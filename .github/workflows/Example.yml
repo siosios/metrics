@@ -1,8 +1,20 @@
-  examples:
+name: Metrics1
+on:
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # (optional) Run workflow manually
+  workflow_dispatch:
+  # (optional) Run workflow when pushing on master/main
+  push: {branches: ["master", "main"]}
+jobs:
+  github-metrics:
     runs-on: ubuntu-latest
-    if: "github.repository == 'siosios/metrics'"
+    environment: 
+      name: production
+    permissions:
+      contents: write
     steps:
-- name: Example
+- name: Metrics
   uses: siosios/metrics@master
   with:
     template: terminal
