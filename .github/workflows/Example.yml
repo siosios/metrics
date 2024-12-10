@@ -1,3 +1,7 @@
+  examples:
+    runs-on: ubuntu-latest
+    if: "github.repository == 'siosios/metrics'"
+    steps:
 - name: Example
   uses: siosios/metrics@master
   with:
