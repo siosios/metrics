@@ -5,33 +5,6 @@ on:
     - cron: "0 8 1/2 * *"
   workflow_dispatch:
   workflow_call:
-    secrets:
-      METRICS_TOKEN:
-        required: true
-      METRICS_TOKEN_WITH_SCOPES:
-        required: true
-      METRICS_TOKEN_PERSONAL:
-        required: true
-      CHESS_TOKEN:
-        required: true
-      PAGESPEED_TOKEN:
-        required: true
-      GOOGLE_MAP_TOKEN:
-        required: true
-      SPLATOON_TOKEN:
-        required: true
-      SPLATOON_STATINK_TOKEN:
-        required: true
-      SIXTEEN_PERSONALITIES_URL:
-        required: true
-      SPOTIFY_TOKENS:
-        required: true
-      STOCK_TOKEN:
-        required: true
-      TWITTER_TOKEN:
-        required: true
-      WAKATIME_TOKEN:
-        required: true
 jobs:
 
 # ======================================================================================
