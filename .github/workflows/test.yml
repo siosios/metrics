@@ -11,6 +11,7 @@ jobs:
   lint:
     name: Lint code
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -33,6 +34,7 @@ jobs:
   build:
     name: Build and test
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     needs: [ lint ]
     steps:
       - name: Checkout repository
@@ -55,6 +57,7 @@ jobs:
   analyze:
     name: Analyze code
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     needs: [ lint ]
     steps:
       - name: Checkout repository
