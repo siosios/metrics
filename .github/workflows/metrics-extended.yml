@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: siosios/metrics@master
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
           filename: github-metrics-extended.svg
           output_action: commit
           committer_message: "chore: update metrics"
