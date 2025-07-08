@@ -29,7 +29,7 @@ RUN chmod +x /metrics/source/app/action/index.mjs \
   # Clean apt/lists
   && rm -rf /var/lib/apt/lists/* \
   # Install node modules and rebuild indexes
-  npm install -g npm@11.4.2
+  &&npm install -g npm@11.4.2
   && npm ci \
   && npm run build
 
