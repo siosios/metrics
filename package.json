@@ -15,7 +15,6 @@
     "preview": "node .github/scripts/preview.mjs",
     "linter": "eslint source/**/*.mjs --quiet",
     "dev": "nodemon source/app/web/index.mjs -e mjs,css,ejs,json",
-    "postinstall": "node node_modules/puppeteer/install.js",
     "indepth": "node source/plugins/languages/analyzers.mjs"
   },
   "repository": {
