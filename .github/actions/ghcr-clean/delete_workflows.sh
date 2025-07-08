@@ -50,7 +50,7 @@ else
 		fi
 	done <<< $ids_to_delete
 fi
- 
+
 rm -rf $temp_file
 echo -e "\n\nFinished the workflow run cleaning process"
 exit 0
