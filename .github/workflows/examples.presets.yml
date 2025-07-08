@@ -1,4 +1,4 @@
-crename: Publish examples (presets)
+name: Publish examples (presets)
 on:
   schedule:
     - cron: "0 16 1/2 * *"
