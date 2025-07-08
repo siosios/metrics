@@ -30,7 +30,7 @@ RUN chmod +x /metrics/source/app/action/index.mjs \
   && rm -rf /var/lib/apt/lists/* \
   # Install node modules and rebuild indexes
   && npm cache clean --force \
-  && npm install puppeteer
+  && npm install puppeteer \
   && npm install \
   && npm run build
 
