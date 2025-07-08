@@ -35,7 +35,7 @@ COPY . .
 # Install node modules and rebuild indexes
 RUN set -x \
   && which "${PUPPETEER_EXECUTABLE_PATH}" \
-  && npm ci \
+  && npm install \
   && npm run build \
   && npm prune --omit=dev
 
