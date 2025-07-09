@@ -59,7 +59,7 @@ jobs:
           git checkout master
           git pull
       - name: Setup metrics
-        run: npm ci
+        run: npm install
       - name: Publish rebuild metrics indexes
         run: npm run build -- publish
 
