@@ -211,7 +211,7 @@ jobs:
         with:
           node-version: 20
       - name: Setup metrics
-        run: npm ci
+        run: npm install
       - name: Pull
         run: git pull
       - name: Checkout latest
@@ -262,7 +262,7 @@ jobs:
         with:
           node-version: 20
       - name: Setup metrics
-        run: npm ci
+        run: npm install
       - name: Publish release
         run: node .github/scripts/release.mjs
         env:
