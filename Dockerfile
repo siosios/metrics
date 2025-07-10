@@ -23,7 +23,7 @@ COPY --chmod=+x <<EOF /usr/local/bin/licensed
 #!/usr/bin/env -S pkgx --shebang --quiet +github.com/licensee/licensed@5 -- licensed
 EOF
 RUN licensed --version
-
+CMD ["node", "node_modules/puppeteer/install.js"]
 # Environment variables
 ENV PUPPETEER_SKIP_DOWNLOAD="true"
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome-stable"
