@@ -42,7 +42,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Chmod script
-        run: chmod +x ./delete_workflows.sh
+        run: chmod +x .github/actions/ghcr-clean/delete_workflows.sh
       - name: Run script
         run: ./delete_workflows.sh siosios/metrics
         working-directory: .github/actions/ghcr-clean
