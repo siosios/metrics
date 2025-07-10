@@ -113,7 +113,7 @@ jobs:
     needs: [ docker-master ]
     steps:
       - name: Run tests
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           token: MOCKED_TOKEN
           plugins_errors_fatal: yes
@@ -205,7 +205,7 @@ jobs:
     needs: [ update-latest ]
     steps:
       - name: Run tests
-        uses: mikey-/metrics@latest
+        uses: siosios/metrics@latest
         with:
           token: MOCKED_TOKEN
           plugins_errors_fatal: yes
