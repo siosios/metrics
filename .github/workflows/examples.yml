@@ -40,7 +40,7 @@ jobs:
 
   examples:
     runs-on: ubuntu-latest
-    if: "github.repository == 'lowlighter/metrics'"
+    if: "github.repository == 'siosios/metrics'"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -50,18 +50,18 @@ jobs:
         run: git checkout examples
 
       - name: 🗃️ Base content - Default metrics
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.base.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🧱 Core - Organization
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.organization.svg
           user: github
@@ -72,51 +72,51 @@ jobs:
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🧱 Core - Large display
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.large.svg
           token: ${{ secrets.METRICS_TOKEN }}
           config_display: large
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🧱 Core - JSON metrics
         if: ${{ success() || failure() }}
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.example.json
           token: ${{ secrets.METRICS_TOKEN }}
           config_output: json
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
       - name: 🧱 Core - PNG metrics
         if: ${{ success() || failure() }}
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.example.png
           token: ${{ secrets.METRICS_TOKEN }}
           config_output: png
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
       - name: 🧱 Core - Metrics insights
         if: ${{ success() || failure() }}
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.insights.html
           token: ${{ secrets.METRICS_TOKEN }}
           config_output: insights
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
       - name: 🧱 Core - Plugin error example
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.error.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -125,10 +125,10 @@ jobs:
           plugins_errors_fatal: no
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
         if: ${{ success() || failure() }}
       - name: 📅 Isometric commit calendar - Half-year calendar
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -136,11 +136,11 @@ jobs:
           plugin_isocalendar: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📅 Isometric commit calendar - Full-year calendar
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.isocalendar.fullyear.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -149,11 +149,11 @@ jobs:
           plugin_isocalendar_duration: full-year
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🈷️ Languages activity - Most used
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.languages.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -165,11 +165,11 @@ jobs:
           plugin_languages_limit: 4
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🈷️ Languages activity - Most used (with details)
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.languages.details.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -182,11 +182,11 @@ jobs:
           plugin_languages_limit: 4
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🈷️ Languages activity - Recently used
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.languages.recent.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -200,11 +200,11 @@ jobs:
           plugin_languages_limit: 4
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🈷️ Languages activity - Indepth analysis
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.languages.indepth.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -219,11 +219,11 @@ jobs:
           plugin_languages_analysis_timeout: 15
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ✨ Stargazers - Using classic charts
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.stargazers.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -231,11 +231,11 @@ jobs:
           plugin_stargazers: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ✨ Stargazers - Using graph charts
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.stargazers.graph.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -244,11 +244,11 @@ jobs:
           plugin_stargazers_charts_type: graph
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ✨ Stargazers - With worldmap
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.stargazers.worldmap.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -260,11 +260,11 @@ jobs:
           plugin_stargazers_worldmap_sample: 200
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 👨‍💻 Lines of code changed - Compact display in base plugin
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.lines.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -273,11 +273,11 @@ jobs:
           plugin_lines_delay: 30
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 👨‍💻 Lines of code changed - Repositories and diff history
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.lines.history.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -290,14 +290,14 @@ jobs:
           repositories_skipped: |
             @use.patterns
             */*
-            +lowlighter/metrics
+            +siosios/metrics
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📌 Starred topics - Labels
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.topics.svg
           token: NOT_NEEDED
@@ -306,11 +306,11 @@ jobs:
           plugin_topics_limit: 12
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📌 Starred topics - Icons
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.topics.icons.svg
           token: NOT_NEEDED
@@ -320,11 +320,11 @@ jobs:
           plugin_topics_mode: icons
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🌟 Recently starred repositories - Recently starred
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.stars.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -333,7 +333,7 @@ jobs:
           plugin_stars_limit: 3
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📜 Repository licenses - Licenses and permissions
@@ -347,12 +347,12 @@ jobs:
           plugin_licenses_setup: bash -c '[[ -f package.json ]] && npm ci || true'
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
       - name: 📜 Repository licenses - Licenses with open-source ratio graphs
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.licenses.ratio.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -365,11 +365,11 @@ jobs:
           plugin_licenses_ratio: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 💡 Coding habits and activity - Mildly interesting facts
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.habits.facts.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -380,11 +380,11 @@ jobs:
           config_timezone: Europe/Paris
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 💡 Coding habits and activity - Recent activity charts
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.habits.charts.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -395,11 +395,11 @@ jobs:
           config_timezone: Europe/Paris
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🏅 Repository contributors - Contributors with contributions count
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.contributors.contributions.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -410,11 +410,11 @@ jobs:
           plugin_contributors_contributions: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🏅 Repository contributors - Contributors by categories
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.contributors.categories.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -431,11 +431,11 @@ jobs:
             }
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎟️ Follow-up of issues and pull requests - Opened on user's repositories
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.followup.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -443,11 +443,11 @@ jobs:
           plugin_followup: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎟️ Follow-up of issues and pull requests - Opened by user
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.followup.user.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -456,11 +456,11 @@ jobs:
           plugin_followup_sections: user
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎟️ Follow-up of issues and pull requests - Indepth analysis
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.followup.indepth.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -469,11 +469,11 @@ jobs:
           plugin_followup_indepth: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎭 Comment reactions - Comment reactions
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.reactions.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -483,11 +483,11 @@ jobs:
           plugin_reactions_details: percentage
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🧑‍🤝‍🧑 People - Followers
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.people.followers.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -496,11 +496,11 @@ jobs:
           plugin_people_types: followers
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🧑‍🤝‍🧑 People - Contributors and sponsors
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.people.repository.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -511,11 +511,11 @@ jobs:
           plugin_people_types: contributors, stargazers, watchers, sponsors
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 💝 GitHub Sponsorships - 💝 GitHub Sponsorships
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.sponsorships.svg
           token: ${{ secrets.METRICS_TOKEN_PERSONAL }}
@@ -523,11 +523,11 @@ jobs:
           plugin_sponsorships: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 💕 GitHub Sponsors - Sponsors goal
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.sponsors.svg
           token: ${{ secrets.METRICS_TOKEN_PERSONAL }}
@@ -537,11 +537,11 @@ jobs:
           plugin_sponsors_past: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 💕 GitHub Sponsors - Sponsors introduction
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.sponsors.full.svg
           token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
@@ -549,24 +549,24 @@ jobs:
           plugin_sponsors: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📓 Featured repositories - Featured repositories
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.repositories.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_repositories: yes
-          plugin_repositories_featured: lowlighter/metrics
+          plugin_repositories_featured: siosios/metrics
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📓 Featured repositories - Pinned repositories
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.repositories.pinned.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -575,11 +575,11 @@ jobs:
           plugin_repositories_pinned: 2
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 💬 Discussions - GitHub Discussions
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.discussions.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -588,11 +588,11 @@ jobs:
           plugin_discussions_categories_limit: 8
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 💫 Star lists - Featured star list
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.starlists.svg
           token: NOT_NEEDED
@@ -602,11 +602,11 @@ jobs:
           plugin_starlists_only: TC39
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 💫 Star lists - Featured star list languages
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.starlists.languages.svg
           token: NOT_NEEDED
@@ -618,11 +618,11 @@ jobs:
           plugin_starlists_only: Awesome
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📆 Commit calendar - Current year calendar
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.calendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -630,11 +630,11 @@ jobs:
           plugin_calendar: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📆 Commit calendar - Full history calendar
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.calendar.full.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -643,11 +643,11 @@ jobs:
           plugin_calendar_limit: 0
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🏆 Achievements - Detailed display
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.achievements.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -656,11 +656,11 @@ jobs:
           plugin_achievements_only: sponsor, maintainer, octonaut
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🏆 Achievements - Compact display
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.achievements.compact.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -673,11 +673,11 @@ jobs:
           plugin_achievements_threshold: X
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎩 Notable contributions - Contributions
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.notable.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -685,11 +685,11 @@ jobs:
           plugin_notable: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎩 Notable contributions - Indepth analysis
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.notable.indepth.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -699,11 +699,11 @@ jobs:
           plugin_notable_repositories: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📰 Recent activity - Recent activity
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.activity.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -714,11 +714,11 @@ jobs:
           plugin_activity_filter: issue, pr, release, fork, review, ref/create
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🧮 Repositories traffic - Repositories traffic
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.traffic.svg
           token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
@@ -726,11 +726,11 @@ jobs:
           plugin_traffic: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ♐ Random code snippet - JavaScript or TypeScript snippet of the day
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.code.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -740,11 +740,11 @@ jobs:
           plugin_code_load: 400
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎫 Gists - Gists
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.gists.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -752,25 +752,25 @@ jobs:
           plugin_gists: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🗂️ GitHub projects - Project from a repository
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.projects.svg
           token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
           base: ""
           plugin_projects: yes
-          plugin_projects_repositories: lowlighter/metrics/projects/1
+          plugin_projects_repositories: siosios/metrics/projects/1
           plugin_projects_descriptions: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🙋 Introduction - Organization introduction
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.introduction.svg
           token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
@@ -782,7 +782,7 @@ jobs:
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🙋 Introduction - Repository introduction
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.introduction.repository.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -792,11 +792,11 @@ jobs:
           plugin_introduction: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ⏱️ Google PageSpeed - Succinct report
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.pagespeed.svg
           token: NOT_NEEDED
@@ -806,11 +806,11 @@ jobs:
           plugin_pagespeed_url: https://lecoq.io
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ⏱️ Google PageSpeed - Detailed report
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.pagespeed.detailed.svg
           token: NOT_NEEDED
@@ -821,11 +821,11 @@ jobs:
           plugin_pagespeed_url: https://lecoq.io
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ⏱️ Google PageSpeed - Screenshot
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.pagespeed.screenshot.svg
           token: NOT_NEEDED
@@ -836,11 +836,11 @@ jobs:
           plugin_pagespeed_url: https://lecoq.io
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🗨️ Stack Overflow - Top answers from stackoverflow
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.stackoverflow.svg
           token: NOT_NEEDED
@@ -851,13 +851,13 @@ jobs:
           plugin_stackoverflow_limit: 2
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: >-
           🌸 Anilist watch list and reading list - Favorites anime and currently
           watching
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.anilist.svg
           token: NOT_NEEDED
@@ -868,13 +868,13 @@ jobs:
           plugin_anilist_limit: 1
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: >-
           🌸 Anilist watch list and reading list - Favorites manga and currently
           reading
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.anilist.manga.svg
           token: NOT_NEEDED
@@ -885,11 +885,11 @@ jobs:
           plugin_anilist_limit: 1
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🌸 Anilist watch list and reading list - Favorites characters
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.anilist.characters.svg
           token: NOT_NEEDED
@@ -899,11 +899,11 @@ jobs:
           plugin_anilist_limit_characters: 22
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎼 Music activity and suggestions - Apple Music - Random track from playlist
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.music.playlist.svg
           token: NOT_NEEDED
@@ -913,11 +913,11 @@ jobs:
           plugin_music_limit: 2
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎼 Music activity and suggestions - Spotify - Random track from playlist
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.music.playlist.spotify.svg
           token: NOT_NEEDED
@@ -926,11 +926,11 @@ jobs:
           plugin_music_playlist: https://open.spotify.com/embed/playlist/3nfA87oeJw4LFVcUDjRcqi
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎼 Music activity and suggestions - Spotify - Recently listed
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.music.recent.svg
           token: NOT_NEEDED
@@ -942,11 +942,11 @@ jobs:
           plugin_music_limit: 2
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎼 Music activity and suggestions - Spotify - Top tracks
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           token: NOT_NEEDED
           base: ""
@@ -958,11 +958,11 @@ jobs:
           plugin_music_top_type: tracks
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🎼 Music activity and suggestions - Spotify - Top artists
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           token: NOT_NEEDED
           base: ""
@@ -974,13 +974,13 @@ jobs:
           plugin_music_top_type: artists
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: >-
           🎼 Music activity and suggestions - Youtube Music - Random track from
           playlist
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           token: NOT_NEEDED
           base: ""
@@ -989,11 +989,11 @@ jobs:
             https://music.youtube.com/playlist?list=OLAK5uy_kU_uxp9TUOl9zVdw77xith8o9AknVwz9U
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ✒️ Recent posts - Recent posts
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.posts.svg
           token: NOT_NEEDED
@@ -1002,11 +1002,11 @@ jobs:
           plugin_posts_source: dev.to
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ✒️ Recent posts - Recent posts with descriptions and cover images
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.posts.full.svg
           token: NOT_NEEDED
@@ -1018,11 +1018,11 @@ jobs:
           plugin_posts_covers: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🗼 Rss feed - News from hackernews
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.rss.svg
           token: NOT_NEEDED
@@ -1032,11 +1032,11 @@ jobs:
           plugin_rss_limit: 4
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ⏰ WakaTime - WakaTime
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.wakatime.svg
           token: NOT_NEEDED
@@ -1047,11 +1047,11 @@ jobs:
           use_mocked_data: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🗳️ Leetcode - LeetCode
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.leetcode.svg
           token: NOT_NEEDED
@@ -1060,11 +1060,11 @@ jobs:
           plugin_leetcode_sections: solved, skills, recent
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🕹️ Steam - Recently played games
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.steam.svg
           token: NOT_NEEDED
@@ -1077,11 +1077,11 @@ jobs:
           use_mocked_data: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🕹️ Steam - Profile and detailed game history
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.steam.full.svg
           token: NOT_NEEDED
@@ -1092,11 +1092,11 @@ jobs:
           use_mocked_data: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🧠 16personalities - MBTI Personality profile
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.16personalities.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -1107,11 +1107,11 @@ jobs:
           plugin_16personalities_scores: no
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: ♟️ Chess - Last chess game from lichess.org
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.chess.svg
           token: NOT_NEEDED
@@ -1121,11 +1121,11 @@ jobs:
           plugin_chess_platform: lichess.org
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 🥠 Fortune - Fortune
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.fortune.svg
           token: NOT_NEEDED
@@ -1133,11 +1133,11 @@ jobs:
           plugin_fortune: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📸 Website screenshot - XKCD of the day
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.screenshot.svg
           token: NOT_NEEDED
@@ -1148,11 +1148,11 @@ jobs:
           plugin_screenshot_selector: "#comic img"
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 💹 Stock prices - Stock prices from Tesla
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.plugin.stock.svg
           token: NOT_NEEDED
@@ -1162,11 +1162,11 @@ jobs:
           plugin_stock_symbol: TSLA
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📗 Classic template - Example
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.classic.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -1174,27 +1174,27 @@ jobs:
           plugin_lines: yes
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📘 Repository template - Example
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           template: repository
           filename: metrics.repository.svg
           token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
-          user: lowlighter
+          user: siosios
           repo: metrics
           plugin_lines: yes
           plugin_followup: yes
           plugin_projects: yes
-          plugin_projects_repositories: lowlighter/metrics/projects/1
+          plugin_projects_repositories: siosios/metrics/projects/1
           output_action: none
           delay: 120
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📙 Terminal template - Example
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           template: terminal
           filename: metrics.terminal.svg
@@ -1202,31 +1202,31 @@ jobs:
           base: header, metadata
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📒 Markdown template - Example
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           template: markdown
           filename: metrics.markdown.md
           markdown: >-
-            https://raw.githubusercontent.com/lowlighter/metrics/examples/metrics.markdown.template.md
+            https://raw.githubusercontent.com/siosios/metrics/examples/metrics.markdown.template.md
           config_output: markdown
           token: ${{ secrets.METRICS_TOKEN }}
           output_action: commit
           committer_branch: examples
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📒 Markdown template - Example with plugins configuration for embed use
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           template: markdown
           filename: metrics.markdown.full.md
           markdown: >-
-            https://raw.githubusercontent.com/lowlighter/metrics/master/source/templates/markdown/example.md
+            https://raw.githubusercontent.com/siosios/metrics/master/source/templates/markdown/example.md
           config_output: markdown
           plugin_activity: yes
           plugin_activity_limit: 7
@@ -1248,16 +1248,16 @@ jobs:
           output_action: commit
           committer_branch: examples
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📒 Markdown template - Example (pdf output)
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           template: markdown
           filename: metrics.markdown.pdf
           markdown: >-
-            https://raw.githubusercontent.com/lowlighter/metrics/master/source/templates/markdown/example.pdf.md
+            https://raw.githubusercontent.com/siosios/metrics/master/source/templates/markdown/example.pdf.md
           config_output: markdown-pdf
           plugin_rss: yes
           plugin_rss_source: https://news.ycombinator.com/rss
@@ -1269,29 +1269,29 @@ jobs:
           output_action: commit
           committer_branch: examples
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📕 Community templates - Using a community template
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           template: "@classic"
-          setup_community_templates: lowlighter/metrics@master:classic
+          setup_community_templates: siosios/metrics@master:classic
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
       - name: 📕 Community templates - Using a trusted community template
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           template: "@terminal"
-          setup_community_templates: lowlighter/metrics@master:terminal+trust
+          setup_community_templates: siosios/metrics@master:terminal+trust
           output_action: none
           delay: 120
-          user: lowlighter
+          user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
 
@@ -1299,7 +1299,7 @@ jobs:
       - name: Screenshot markdown example
         if: ${{ success() || failure() }}
         run: |
-          docker run --rm --entrypoint="" --volume=/tmp:/tmp ghcr.io/lowlighter/metrics:master node /metrics/.github/scripts/markdown_example.mjs
+          docker run --rm --entrypoint="" --volume=/tmp:/tmp ghcr.io/siosios/metrics:master node /metrics/.github/scripts/markdown_example.mjs
           sudo mv /tmp/metrics.markdown.png /metrics_renders/
       - name: Publish examples
         if: ${{ success() || failure() }}
@@ -1316,13 +1316,13 @@ jobs:
           git push --force
 
 # ======================================================================================
-# Special job used to render lowlighter/metrics repository assets
+# Special job used to render siosios/metrics repository assets
 # ======================================================================================
 
   repository:
     runs-on: ubuntu-latest
     needs: [ examples ]
-    if: "github.repository == 'lowlighter/metrics'"
+    if: "github.repository == 'siosios/metrics'"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -1333,13 +1333,13 @@ jobs:
 
       - name: Contributors
         if: ${{ success() || failure() }}
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.contributors.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           template: repository
-          user: lowlighter
+          user: siosios
           repo: metrics
           plugin_people: yes
           plugin_people_types: contributors
@@ -1349,12 +1349,12 @@ jobs:
           delay: 120
       - name: Sponsors
         if: ${{ success() || failure() }}
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.sponsors.svg
           token: ${{ secrets.METRICS_TOKEN_PERSONAL }}
           base: ""
-          user: lowlighter
+          user: siosios
           plugin_sponsors: yes
           plugin_sponsors_past: yes
           plugin_sponsors_sections: list
@@ -1365,13 +1365,13 @@ jobs:
           delay: 120
       - name: Licenses
         if: ${{ success() || failure() }}
-        uses: mikey-/metrics@main
+        uses: siosios/metrics@main
         with:
           filename: metrics.licenses.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           template: repository
-          user: lowlighter
+          user: siosios
           repo: metrics
           plugin_licenses: yes
           plugin_licenses_setup: npm ci
