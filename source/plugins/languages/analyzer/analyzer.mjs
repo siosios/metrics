@@ -5,11 +5,12 @@ import paths from "path"
 import git from "simple-git"
 import { filters } from "../../../app/metrics/utils.mjs"
 import core from "@actions/core"
+import crypto from "crypto"
 
 /**Analyzer */
 export class Analyzer {
   /**Constructor */
-  constructor(login, {account = "bypass", authoring = [], uid = Math.random(), shell, rest = null, context = {mode: "user"}, skipped = [], categories = ["programming", "markup"], timeout = {global: NaN, repositories: NaN}}) {
+  constructor(login, {account = "bypass", authoring = [], uid = crypto.randomUUID(), shell, rest = null, context = {mode: "user"}, skipped = [], categories = ["programming", "markup"], timeout = {global: NaN, repositories: NaN}}) {
     //User informations
     this.login = login
     this.account = account
