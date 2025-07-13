@@ -3,7 +3,7 @@ const path = require("path")
 const git = require("simple-git")(path.join(__dirname, ".."))
 
 //Edited files list
-const diff = async () => (await git.diff(["origin/master...", "--name-status"])).split("\n").map(x => x.trim()).filter(x => /^M\s+/.test(x)).map(x => x.replace(/^M\s+/, ""))
+const diff = async () => (await git.diff(["origin/main...", "--name-status"])).split("\n").map(x => x.trim()).filter(x => /^M\s+/.test(x)).map(x => x.replace(/^M\s+/, ""))
 
 //File changes
 describe("Check file changes (checkout your files if needed)", () => {
@@ -19,7 +19,7 @@ describe("Check file changes (checkout your files if needed)", () => {
       ".github/workflows/examples.yml",
       ".github/readme/partials/documentation/compatibility.md",
     ])("%s", async file => expect((await diff()).includes(file)).toBe(false)))
-  if (!["lowlighter", "mikey-"].includes(process.env.PR_AUTHOR)) {
+  if (!["lowlighter", "mikey-", "siosios"].includes(process.env.PR_AUTHOR)) {
     describe("Repository level files were not modified", () =>
       void test.each([
         ".github/config/*",
