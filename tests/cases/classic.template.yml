@@ -1,8 +1,0 @@
-- name: 📗 Classic template - Example
-  uses: siosios/metrics@main
-  with:
-    token: MOCKED_TOKEN
-    base: header, repositories
-    plugin_lines: yes
-    use_mocked_data: yes
-    verify: yes
