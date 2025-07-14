@@ -162,7 +162,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Login to GitHub registry
         run: echo ${{ github.token }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-      - name: Pull docker image (master)
+      - name: Pull docker image (main)
         run: docker pull ghcr.io/siosios/metrics:main
       - name: Tag docker image (release)
         env:
@@ -197,7 +197,7 @@ jobs:
         run: git pull
       - name: Checkout latest
         run: git checkout latest
-      - name: Rebase latest on master
+      - name: Rebase latest on main
         run: git merge main
       - name: Push latest
         run: git push origin latest
