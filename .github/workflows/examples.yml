@@ -1095,21 +1095,6 @@ jobs:
           user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
-      - name: 🧠 16personalities - MBTI Personality profile
-        uses: siosios/metrics@main
-        with:
-          filename: metrics.plugin.16personalities.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: ""
-          plugin_16personalities: yes
-          plugin_16personalities_url: ${{ secrets.SIXTEEN_PERSONALITIES_URL }}
-          plugin_16personalities_sections: personality, traits
-          plugin_16personalities_scores: no
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
       - name: ♟️ Chess - Last chess game from lichess.org
         uses: siosios/metrics@main
         with:
@@ -1226,7 +1211,7 @@ jobs:
           template: markdown
           filename: metrics.markdown.full.md
           markdown: >-
-            https://raw.githubusercontent.com/siosios/metrics/master/source/templates/markdown/example.md
+            https://raw.githubusercontent.com/siosios/metrics/main/source/templates/markdown/example.md
           config_output: markdown
           plugin_activity: yes
           plugin_activity_limit: 7
@@ -1257,7 +1242,7 @@ jobs:
           template: markdown
           filename: metrics.markdown.pdf
           markdown: >-
-            https://raw.githubusercontent.com/siosios/metrics/master/source/templates/markdown/example.pdf.md
+            https://raw.githubusercontent.com/siosios/metrics/main/source/templates/markdown/example.pdf.md
           config_output: markdown-pdf
           plugin_rss: yes
           plugin_rss_source: https://news.ycombinator.com/rss
@@ -1277,7 +1262,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           template: "@classic"
-          setup_community_templates: siosios/metrics@master:classic
+          setup_community_templates: siosios/metrics@main:classic
           output_action: none
           delay: 120
           user: siosios
@@ -1288,7 +1273,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           template: "@terminal"
-          setup_community_templates: siosios/metrics@master:terminal+trust
+          setup_community_templates: siosios/metrics@main:terminal+trust
           output_action: none
           delay: 120
           user: siosios
@@ -1299,7 +1284,7 @@ jobs:
       - name: Screenshot markdown example
         if: ${{ success() || failure() }}
         run: |
-          docker run --rm --entrypoint="" --volume=/tmp:/tmp ghcr.io/siosios/metrics:master node /metrics/.github/scripts/markdown_example.mjs
+          docker run --rm --entrypoint="" --volume=/tmp:/tmp ghcr.io/siosios/metrics:main node /metrics/.github/scripts/markdown_example.mjs
           sudo mv /tmp/metrics.markdown.png /metrics_renders/
       - name: Publish examples
         if: ${{ success() || failure() }}
