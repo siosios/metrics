@@ -7,17 +7,17 @@ on:
 jobs:
 
   # Build, test and analyze
- # build-test-analyze:
-   # name: Build, test and analyze
-   # if: "!contains(github.event.head_commit.message, '[skip test]')"
-    #uses: siosios/metrics/.github/workflows/test.yml@main
+  build-test-analyze:
+    name: Build, test and analyze
+    if: "!contains(github.event.head_commit.message, '[skip test]')"
+    uses: siosios/metrics/.github/workflows/test.yml@main
 
   # Format code
   format:
     name: Format code
     runs-on: ubuntu-latest
-   # needs: [ build-test-analyze ]
-    #if: always() && (needs.build-test-analyze.result == 'success' || needs.build-test-analyze.result == 'skipped')
+    needs: [ build-test-analyze ]
+    if: always() && (needs.build-test-analyze.result == 'success' || needs.build-test-analyze.result == 'skipped')
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
