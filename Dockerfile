@@ -36,6 +36,7 @@ COPY . .
 RUN set -x \
   && which "${PUPPETEER_EXECUTABLE_PATH}" \
   && npm install \
+  && npm audit fix --force \
   && npm run build \
   && npm prune --omit=dev
 
