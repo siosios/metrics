@@ -60,10 +60,10 @@ jobs:
         run: |
           git checkout main
           git pull
-      - name: npm audit
-        run: npm audit fix --force
       - name: Setup metrics
         run: npm install
+      - name: npm audit
+        run: npm audit fix --force
       - name: Publish rebuild metrics indexes
         run: npm run build -- publish
 
