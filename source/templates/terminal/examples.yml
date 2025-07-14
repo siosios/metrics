@@ -1,7 +1,0 @@
-- name: Example
-  uses: mikey-/metrics@latest
-  with:
-    template: terminal
-    filename: metrics.terminal.svg
-    token: ${{ secrets.METRICS_TOKEN }}
-    base: header, metadata
