@@ -1,9 +1,0 @@
-- name: Example
-  uses: mikey-/metrics@latest
-  with:
-    filename: metrics.plugin.<%= name %>.svg
-    token: ${{ secrets.METRICS_TOKEN }}
-    base: ""
-    plugin_<%= name %>: yes
-  prod:
-    skip: true
