@@ -41,13 +41,13 @@ jobs:
           npm install -g dprint
           mkdir -v -p /home/runner/.cache/dprint/cache
           npx dprint fmt --config .github/config/dprint.json
-      - name: Build siosios/metrics:${{ github.head_ref || 'master' }}
+      - name: Build siosios/metrics:${{ github.head_ref || 'main' }}
         env:
-          GIT_REF: ${{ github.head_ref || 'master' }}
+          GIT_REF: ${{ github.head_ref || 'main' }}
         run: docker build -t siosios/metrics:$(echo $GIT_REF | sed 's/[^a-z]/-/g') .
       - name: Run tests
         env:
-          GIT_REF: ${{ github.head_ref || 'master' }}
+          GIT_REF: ${{ github.head_ref || 'main' }}
         run: docker run --rm --entrypoint="" siosios/metrics:$(echo $GIT_REF | sed 's/[^a-z]/-/g') sh -xc 'npm install --no-save && exec npm run test-metrics'
 
   # Run CodeQL on branch
