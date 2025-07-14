@@ -1,5 +1,5 @@
 - name: 🎫 Gists - Gists
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@main
   with:
     token: MOCKED_TOKEN
     plugin_gists: 'yes'

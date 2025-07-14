@@ -1,5 +1,5 @@
 - name: 🥠 Fortune - Fortune
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@main
   with:
     token: NOT_NEEDED
     plugin_fortune: 'yes'

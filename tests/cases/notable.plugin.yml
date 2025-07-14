@@ -1,12 +1,12 @@
 - name: 🎩 Notable contributions - Contributions
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@main
   with:
     token: MOCKED_TOKEN
     plugin_notable: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 🎩 Notable contributions - Indepth analysis
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@main
   with:
     token: MOCKED_TOKEN
     plugin_notable: 'yes'
