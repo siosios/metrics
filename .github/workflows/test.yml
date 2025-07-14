@@ -20,8 +20,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: npm audit
-        run: npm audit fix --force
       - name: Setup metrics
         run: npm install
       - name: Check contributions requirements
