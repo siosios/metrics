@@ -67,7 +67,7 @@ jobs:
       - name: npm audit
         run: npm audit fix --force
       - name: Publish rebuild metrics indexes
-        run: npm run build -- publish
+        run: npm run build --publish
 
   # Build docker image from master and publish it to GitHub registry
   docker-master:
