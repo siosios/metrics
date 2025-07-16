@@ -1,13 +1,11 @@
 name: Continuous integration
 permissions:
   contents: write
-  
 on:
   push:
     branches: [ main ]
 
 jobs:
-
   #Build, test and analyze
   build-test-analyze:
     name: Build, test and analyze
