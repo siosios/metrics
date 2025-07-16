@@ -1,6 +1,5 @@
 name: Continuous integration
-permissions:
-  contents: write
+permissions: write-all
 on:
   push:
     branches: [ main ]
