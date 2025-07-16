@@ -1,7 +1,6 @@
 name: Continuous integration
 permissions:
   contents: write
-  actions: write
   
 on:
   push:
