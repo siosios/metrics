@@ -14,7 +14,7 @@ jobs:
   # Format code
   format:
     name: Format code
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [ build-test-analyze ]
     if: always() && (needs.build-test-analyze.result == 'success' || needs.build-test-analyze.result == 'skipped')
     steps:
@@ -42,7 +42,7 @@ jobs:
   # Update plugins and template indexes, along with README.md
   update-indexes:
     name: Publish rebuilt metrics indexes
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [ format ]
     permissions:
       contents: write
@@ -69,7 +69,7 @@ jobs:
   # Build docker image from master and publish it to GitHub registry
   docker-master:
     name: Publish main to GitHub registry
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [ update-indexes ]
     steps:
       - name: Checkout repository
@@ -112,7 +112,7 @@ jobs:
   # Test siosios/metrics@master
   action-master-test:
     name: Test siosios/metrics@main
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [ docker-master ]
     steps:
       - name: Run tests
@@ -152,7 +152,7 @@ jobs:
   # Build docker image from master and publish it to GitHub registry with release tag
   docker-release:
     name: Publish release to GitHub registry
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [ publish-examples ]
     if: contains(github.event.head_commit.message, '[release]')
     steps:
@@ -178,7 +178,7 @@ jobs:
   # Rebase latest branch on master
   update-latest:
     name: Rebase latest on main
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [ docker-release ]
     steps:
       - name: Checkout repository
@@ -203,7 +203,7 @@ jobs:
   # Test siosios/metrics@latest
   action-latest-test:
     name: Test siosios/metrics@latest
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [ update-latest ]
     steps:
       - name: Run tests
@@ -231,7 +231,7 @@ jobs:
   # Publish GitHub release
   publish-release:
     name: Publish release
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [ action-latest-test ]
     steps:
       - name: Checkout repository
