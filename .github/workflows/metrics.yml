@@ -22,7 +22,8 @@ jobs:
           retries: 3
           retries_delay: 900
           optimize: css, xml
-
+          config_output: insights
+          
           # Options
           user: siosios
           template: classic
