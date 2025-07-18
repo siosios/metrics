@@ -26,14 +26,14 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [ChatGPT agent: bridging research and action](https://openai.com/index/introducing-chatgpt-agent/)
-  * *Published on 17 Jul 2025*
-* [Mistral Releases Deep Research, Voice, Projects in Le Chat](https://mistral.ai/news/le-chat-dives-deep)
-  * *Published on 17 Jul 2025*
-* [Apple Intelligence Foundation Language Models Tech Report 2025](https://machinelearning.apple.com/research/apple-foundation-models-tech-report-2025)
-  * *Published on 17 Jul 2025*
-* [Hand: open-source Robot Hand](https://github.com/pollen-robotics/AmazingHand)
-  * *Published on 17 Jul 2025*
+* [lsr: ls with io_uring](https://tangled.sh/@rockorager.dev/lsr)
+  * *Published on 18 Jul 2025*
+* [CP/M Creator Gary Kildall&#39;s Memoirs Released as Free Download](https://spectrum.ieee.org/cpm-creator-gary-kildalls-memoirs-released-as-free-download)
+  * *Published on 18 Jul 2025*
+* [Ask HN: Any active COBOL devs here? What are you working on?](https://news.ycombinator.com/item?id=44604257)
+  * *Published on 18 Jul 2025*
+* [When Root Meets Immutable: OpenBSD Chflags vs. Log Tampering](https://rsadowski.de/posts/2025/openbsd-immutable-system-logs/)
+  * *Published on 18 Jul 2025*
 
 
 ___
