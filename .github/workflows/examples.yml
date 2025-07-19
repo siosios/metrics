@@ -102,17 +102,6 @@ jobs:
           delay: 120
           user: siosios
           plugins_errors_fatal: yes
-      - name: 🧱 Core - Metrics insights
-        if: ${{ success() || failure() }}
-        uses: siosios/metrics@main
-        with:
-          filename: metrics.insights.html
-          token: ${{ secrets.GITHUB_TOKEN }}
-          config_output: insights
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
       - name: 🧱 Core - Plugin error example
         uses: siosios/metrics@main
         with:
