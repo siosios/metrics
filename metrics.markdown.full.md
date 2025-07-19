@@ -26,13 +26,13 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [lsr: ls with io_uring](https://tangled.sh/@rockorager.dev/lsr)
+* [How to write Rust in the Linux kernel: part 3](https://lwn.net/SubscriberLink/1026694/3413f4b43c862629/)
   * *Published on 18 Jul 2025*
-* [CP/M Creator Gary Kildall&#39;s Memoirs Released as Free Download](https://spectrum.ieee.org/cpm-creator-gary-kildalls-memoirs-released-as-free-download)
+* [Asynchrony is not concurrency](https://kristoff.it/blog/asynchrony-is-not-concurrency/)
   * *Published on 18 Jul 2025*
-* [Ask HN: Any active COBOL devs here? What are you working on?](https://news.ycombinator.com/item?id=44604257)
-  * *Published on 18 Jul 2025*
-* [When Root Meets Immutable: OpenBSD Chflags vs. Log Tampering](https://rsadowski.de/posts/2025/openbsd-immutable-system-logs/)
+* [Mr Browser – Macintosh Repository file downloader that runs directly on 68k Macs](https://www.macintoshrepository.org/44146-mr-browser)
+  * *Published on 19 Jul 2025*
+* [Silence Is a Commons by Ivan Illich (1983)](http://www.davidtinapple.com/illich/1983_silence_commons.html)
   * *Published on 18 Jul 2025*
 
 
