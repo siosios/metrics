@@ -26,13 +26,13 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
+* [My Ultimate Self-Hosting Setup](https://codecaptured.com/blog/my-ultimate-self-hosting-setup/)
+  * *Published on 19 Jul 2025*
 * [How to write Rust in the Linux kernel: part 3](https://lwn.net/SubscriberLink/1026694/3413f4b43c862629/)
   * *Published on 18 Jul 2025*
 * [Asynchrony is not concurrency](https://kristoff.it/blog/asynchrony-is-not-concurrency/)
   * *Published on 18 Jul 2025*
-* [Mr Browser – Macintosh Repository file downloader that runs directly on 68k Macs](https://www.macintoshrepository.org/44146-mr-browser)
-  * *Published on 19 Jul 2025*
-* [Silence Is a Commons by Ivan Illich (1983)](http://www.davidtinapple.com/illich/1983_silence_commons.html)
+* [Valve confirms credit card companies pressured it to delist certain adult games](https://www.pcgamer.com/software/platforms/valve-confirms-credit-card-companies-pressured-it-to-delist-certain-adult-games-from-steam/)
   * *Published on 18 Jul 2025*
 
 
