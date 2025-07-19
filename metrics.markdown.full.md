@@ -26,14 +26,14 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [My Ultimate Self-Hosting Setup](https://codecaptured.com/blog/my-ultimate-self-hosting-setup/)
+* [I avoid using LLMs as a publisher and writer](https://lifehacky.net/prompt-0b953c089b44)
   * *Published on 19 Jul 2025*
-* [How to write Rust in the Linux kernel: part 3](https://lwn.net/SubscriberLink/1026694/3413f4b43c862629/)
-  * *Published on 18 Jul 2025*
-* [Asynchrony is not concurrency](https://kristoff.it/blog/asynchrony-is-not-concurrency/)
-  * *Published on 18 Jul 2025*
-* [Valve confirms credit card companies pressured it to delist certain adult games](https://www.pcgamer.com/software/platforms/valve-confirms-credit-card-companies-pressured-it-to-delist-certain-adult-games-from-steam/)
-  * *Published on 18 Jul 2025*
+* [Fstrings.wtf](https://fstrings.wtf/)
+  * *Published on 19 Jul 2025*
+* [My Self-Hosting Setup](https://codecaptured.com/blog/my-ultimate-self-hosting-setup/)
+  * *Published on 19 Jul 2025*
+* [Linux and Secure Boot certificate expiration](https://lwn.net/SubscriberLink/1029767/43b62a7a7408c2a9/)
+  * *Published on 19 Jul 2025*
 
 
 ___
