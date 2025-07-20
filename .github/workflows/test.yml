@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 20
       - name: Setup metrics
-        run: npm ci
+        run: npm install
       - name: Check contributions requirements
         run: npm run test-contrib
         env:
