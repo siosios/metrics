@@ -1,43 +1,42 @@
-# syntax=docker/dockerfile:1.16
-
 # Base image
-FROM node:22
-
-# Install latest chrome dev package, fonts to support major charsets and skip chromium download on puppeteer install
-# Based on https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker
-RUN set -x \
-  && apt-get update \
-  && apt-get install -y --no-install-recommends wget ca-certificates \
-  && wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-  && apt-get install -y --no-install-recommends ./google-chrome-stable_current_amd64.deb fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 \
-  && rm -rf ./google-chrome-stable_current_amd64.deb /var/lib/apt/lists/*
-
-# Install deno for miscellaneous scripts
-# TODO: pin major deno version
-COPY --from=denoland/deno:bin /deno /usr/local/bin/deno
-
-# Install licensed through pkgx
-# TODO: pin major pkgx version
-COPY --from=pkgxdev/pkgx:busybox /usr/local/bin/pkgx /usr/local/bin/pkgx
-COPY --chmod=+x <<EOF /usr/local/bin/licensed
-#!/usr/bin/env -S pkgx --shebang --quiet +github.com/licensee/licensed@5 -- licensed
-EOF
-RUN licensed --version
-
-# Environment variables
-ENV PUPPETEER_SKIP_DOWNLOAD="true"
-ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome-stable"
+FROM node:20-bookworm-slim
 
 # Copy repository
+COPY . /metrics
 WORKDIR /metrics
-COPY . .
 
-# Install node modules and rebuild indexes
-RUN set -x \
-  && which "${PUPPETEER_EXECUTABLE_PATH}" \
-  && npm ci \
-  && npm run build \
-  && npm prune --omit=dev
+# Setup
+RUN chmod +x /metrics/source/app/action/index.mjs \
+  # Install latest chrome dev package, fonts to support major charsets and skip chromium download on puppeteer install
+  # Based on https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-in-docker
+  && apt-get update \
+  && apt-get install -y libnss3 libnss3-dev libxml2-dev libxslt1-dev zlib1g-dev wget gnupg ca-certificates libgconf-2-4 libterm-readline-gnu-perl \
+  && apt-get install -y libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev \
+  && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+  && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
+  && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
+  && apt-get install -y -q \
+  && apt-get update \
+  && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 libx11-xcb1 libxtst6 lsb-release --no-install-recommends \
+  # Install deno for miscellaneous scripts
+  && apt-get install -y curl unzip xz-utils \
+  && curl -fsSL https://deno.land/x/install/install.sh | DENO_INSTALL=/usr/local sh \
+  # Install ruby to support github licensed gem
+  && apt-get install -y ruby-full git g++ cmake pkg-config libssl-dev \
+  && gem install licensed \
+  # Install python for node-gyp
+  && apt-get install -y python3 \
+  # Clean apt/lists
+  && rm -rf /var/lib/apt/lists/* \
+  # Install node modules and rebuild indexes
+  && npm cache clean --force \
+  && npm install puppeteer \
+  && npm install \
+  && npm run build
+
+# Environment variables
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_BROWSER_PATH="google-chrome-stable"
 
 # Execute GitHub action
-ENTRYPOINT ["node", "/metrics/source/app/action/index.mjs"]
+ENTRYPOINT node /metrics/source/app/action/index.mjs
