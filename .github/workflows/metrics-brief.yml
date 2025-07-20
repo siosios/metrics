@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: siosios/metrics@main
+      - uses: siosios/metrics@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: github-metrics-brief.svg
