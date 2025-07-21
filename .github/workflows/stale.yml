@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: dessant/lock-threads@v4
         with:
-          github-token: ${{ github.token }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-inactive-days: 180
           issue-lock-reason: ""
           add-issue-labels: ☑️ archived
@@ -44,7 +44,7 @@ jobs:
       - name: Chmod script
         run: chmod +x .github/actions/ghcr-clean/delete_workflows.sh
       - name: Run script
-        run: ./delete_workflows.sh siosios/metrics
+        run: ./delete_workflows.sh siosios/Metrics
         working-directory: .github/actions/ghcr-clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
