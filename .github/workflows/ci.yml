@@ -116,13 +116,14 @@ jobs:
    #     run: "curl --retry 15 --retry-delay 60 https://beta-Metrics.lecoq.io/.version"
 
   # Test siosios/Metrics@master
+  # Test lowlighter/metrics@master
   action-master-test:
-    name: Test master
+    name: Test siosios/metrics@master
     runs-on: self-hosted
     needs: [ docker-master ]
     steps:
       - name: Run tests
-        uses: siosios/Metrics@master
+        uses: siosios/metrics@main
         with:
           token: MOCKED_TOKEN
           plugins_errors_fatal: yes
