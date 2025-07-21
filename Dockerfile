@@ -1,9 +1,9 @@
 # Base image
-FROM node:20-bookworm-slim
+FROM node:22
 
 # Copy repository
-COPY . /metrics
 WORKDIR /metrics
+COPY . .
 
 # Setup
 RUN chmod +x /metrics/source/app/action/index.mjs \
@@ -32,10 +32,13 @@ RUN chmod +x /metrics/source/app/action/index.mjs \
   && npm cache clean --force \
   && npm install puppeteer \
   && npm install \
-  && npm run build
+  && npm audit fix --force \
+  && npm run build \
+  && npm prune --omit=dev
 
 # Environment variables
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome-stable"
 ENV PUPPETEER_BROWSER_PATH="google-chrome-stable"
 
 # Execute GitHub action
