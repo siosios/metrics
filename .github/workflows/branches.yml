@@ -9,7 +9,7 @@ on:
 jobs:
   notice:
     name: Notice for automated branches
-    runs-on: self-josted
+    runs-on: self-hosted
     steps:
       - name: Comment on pull request
         uses: actions/github-script@v7

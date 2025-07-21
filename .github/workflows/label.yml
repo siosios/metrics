@@ -5,7 +5,7 @@ on: pull_request_target
 jobs:
   label:
     name: Label issue and pull requests
-    runs-on: self-josted
+    runs-on: self-hosted
     steps:
       - uses: actions/labeler@v5
         with:

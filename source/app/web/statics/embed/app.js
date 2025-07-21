@@ -242,7 +242,7 @@
           `  push: {branches: ["master", "main"]}`,
           `jobs:`,
           `  github-metrics:`,
-          `    runs-on: self-josted`,
+          `    runs-on: self-hosted`,
           `    permissions:`,
           `      contents: write`,
           `    steps:`,

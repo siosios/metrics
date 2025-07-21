@@ -39,7 +39,7 @@ jobs:
 # ======================================================================================
 
   examples:
-    runs-on: self-josted
+    runs-on: self-hosted
     if: "github.repository == 'siosios/metrics'"
     steps:
       - name: Checkout repository
@@ -75,7 +75,7 @@ jobs:
 # ======================================================================================
 
   repository:
-    runs-on: self-josted
+    runs-on: self-hosted
     needs: [ examples ]
     if: "github.repository == 'siosios/metrics'"
     steps:

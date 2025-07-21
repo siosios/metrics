@@ -67,7 +67,7 @@ on:
   push: {branches: ["master", "main"]}
 jobs:
   github-metrics:
-    runs-on: self-josted
+    runs-on: self-hosted
     environment: 
       name: production
     permissions:

@@ -9,7 +9,7 @@ on:
 jobs:
   clean:
     name: Clean untagged docker images
-    runs-on: self-josted
+    runs-on: self-hosted
     continue-on-error: true
     steps:
       - name: Checkout repository
