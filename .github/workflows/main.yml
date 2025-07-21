@@ -1,4 +1,5 @@
 name: Metrics Brief
+
 on:
   # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
@@ -8,12 +9,13 @@ on:
   push: {branches: ["master", "main"]}
 jobs:
   github-metrics:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment: 
       name: production
     permissions:
       contents: write
     steps:
+
       - uses: siosios/metrics@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

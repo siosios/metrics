@@ -10,19 +10,19 @@ jobs:
   # Run linter to ensure new code respect coding rules
   lint:
     name: Lint code
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 45
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Setup NodeJS
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Setup metrics
-        run: npm ci
+        run: npm install
       - name: Check contributions requirements
         run: npm run test-contrib
         env:
@@ -33,39 +33,40 @@ jobs:
   # Build docker image from branch and run tests
   build:
     name: Build and test
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 45
     needs: [ lint ]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Format code with dprint
         run: |
           npm install -g dprint
           mkdir -v -p /home/runner/.cache/dprint/cache
           npx dprint fmt --config .github/config/dprint.json
-      - name: Build lowlighter/metrics:${{ github.head_ref || 'master' }}
+      - name: Build siosios/metrics:${{ github.head_ref || 'master' }}
         env:
           GIT_REF: ${{ github.head_ref || 'master' }}
-        run: docker build -t lowlighter/metrics:$(echo $GIT_REF | sed 's/[^a-z]/-/g') .
+        run: docker build -t siosios/metrics:$(echo $GIT_REF | sed 's/[^a-z]/-/g') .
       - name: Run tests
         env:
           GIT_REF: ${{ github.head_ref || 'master' }}
-        run: docker run --rm --entrypoint="" lowlighter/metrics:$(echo $GIT_REF | sed 's/[^a-z]/-/g') npm run test-metrics
+        run: docker run --rm --entrypoint="" siosios/metrics:$(echo $GIT_REF | sed 's/[^a-z]/-/g') sh -xc 'npm install --no-save && exec npm run test-metrics'
 
   # Run CodeQL on branch
   analyze:
     name: Analyze code
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 45
     needs: [ lint ]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: javascript
           config-file: ./.github/config/codeql.yml
       - name: Analyze code
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
+

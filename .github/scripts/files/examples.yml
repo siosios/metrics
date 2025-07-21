@@ -88,7 +88,7 @@ jobs:
 
       - name: Contributors
         if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@master
+        uses: mikey-/metrics@main
         with:
           filename: metrics.contributors.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -104,7 +104,7 @@ jobs:
           delay: 120
       - name: Sponsors
         if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@master
+        uses: mikey-/metrics@main
         with:
           filename: metrics.sponsors.svg
           token: ${{ secrets.METRICS_TOKEN_PERSONAL }}
@@ -120,7 +120,7 @@ jobs:
           delay: 120
       - name: Licenses
         if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@master
+        uses: mikey-/metrics@main
         with:
           filename: metrics.licenses.svg
           token: ${{ secrets.METRICS_TOKEN }}

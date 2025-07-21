@@ -39,7 +39,7 @@ jobs:
       actions: read
     outputs:
       followup: ${{ steps.spelling.outputs.followup }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     if: "contains(github.event_name, 'pull_request') || github.event_name == 'push'"
     concurrency:
       group: spelling-${{ github.event.pull_request.number || github.ref }}
@@ -48,13 +48,19 @@ jobs:
     steps:
     - name: check-spelling
       id: spelling
-      uses: check-spelling/check-spelling@v0.0.24
+      uses: check-spelling/check-spelling@v0.0.25
+
       with:
         experimental_apply_changes_via_bot: ${{ github.repository_owner != 'siosios' && 1 || 0 }}
         suppress_push_for_open_pull_request: 1
         checkout: true
         post_comment: 0
+        dictionary_source_prefixes: >
+          {
+            "cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20241114/dictionaries/"
+          }
         extra_dictionaries:
+          cspell:cpp/cpp.txt
           cspell:html/html.txt
           cspell:filetypes/filetypes.txt
           cspell:css/css.txt
@@ -62,11 +68,12 @@ jobs:
           cspell:django/django.txt
           cspell:npm/npm.txt
           cspell:aws/aws.txt
-        check_extra_dictionaries: ''
+          cspell:software-terms/software-terms.txt
+        extra_dictionary_limit: 50
 
   comment:
     name: Report
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: spelling
     permissions:
       contents: write
@@ -74,7 +81,7 @@ jobs:
     if: (success() || failure()) && needs.spelling.outputs.followup
     steps:
     - name: comment
-      uses: check-spelling/check-spelling@v0.0.24
+      uses: check-spelling/check-spelling@v0.0.25
       with:
         checkout: true
         task: ${{ needs.spelling.outputs.followup }}
@@ -85,7 +92,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     if: ${{
         github.repository_owner != 'siosios' &&
         github.event_name == 'issue_comment' &&
@@ -97,7 +104,7 @@ jobs:
       cancel-in-progress: false
     steps:
     - name: apply spelling updates
-      uses: check-spelling/check-spelling@v0.0.24
+      uses: check-spelling/check-spelling@v0.0.25
       with:
         experimental_apply_changes_via_bot: ${{ github.repository_owner != 'siosios' && 1 || 0 }}
         checkout: true

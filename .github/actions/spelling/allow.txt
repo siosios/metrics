@@ -44,3 +44,15 @@ xticks
 yargsparser
 yticked
 webtoken
+bitcoin
+coingecko
+dajneem
+emojis
+eur
+identicons
+jpy
+mikey
+octokits
+twemojis
+upvotes
+usd

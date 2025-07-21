@@ -8,7 +8,7 @@ on:
   push: {branches: ["master", "main"]}
 jobs:
   github-metrics:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment: 
       name: production
     permissions:
@@ -23,6 +23,8 @@ jobs:
           retries_delay: 900
           optimize: css, xml
 
+
+          
           # Options
           user: siosios
           template: classic
