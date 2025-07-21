@@ -114,7 +114,7 @@ jobs:
 
   # Test siosios/Metrics@master
   action-master-test:
-    name: Test siosios/Metrics@master
+    name: Test master
     runs-on: self-hosted
     needs: [ docker-master ]
     steps:
