@@ -6,7 +6,7 @@ on:
   workflow_call:
 jobs:
   examples:
-    runs-on: self-josted
+    runs-on: self-hosted
     if: "github.repository == 'siosios/metrics'"
     steps:
       - name: Checkout repository
