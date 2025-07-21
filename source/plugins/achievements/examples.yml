@@ -2,7 +2,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.achievements.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_achievements: yes
     plugin_achievements_only: sponsor, maintainer, octonaut
@@ -13,7 +13,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.achievements.compact.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_achievements: yes
     plugin_achievements_only: polyglot, stargazer, sponsor, deployer, member, maintainer, developer, scripter, packager, explorer, infographile, manager

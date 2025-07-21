@@ -6,11 +6,11 @@ on:
   workflow_dispatch:
   workflow_call:
     secrets:
-      METRICS_TOKEN:
+      metrics_TOKEN:
         required: true
-      METRICS_TOKEN_WITH_SCOPES:
+      metrics_TOKEN_WITH_SCOPES:
         required: true
-      METRICS_TOKEN_PERSONAL:
+      metrics_TOKEN_PERSONAL:
         required: true
       CHESS_TOKEN:
         required: true
@@ -39,8 +39,8 @@ jobs:
 # ======================================================================================
 
   examples:
-    runs-on: ubuntu-latest
-    if: "github.repository == 'lowlighter/metrics'"
+    runs-on: self-josted
+    if: "github.repository == 'siosios/metrics'"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -54,7 +54,7 @@ jobs:
       - name: Screenshot markdown example
         if: ${{ success() || failure() }}
         run: |
-          docker run --rm --entrypoint="" --volume=/tmp:/tmp ghcr.io/lowlighter/metrics:master node /metrics/.github/scripts/markdown_example.mjs
+          docker run --rm --entrypoint="" --volume=/tmp:/tmp ghcr.io/siosios/metrics:master node /metrics/.github/scripts/markdown_example.mjs
           sudo mv /tmp/metrics.markdown.png /metrics_renders/
       - name: Publish examples
         if: ${{ success() || failure() }}
@@ -71,13 +71,13 @@ jobs:
           git push --force
 
 # ======================================================================================
-# Special job used to render lowlighter/metrics repository assets
+# Special job used to render siosios/metrics repository assets
 # ======================================================================================
 
   repository:
-    runs-on: ubuntu-latest
+    runs-on: self-josted
     needs: [ examples ]
-    if: "github.repository == 'lowlighter/metrics'"
+    if: "github.repository == 'siosios/metrics'"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -91,10 +91,10 @@ jobs:
         uses: mikey-/metrics@main
         with:
           filename: metrics.contributors.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.metrics_TOKEN }}
           base: ""
           template: repository
-          user: lowlighter
+          user: siosios
           repo: metrics
           plugin_people: yes
           plugin_people_types: contributors
@@ -107,9 +107,9 @@ jobs:
         uses: mikey-/metrics@main
         with:
           filename: metrics.sponsors.svg
-          token: ${{ secrets.METRICS_TOKEN_PERSONAL }}
+          token: ${{ secrets.metrics_TOKEN_PERSONAL }}
           base: ""
-          user: lowlighter
+          user: siosios
           plugin_sponsors: yes
           plugin_sponsors_past: yes
           plugin_sponsors_sections: list
@@ -123,10 +123,10 @@ jobs:
         uses: mikey-/metrics@main
         with:
           filename: metrics.licenses.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.metrics_TOKEN }}
           base: ""
           template: repository
-          user: lowlighter
+          user: siosios
           repo: metrics
           plugin_licenses: yes
           plugin_licenses_setup: npm ci

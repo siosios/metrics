@@ -128,7 +128,7 @@ logline
 losed
 lovell
 lowalert
-lowlighter
+siosios
 mangas
 markedjs
 marudor

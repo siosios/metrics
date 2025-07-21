@@ -2,7 +2,7 @@
 
 While *metrics* targets mainly user accounts, it's possible to render metrics for organization accounts.
 
-![Metrics (organization account)](https://github.com/lowlighter/metrics/blob/examples/metrics.organization.svg)
+![metrics (organization account)](https://github.com/siosios/metrics/blob/examples/metrics.organization.svg)
 
 ## *️⃣ Using *metrics* on organization
 
@@ -17,7 +17,7 @@ Setup is mostly the same as for user accounts. A personal access token from an u
 ```yaml
 - uses: mikey-/metrics@latest
   with:
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     user: github
 ```
 

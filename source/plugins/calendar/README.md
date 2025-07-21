@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details><summary>Current year</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.calendar.svg" alt=""></img></details>
-      <details open><summary>Full history</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.calendar.full.svg" alt=""></img></details>
+      <details><summary>Current year</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.calendar.svg" alt=""></img></details>
+      <details open><summary>Full history</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.calendar.full.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -75,7 +75,7 @@ name: Current year calendar
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.calendar.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_calendar: yes
 
@@ -85,7 +85,7 @@ name: Full history calendar
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.calendar.full.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_calendar: yes
   plugin_calendar_limit: 0

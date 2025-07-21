@@ -16,10 +16,10 @@
   <tr>
 <td colspan="2"><table><tr>
 <td align="center">
-<img src="https://github.com/lowlighter/metrics/blob/examples/metrics.classic.svg" alt=""></img>
+<img src="https://github.com/siosios/metrics/blob/examples/metrics.classic.svg" alt=""></img>
 </td>
 <td align="center">
-<img src="https://github.com/lowlighter/metrics/blob/examples/metrics.organization.svg" alt=""></img>
+<img src="https://github.com/siosios/metrics/blob/examples/metrics.organization.svg" alt=""></img>
 </td>
 </tr></table></td>
   </tr>
@@ -208,7 +208,7 @@ name: Default metrics
 uses: mikey-/metrics@latest
 with:
   filename: metrics.base.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: header, activity, community, repositories, metadata
 
 ```

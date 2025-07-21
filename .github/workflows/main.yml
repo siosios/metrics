@@ -1,4 +1,4 @@
-name: Metrics Brief
+name: metrics Brief
 
 on:
   # Schedule daily updates
@@ -16,7 +16,7 @@ jobs:
       contents: write
     steps:
 
-      - uses: siosios/Metrics@master
+      - uses: siosios/metrics@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: github-metrics-brief.svg

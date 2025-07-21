@@ -2,6 +2,6 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.sponsorships.svg
-    token: ${{ secrets.METRICS_TOKEN_PERSONAL }}
+    token: ${{ secrets.metrics_TOKEN_PERSONAL }}
     base: ""
     plugin_sponsorships: yes

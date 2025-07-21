@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>GitHub sponsors card</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.sponsors.svg" alt=""></img></details>
-      <details><summary>GitHub sponsors full introduction</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.sponsors.full.svg" alt=""></img></details>
+      <details open><summary>GitHub sponsors card</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.sponsors.svg" alt=""></img></details>
+      <details><summary>GitHub sponsors full introduction</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.sponsors.full.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -109,7 +109,7 @@ name: Sponsors goal
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.sponsors.svg
-  token: ${{ secrets.METRICS_TOKEN_PERSONAL }}
+  token: ${{ secrets.metrics_TOKEN_PERSONAL }}
   base: ""
   plugin_sponsors: yes
   plugin_sponsors_sections: goal, list
@@ -121,7 +121,7 @@ name: Sponsors introduction
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.sponsors.full.svg
-  token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
+  token: ${{ secrets.metrics_TOKEN_WITH_SCOPES }}
   base: ""
   plugin_sponsors: yes
 

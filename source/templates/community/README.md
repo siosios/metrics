@@ -2,7 +2,7 @@
   <tr><th colspan="2"><h3>📕 Community templates</h3></th></tr>
   <tr><td colspan="2" align="center">
 
-  Community templates are a way to use official releases of [lowlighter/metrics](https://github.com/lowlighter/metrics) while using templates from external repositories (owned or not).
+  Community templates are a way to use official releases of [siosios/metrics](https://github.com/siosios/metrics) while using templates from external repositories (owned or not).
 
   </td></tr>
 </table>
@@ -57,18 +57,18 @@ Some templates may accept additional custom parameters that can be passed throug
 name: Using a community template
 uses: mikey-/metrics@latest
 with:
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   template: "@classic"
-  setup_community_templates: lowlighter/metrics@master:classic
+  setup_community_templates: siosios/metrics@master:classic
 
 ```
 ```yaml
 name: Using a trusted community template
 uses: mikey-/metrics@latest
 with:
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   template: "@terminal"
-  setup_community_templates: lowlighter/metrics@master:terminal+trust
+  setup_community_templates: siosios/metrics@master:terminal+trust
 
 ```
 <!--/examples-->
@@ -81,7 +81,7 @@ Templates creation requires you to be comfortable with HTML, CSS and [EJS](https
 
 To create a new template, clone and setup this repository first:
 ```shell
-git clone https://github.com/lowlighter/metrics.git
+git clone https://github.com/siosios/metrics.git
 cd metrics/
 npm install
 ```

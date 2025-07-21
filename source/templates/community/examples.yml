@@ -1,9 +1,9 @@
 - name: Using a community template
   uses: mikey-/metrics@latest
   with:
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     template: "@classic"
-    setup_community_templates: "lowlighter/metrics@master:classic"
+    setup_community_templates: "siosios/metrics@master:classic"
   test:
     modes:
       - action
@@ -11,9 +11,9 @@
 - name: Using a trusted community template
   uses: mikey-/metrics@latest
   with:
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     template: "@terminal"
-    setup_community_templates: "lowlighter/metrics@master:terminal+trust"
+    setup_community_templates: "siosios/metrics@master:terminal+trust"
   test:
     modes:
       - action

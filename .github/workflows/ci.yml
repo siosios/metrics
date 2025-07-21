@@ -72,11 +72,11 @@ jobs:
           docker push ghcr.io/siosios/metrics:master
       - name: Tag and publish beta and main images
         run: |
-          METRICS_VERSION=$(cat package.json | grep -Po '(?<="version": ")\d+[.]\d+(?=[.]0-beta")')
-          METRICS_VERSION_BETA="$METRICS_VERSION-beta"
-          if [[ ! -z "$METRICS_VERSION" ]]; then
-            docker tag ghcr.io/siosios/metrics:master ghcr.io/siosios/metrics:$METRICS_VERSION_BETA
-            docker push ghcr.io/siosios/metrics:$METRICS_VERSION_BETA
+          metrics_VERSION=$(cat package.json | grep -Po '(?<="version": ")\d+[.]\d+(?=[.]0-beta")')
+          metrics_VERSION_BETA="$metrics_VERSION-beta"
+          if [[ ! -z "$metrics_VERSION" ]]; then
+            docker tag ghcr.io/siosios/metrics:master ghcr.io/siosios/metrics:$metrics_VERSION_BETA
+            docker push ghcr.io/siosios/metrics:$metrics_VERSION_BETA
           fi
           docker tag ghcr.io/siosios/metrics:master ghcr.io/siosios/metrics:main
           docker push ghcr.io/siosios/metrics:main
@@ -112,18 +112,18 @@ jobs:
     needs: action-master-test
     uses: siosios/metrics/.github/workflows/examples.yml@master
     secrets:
-      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
-      METRICS_TOKEN_WITH_SCOPES: ${{ secrets.METRICS_TOKEN }}
-      METRICS_TOKEN_PERSONAL: ${{ secrets.METRICS_TOKEN }}
-      CHESS_TOKEN: ${{ secrets.METRICS_TOKEN }}
-      PAGESPEED_TOKEN: ${{ secrets.METRICS_TOKEN }}
-      GOOGLE_MAP_TOKEN: ${{ secrets.METRICS_TOKEN }}
-      SPLATOON_TOKEN: ${{ secrets.METRICS_TOKEN }}
-      SPLATOON_STATINK_TOKEN: ${{ secrets.METRICS_TOKEN }}
+      metrics_TOKEN: ${{ secrets.metrics_TOKEN }}
+      metrics_TOKEN_WITH_SCOPES: ${{ secrets.metrics_TOKEN }}
+      metrics_TOKEN_PERSONAL: ${{ secrets.metrics_TOKEN }}
+      CHESS_TOKEN: ${{ secrets.metrics_TOKEN }}
+      PAGESPEED_TOKEN: ${{ secrets.metrics_TOKEN }}
+      GOOGLE_MAP_TOKEN: ${{ secrets.metrics_TOKEN }}
+      SPLATOON_TOKEN: ${{ secrets.metrics_TOKEN }}
+      SPLATOON_STATINK_TOKEN: ${{ secrets.metrics_TOKEN }}
       SPOTIFY_TOKENS: ${{ secrets.SPOTIFY_TOKENS }}
       STOCK_TOKEN: ${{ secrets.STOCK_TOKEN }}
       TWITTER_TOKEN: ${{ secrets.TWITTER_TOKEN }}
-      WAKATIME_TOKEN: ${{ secrets.METRICS_TOKEN }}
+      WAKATIME_TOKEN: ${{ secrets.metrics_TOKEN }}
 
   publish-examples-presets:
     name: Publish examples (presets)

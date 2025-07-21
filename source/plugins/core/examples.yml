@@ -3,14 +3,14 @@
   with:
     filename: metrics.organization.svg
     user: github
-    token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
+    token: ${{ secrets.metrics_TOKEN_WITH_SCOPES }}
     base: header, repositories
 
 - name: Large display
   uses: mikey-/metrics@latest
   with:
     filename: metrics.large.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     config_display: large
 
 - name: JSON metrics
@@ -18,7 +18,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.example.json
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     config_output: json
 
 - name: PNG metrics
@@ -26,24 +26,24 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.example.png
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     config_output: png
 
-- name: Metrics insights
+- name: metrics insights
   if: ${{ success() || failure() }}
   uses: mikey-/metrics@latest
   with:
     filename: metrics.insights.html
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     config_output: insights
 
 - name: Presets
   uses: mikey-/metrics@latest
   with:
     filename: metrics.presets.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: header, repositories
-    config_presets: https://raw.githubusercontent.com/lowlighter/metrics/presets/lunar-red/preset.yaml
+    config_presets: https://raw.githubusercontent.com/siosios/metrics/presets/lunar-red/preset.yaml
   prod:
     skip: true
   test:
@@ -54,7 +54,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.error.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_projects: yes
   prod:

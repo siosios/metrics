@@ -1,5 +1,5 @@
-query AchievementsMetrics {
- 	repository(owner: "lowlighter", name: "metrics") {
+query Achievementsmetrics {
+ 	repository(owner: "siosios", name: "metrics") {
     viewerHasStarred
   }
   viewer {

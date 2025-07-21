@@ -6,7 +6,7 @@ on:
   workflow_call:
 jobs:
   examples:
-    runs-on: ubuntu-latest
+    runs-on: self-josted
     if: "github.repository == 'siosios/metrics'"
     steps:
       - name: Checkout repository

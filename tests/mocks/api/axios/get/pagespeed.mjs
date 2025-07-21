@@ -29,7 +29,7 @@ export default function({faker, url, options, login = faker.internet.userName()}
               },
               metrics: {
                 id: "metrics",
-                title: "Metrics",
+                title: "metrics",
                 score: null,
                 details: {
                   items: [

@@ -3,11 +3,11 @@
   with:
     template: repository
     token: MOCKED_TOKEN
-    user: lowlighter
+    user: siosios
     repo: metrics
     plugin_lines: yes
     plugin_followup: yes
     plugin_projects: yes
-    plugin_projects_repositories: lowlighter/metrics/projects/1
+    plugin_projects_repositories: siosios/metrics/projects/1
     use_mocked_data: yes
     verify: yes

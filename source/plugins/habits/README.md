@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Recent activity charts</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.habits.charts.svg" alt=""></img></details>
-      <details open><summary>Mildly interesting facts</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.habits.facts.svg" alt=""></img></details>
+      <details open><summary>Recent activity charts</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.habits.charts.svg" alt=""></img></details>
+      <details open><summary>Mildly interesting facts</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.habits.facts.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -191,7 +191,7 @@ name: Mildly interesting facts
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.habits.facts.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_habits: yes
   plugin_habits_facts: yes
@@ -204,7 +204,7 @@ name: Recent activity charts
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.habits.charts.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_habits: yes
   plugin_habits_facts: no

@@ -31,7 +31,7 @@ runs-on: self-hosted
 steps:
   - uses: mikey-/metrics@latest
     with:
-      token: ${{ secrets.METRICS_TOKEN }}
+      token: ${{ secrets.metrics_TOKEN }}
 ```
 
-> 💡 To easily debug workflow errors, use [`debug: yes`](https://github.com/lowlighter/metrics/tree/master/source/plugins/core#debug) option
+> 💡 To easily debug workflow errors, use [`debug: yes`](https://github.com/siosios/metrics/tree/master/source/plugins/core#debug) option

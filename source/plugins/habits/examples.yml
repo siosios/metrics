@@ -2,7 +2,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.habits.facts.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_habits: yes
     plugin_habits_facts: yes
@@ -13,7 +13,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.habits.charts.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_habits: yes
     plugin_habits_facts: no

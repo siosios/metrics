@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github.com/lowlighter/metrics/blob/examples/metrics.markdown.png" alt=""></img>
+      <img src="https://github.com/siosios/metrics/blob/examples/metrics.markdown.png" alt=""></img>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -67,7 +67,7 @@ It also means that to access plugins data they must be enabled and configured be
 
 A few properties are aliased in [/source/templates/markdown/template.mjs](/source/templates/markdown/template.mjs) for convenience.
 
-Use `config_output: json` to dump all available data for a given configuration. Power users can also directly read [metrics source code](https://github.com/lowlighter/metrics) to know what is exposed.
+Use `config_output: json` to dump all available data for a given configuration. Power users can also directly read [metrics source code](https://github.com/siosios/metrics) to know what is exposed.
 
 For a quick overview, it is also possible to use [metrics.lecoq.io/{username}?config.output=json](https://metrics.lecoq.io).
 
@@ -82,19 +82,19 @@ Several plugins have a markdown version which provides better usability, usually
 <%- await include(`partials/posts.ejs`) %>
 ```
 
-**[✒️ Recent posts from dev.to](https://dev.to/lowlighter)**
+**[✒️ Recent posts from dev.to](https://dev.to/siosios)**
 <table>
   <tr>
     <td rowspan="2" width="280">
       <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--rbmokFTg--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/idot5ak9irxtu948bgzs.png" alt="" width="280">
     </td>
     <th>
-      <a href="https://dev.to/lowlighter/metrics-v3-0-the-ultimate-tool-to-pimp-your-github-profile-g7p">Metrics v3.0, the ultimate tool to pimp your GitHub profile!</a>
+      <a href="https://dev.to/siosios/metrics-v3-0-the-ultimate-tool-to-pimp-your-github-profile-g7p">metrics v3.0, the ultimate tool to pimp your GitHub profile!</a>
     </th>
   </tr>
   <tr>
     <td>
-      Metrics is an extensive SVG images generator plugged with various APIs (GitHub, Twitter, Spotify, ......
+      metrics is an extensive SVG images generator plugged with various APIs (GitHub, Twitter, Spotify, ......
       <br>
       <i>Published on 4 Jan 2021</i>
     </td>
@@ -126,7 +126,7 @@ The `embed()` function takes two arguments:
 <%- await embed(`example-languages-pdf`, {languages:true, languages_details:"percentage, bytes-size", config_display:"large"}) %>
 ```
 
-<img src="https://github.com/lowlighter/metrics/blob/examples/.cache/example-languages-pdf.svg">
+<img src="https://github.com/siosios/metrics/blob/examples/.cache/example-languages-pdf.svg">
 
 > 💡 The `plugin_` prefix can be dropped for convenience
 
@@ -142,9 +142,9 @@ with:
   template: markdown
   filename: metrics.markdown.md
   markdown: >-
-    https://raw.githubusercontent.com/lowlighter/metrics/examples/metrics.markdown.template.md
+    https://raw.githubusercontent.com/siosios/metrics/examples/metrics.markdown.template.md
   config_output: markdown
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
 
 ```
 ```yaml
@@ -154,7 +154,7 @@ with:
   template: markdown
   filename: metrics.markdown.full.md
   markdown: >-
-    https://raw.githubusercontent.com/lowlighter/metrics/master/source/templates/markdown/example.md
+    https://raw.githubusercontent.com/siosios/metrics/master/source/templates/markdown/example.md
   config_output: markdown
   plugin_activity: yes
   plugin_activity_limit: 7
@@ -172,7 +172,7 @@ with:
   plugin_topics_limit: 24
   plugin_isocalendar: yes
   plugin_languages: yes
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
 
 ```
 ```yaml
@@ -182,7 +182,7 @@ with:
   template: markdown
   filename: metrics.markdown.pdf
   markdown: >-
-    https://raw.githubusercontent.com/lowlighter/metrics/master/source/templates/markdown/example.pdf.md
+    https://raw.githubusercontent.com/siosios/metrics/master/source/templates/markdown/example.pdf.md
   config_output: markdown-pdf
   plugin_rss: yes
   plugin_rss_source: https://news.ycombinator.com/rss
@@ -190,7 +190,7 @@ with:
   plugin_isocalendar: yes
   config_twemoji: yes
   config_padding: 5%
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
 
 ```
 <!--/examples-->

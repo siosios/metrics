@@ -2,7 +2,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.activity.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_activity: yes
     plugin_activity_limit: 5

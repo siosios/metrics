@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Compact display</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.achievements.compact.svg" alt=""></img></details>
-      <details><summary>Detailed display</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.achievements.svg" alt=""></img></details>
+      <details open><summary>Compact display</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.achievements.compact.svg" alt=""></img></details>
+      <details><summary>Detailed display</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.achievements.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -132,7 +132,7 @@ name: Detailed display
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.achievements.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_achievements: yes
   plugin_achievements_only: sponsor, maintainer, octonaut
@@ -143,7 +143,7 @@ name: Compact display
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.achievements.compact.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_achievements: yes
   plugin_achievements_only: >-

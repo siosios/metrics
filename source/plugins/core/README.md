@@ -125,10 +125,10 @@ Options resolution is done in the following order:
 ```yaml
 - uses: mikey-/metrics@latest
   with:
-    config_presets: https://raw.githubusercontent.com/lowlighter/metrics/presets/lunar-red/preset.yaml
+    config_presets: https://raw.githubusercontent.com/siosios/metrics/presets/lunar-red/preset.yaml
 ```
 
-Some presets are hosted on this repository on the [`@presets`](https://github.com/lowlighter/metrics/tree/presets) branch and can be used directly by using their identifier prefixed by an arobase (`@`).
+Some presets are hosted on this repository on the [`@presets`](https://github.com/siosios/metrics/tree/presets) branch and can be used directly by using their identifier prefixed by an arobase (`@`).
 
 *Example: using a pre-defined configuration preset*
 ```yaml
@@ -139,7 +139,7 @@ Some presets are hosted on this repository on the [`@presets`](https://github.co
 
 > ⚠️ `🔐 Tokens` and options marked with `⏯️ Cannot be preset`, as they suggest, cannot be preset and thus requires to be explicitly defined to be set.
 
-> ℹ️ Presets configurations use [schemas](https://github.com/lowlighter/metrics/tree/presets/%40schema) to ensure compatibility between format changes
+> ℹ️ Presets configurations use [schemas](https://github.com/siosios/metrics/tree/presets/%40schema) to ensure compatibility between format changes
 
 ## 🎨 Custom CSS styling
 
@@ -270,13 +270,13 @@ When using a PDF output, it is advised to set `config_base64: yes` to encode emb
     config_base64: yes
 ```
 
-## ✨ Render `Metrics insights` statically
+## ✨ Render `metrics insights` statically
 
-It is possible to generate a self-contained HTML file containing `✨ Metrics insights` output by using `config_output: insights`.
+It is possible to generate a self-contained HTML file containing `✨ metrics insights` output by using `config_output: insights`.
 
-> 💡 Note that like `✨ Metrics insights` content is not configurable, thus any other plugin option will actually be ignored
+> 💡 Note that like `✨ metrics insights` content is not configurable, thus any other plugin option will actually be ignored
 
-*Example: output `✨ Metrics insights` report*
+*Example: output `✨ metrics insights` report*
 ```yaml
 - uses: mikey-/metrics@latest
   with:
@@ -437,7 +437,7 @@ To reduce filesize and decrease loading time, *metrics* offers several optimizat
 
 ## 🐳 Faster execution with prebuilt docker images
 
-When using `lowlighter/metrics` official releases as a GitHub Action, a prebuilt docker container image will be pulled from [GitHub Container Registry](https://github.com/users/lowlighter/packages/container/package/metrics). It allows to significantly reduce workflow execution time.
+When using `siosios/metrics` official releases as a GitHub Action, a prebuilt docker container image will be pulled from [GitHub Container Registry](https://github.com/users/siosios/packages/container/package/metrics). It allows to significantly reduce workflow execution time.
 
 > 💡 This option is enabled by default!
 
@@ -637,7 +637,7 @@ When doing so, any settings which defaults on user fetched values will not be te
   <tr>
     <td nowrap="nowrap"><h4><code>setup_community_templates</code></h4></td>
     <td rowspan="2"><p>Community templates to setup</p>
-<p>See <a href="https://github.com/lowlighter/metrics/blob/master/source/templates/community/README.md">community templates guide</a> for more informations</p>
+<p>See <a href="https://github.com/siosios/metrics/blob/master/source/templates/community/README.md">community templates guide</a> for more informations</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
@@ -653,7 +653,7 @@ When doing so, any settings which defaults on user fetched values will not be te
     <td nowrap="nowrap"><h4><code>template</code></h4></td>
     <td rowspan="2"><p>Template</p>
 <p>Community templates must be prefixed by at sign (<code>@</code>)
-See <a href="https://github.com/lowlighter/metrics/blob/master/README.md#%EF%B8%8F-templates">list of supported templates</a></p>
+See <a href="https://github.com/siosios/metrics/blob/master/README.md#%EF%B8%8F-templates">list of supported templates</a></p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
@@ -818,7 +818,7 @@ Size must be a supported icon size (12, 16 or 24).
 <li><code>regular</code>: 480px width</li>
 <li><code>large</code>: 960px width (may not be supported by all templates)</li>
 <li><code>columns</code>: Full width with auto-sizing (two columns for desktops, and one column for mobile)<ul>
-<li>known issue: <a href="https://github.com/lowlighter/metrics/issues/374">https://github.com/lowlighter/metrics/issues/374</a></li>
+<li>known issue: <a href="https://github.com/siosios/metrics/issues/374">https://github.com/siosios/metrics/issues/374</a></li>
 </ul>
 </li>
 </ul>
@@ -889,7 +889,7 @@ It can result in cropped or oversized outputs.</p>
 <li><code>json</code>: JSON data dump</li>
 <li><code>markdown</code>: Markdown rendered file</li>
 <li><code>markdown-pdf</code>: PDF from markdown rendered file</li>
-<li><code>insights</code>: Metrics Insights self-contained HTML file (not configurable)</li>
+<li><code>insights</code>: metrics Insights self-contained HTML file (not configurable)</li>
 </ul>
 <img width="900" height="1" alt=""></td>
   </tr>
@@ -1055,7 +1055,7 @@ Be sure to disable this option when asking for help or submitting bug reports.</
   </tr>
   <tr>
     <td nowrap="nowrap"><h4><code>use_prebuilt_image</code></h4></td>
-    <td rowspan="2"><p>Use pre-built docker image from <a href="https://github.com/lowlighter/metrics/pkgs/container/metrics">GitHub container registry</a></p>
+    <td rowspan="2"><p>Use pre-built docker image from <a href="https://github.com/siosios/metrics/pkgs/container/metrics">GitHub container registry</a></p>
 <p>It allows to save build time and make job significantly faster, and there is almost no reason to disable this settings.
 This option has no effects on forks (images will always be rebuilt from Dockerfile)</p>
 <img width="900" height="1" alt=""></td>

@@ -6,11 +6,11 @@ on:
   workflow_dispatch:
   workflow_call:
     secrets:
-      METRICS_TOKEN:
+      metrics_TOKEN:
         required: true
-      METRICS_TOKEN_WITH_SCOPES:
+      metrics_TOKEN_WITH_SCOPES:
         required: true
-      METRICS_TOKEN_PERSONAL:
+      metrics_TOKEN_PERSONAL:
         required: true
       CHESS_TOKEN:
         required: true
@@ -37,7 +37,7 @@ jobs:
 # ======================================================================================
 
   examples:
-    runs-on: ubuntu-latest
+    runs-on: self-josted
     if: "github.repository == 'siosios/metrics'"
     steps:
       - name: Checkout repository
@@ -1292,7 +1292,7 @@ jobs:
 # ======================================================================================
 
   repository:
-    runs-on: ubuntu-latest
+    runs-on: self-josted
     needs: [ examples ]
     if: "github.repository == 'siosios/metrics'"
     steps:

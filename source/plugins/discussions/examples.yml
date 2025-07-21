@@ -2,7 +2,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.discussions.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_discussions: yes
     plugin_discussions_categories_limit: 8

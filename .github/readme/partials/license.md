@@ -2,7 +2,7 @@
 
 ```
 MIT License
-Copyright (c) 2020-present lowlighter
+Copyright (c) 2020-present siosios
 ```
 
-![Sponsors](https://github.com/lowlighter/metrics/blob/examples/metrics.sponsors.svg)
+![Sponsors](https://github.com/siosios/metrics/blob/examples/metrics.sponsors.svg)

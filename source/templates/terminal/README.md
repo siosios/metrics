@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github.com/lowlighter/metrics/blob/examples/metrics.terminal.svg" alt=""></img>
+      <img src="https://github.com/siosios/metrics/blob/examples/metrics.terminal.svg" alt=""></img>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -32,7 +32,7 @@ uses: mikey-/metrics@latest
 with:
   template: terminal
   filename: metrics.terminal.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: header, metadata
 
 ```

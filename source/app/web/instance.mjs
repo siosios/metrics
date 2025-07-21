@@ -303,7 +303,7 @@ export default async function({sandbox = false} = {}) {
   //Pending requests
   const pending = new Map()
 
-  //Metrics insights
+  //metrics insights
   if (conf.settings.modes.includes("insights")) {
     console.debug("metrics/app > setup insights mode")
     //Legacy routes
@@ -407,7 +407,7 @@ export default async function({sandbox = false} = {}) {
     app.get("/insights/*", (req, res) => res.status(405).send("Method not allowed: this endpoint is not available"))
   }
 
-  //Metrics embed
+  //metrics embed
   if (conf.settings.modes.includes("embed")) {
     console.debug("metrics/app > setup embed mode")
     //Static routes

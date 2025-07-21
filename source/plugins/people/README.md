@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Related to a user</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.people.followers.svg" alt=""></img></details>
-      <details><summary>Related to a repository</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.people.repository.svg" alt=""></img></details>
+      <details open><summary>Related to a user</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.people.followers.svg" alt=""></img></details>
+      <details><summary>Related to a repository</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.people.repository.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -171,7 +171,7 @@ name: Followers
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.people.followers.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_people: yes
   plugin_people_types: followers
@@ -182,7 +182,7 @@ name: Contributors and sponsors
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.people.repository.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   template: repository
   repo: metrics

@@ -2,7 +2,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.16personalities.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_16personalities: yes
     plugin_16personalities_url: ${{ secrets.SIXTEEN_PERSONALITIES_URL }}

@@ -2,7 +2,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.lines.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: repositories
     plugin_lines: yes
     plugin_lines_delay: 30
@@ -11,7 +11,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.lines.history.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_lines: yes
     plugin_lines_delay: 30
@@ -21,4 +21,4 @@
     repositories_skipped: |
       @use.patterns
       */*
-      +lowlighter/metrics
+      +siosios/metrics

@@ -1,4 +1,4 @@
-name: Metrics Minimal
+name: metrics Minimal
 on:
   # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: siosios/Metrics@master
+      - uses: siosios/metrics@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: github-metrics-minimal.svg

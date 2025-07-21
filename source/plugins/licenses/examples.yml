@@ -1,7 +1,7 @@
 - name: Licenses and permissions
   with:
     filename: metrics.plugin.licenses.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     template: repository
     repo: metrics
@@ -16,7 +16,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.licenses.ratio.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     template: repository
     repo: metrics

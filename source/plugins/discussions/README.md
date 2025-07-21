@@ -19,7 +19,7 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.discussions.svg" alt=""></img>
+      <img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.discussions.svg" alt=""></img>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -76,7 +76,7 @@ name: GitHub Discussions
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.discussions.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_discussions: yes
   plugin_discussions_categories_limit: 8

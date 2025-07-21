@@ -19,7 +19,7 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.gists.svg" alt=""></img>
+      <img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.gists.svg" alt=""></img>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -54,7 +54,7 @@ name: Gists
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.gists.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_gists: yes
 

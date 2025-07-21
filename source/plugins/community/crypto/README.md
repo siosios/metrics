@@ -84,7 +84,7 @@
 
 <!--examples-->
 ```yaml
-name: Crypto Metrics
+name: Crypto metrics
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.crypto.svg

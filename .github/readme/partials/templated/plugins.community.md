@@ -53,7 +53,7 @@ Please respect the following guidelines:
 
 To create a new plugin, clone and setup this repository first:
 ```shell
-git clone https://github.com/lowlighter/metrics.git
+git clone https://github.com/siosios/metrics.git
 cd metrics/
 npm install
 ```
@@ -314,7 +314,7 @@ It uses the same syntax as GitHub action and looks like below:
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.{name}.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_{name}: yes
   prod:
@@ -384,7 +384,7 @@ You're almost done, review the following checklist before submitting a pull requ
 - [x] I am ready!
   - [x] Checkout any generated files (in fact, don't run `npm run build`)
   - [x] Commit and push your changes (commits are squashed, no need to rebase)
-  - [x] Open a new [pull request](https://github.com/lowlighter/metrics/pulls)
+  - [x] Open a new [pull request](https://github.com/siosios/metrics/pulls)
   - [x] Post a screenshot or a render in the pull request so it can be previewed
 
 > 💡 A pull request **will need** to have passing builds and an example screenshot if you want to get it merged.

@@ -20,8 +20,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>For a user or an organization</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.introduction.svg" alt=""></img></details>
-      <details><summary>For a repository</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.introduction.repository.svg" alt=""></img></details>
+      <details open><summary>For a user or an organization</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.introduction.svg" alt=""></img></details>
+      <details><summary>For a repository</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.introduction.repository.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -66,7 +66,7 @@ name: Organization introduction
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.introduction.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   user: github
   base: header
   plugin_introduction: yes
@@ -77,7 +77,7 @@ name: Repository introduction
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.introduction.repository.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   template: repository
   repo: metrics
   base: header

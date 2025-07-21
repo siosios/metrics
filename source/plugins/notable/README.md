@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Indepth analysis</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.notable.indepth.svg" alt=""></img></details>
-      <details><summary>Contributions in organizations only</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.notable.svg" alt=""></img></details>
+      <details open><summary>Indepth analysis</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.notable.indepth.svg" alt=""></img></details>
+      <details><summary>Contributions in organizations only</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.notable.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -155,7 +155,7 @@ name: Contributions
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.notable.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_notable: yes
 
@@ -165,7 +165,7 @@ name: Indepth analysis
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.notable.indepth.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_notable: yes
   plugin_notable_indepth: yes

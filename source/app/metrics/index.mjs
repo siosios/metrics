@@ -61,7 +61,7 @@ export default async function metrics({login, q}, {graphql, rest, plugins, conf,
       }
     }
 
-    //Metrics insights
+    //metrics insights
     if (convert === "insights")
       return metrics.insights.output({login, imports, conf}, {graphql, rest, Plugins, Templates})
 
@@ -241,7 +241,7 @@ export default async function metrics({login, q}, {graphql, rest, plugins, conf,
   }
 }
 
-//Metrics insights
+//metrics insights
 metrics.insights = async function({login}, {graphql, rest, conf, callbacks}, {Plugins, Templates}) {
   return metrics({login, q: metrics.insights.q}, {graphql, rest, plugins: metrics.insights.plugins, conf, callbacks, convert: "json"}, {Plugins, Templates})
 }
@@ -291,7 +291,7 @@ metrics.insights.plugins = {
   calendar: {enabled: true},
 }
 
-//Metrics insights static render
+//metrics insights static render
 metrics.insights.output = async function({login, imports, conf}, {graphql, rest, Plugins, Templates}) {
   //Server
   console.debug(`metrics/compute/${login} > insights`)
@@ -315,7 +315,7 @@ metrics.insights.output = async function({login, imports, conf}, {graphql, rest,
     <html>
       <head>
         <meta charset="utf-8">
-        <title>Metrics insights: ${login}</title>
+        <title>metrics insights: ${login}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
       </head>
       <body>

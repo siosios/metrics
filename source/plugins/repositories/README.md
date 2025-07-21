@@ -24,8 +24,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Featured</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.repositories.svg" alt=""></img></details>
-      <details><summary>Pinned</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.repositories.pinned.svg" alt=""></img></details>
+      <details open><summary>Featured</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.repositories.svg" alt=""></img></details>
+      <details><summary>Pinned</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.repositories.pinned.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -151,10 +151,10 @@ name: Featured repositories
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.repositories.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_repositories: yes
-  plugin_repositories_featured: lowlighter/metrics
+  plugin_repositories_featured: siosios/metrics
 
 ```
 ```yaml
@@ -162,7 +162,7 @@ name: Pinned repositories
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.repositories.pinned.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_repositories: yes
   plugin_repositories_pinned: 2

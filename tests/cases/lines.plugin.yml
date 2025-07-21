@@ -19,6 +19,6 @@
     repositories_skipped: |
       @use.patterns
       */*
-      +lowlighter/metrics
+      +siosios/metrics
     use_mocked_data: 'yes'
     verify: 'yes'

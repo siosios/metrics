@@ -11,8 +11,8 @@ inputs:
 
 # ====================================================================================
 # Action metadata
-name: Metrics embed
-author: lowlighter
+name: metrics embed
+author: siosios
 description: An infographics generator with 40+ plugins and 300+ options to display stats about your GitHub account!
 branding:
   icon: user-check
@@ -28,8 +28,8 @@ runs:
         <%- runsh.split("\n").map((line, i) => `${i ? "        " : ""}${line}`).join("\n") %>
       shell: bash
       env:
-        METRICS_ACTION: ${{ github.action }}
-        METRICS_ACTION_PATH: ${{ github.action_path }}
-        METRICS_USE_PREBUILT_IMAGE: ${{ inputs.use_prebuilt_image }}
+        metrics_ACTION: ${{ github.action }}
+        metrics_ACTION_PATH: ${{ github.action_path }}
+        metrics_USE_PREBUILT_IMAGE: ${{ inputs.use_prebuilt_image }}
         INPUTS: ${{ toJson(inputs) }}
         TZ: ${{ inputs.config_timezone }}

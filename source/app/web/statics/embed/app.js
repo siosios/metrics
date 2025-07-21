@@ -116,15 +116,15 @@
       oauth: false,
       docs: {
         overview: {
-          link: "https://github.com/lowlighter/metrics#-documentation",
+          link: "https://github.com/siosios/metrics#-documentation",
           name: "Complete documentation",
         },
         markdown: {
-          link: "https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/shared.md",
+          link: "https://github.com/siosios/metrics/blob/master/.github/readme/partials/documentation/setup/shared.md",
           name: "Setup using the shared instance",
         },
         action: {
-          link: "https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md",
+          link: "https://github.com/siosios/metrics/blob/master/.github/readme/partials/documentation/setup/action.md",
           name: "Setup using GitHub Action on a profile repository",
         },
       },
@@ -220,7 +220,7 @@
       },
       //Embedded generated code
       embed() {
-        return `![Metrics](${this.url})`
+        return `![metrics](${this.url})`
       },
       //Token scopes
       scopes() {
@@ -232,8 +232,8 @@
       //GitHub action auto-generated code
       action() {
         return [
-          `# Visit https://github.com/lowlighter/metrics#-documentation for full reference`,
-          `name: Metrics`,
+          `# Visit https://github.com/siosios/metrics#-documentation for full reference`,
+          `name: metrics`,
           `on:`,
           `  # Schedule updates (each hour)`,
           `  schedule: [{cron: "0 * * * *"}]`,
@@ -242,7 +242,7 @@
           `  push: {branches: ["master", "main"]}`,
           `jobs:`,
           `  github-metrics:`,
-          `    runs-on: ubuntu-latest`,
+          `    runs-on: self-josted`,
           `    permissions:`,
           `      contents: write`,
           `    steps:`,
@@ -262,7 +262,7 @@
             : [
               `          # Current configuration doesn't require a GitHub token`,
             ]),
-          `          token: ${this.scopes.size ? `${"$"}{{ secrets.METRICS_TOKEN }}` : "NOT_NEEDED"}`,
+          `          token: ${this.scopes.size ? `${"$"}{{ secrets.metrics_TOKEN }}` : "NOT_NEEDED"}`,
           ``,
           `          # Options`,
           ...(this.user ? [`          user: ${this.user}`] : []),

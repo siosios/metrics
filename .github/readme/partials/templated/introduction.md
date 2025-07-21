@@ -96,8 +96,8 @@ Generate metrics that can be embedded everywhere, including your GitHub profile 
     <th colspan="2"><h2>🦑 Try it now!</h2></th>
   </tr>
   <tr>
-    <th><a href="https://metrics.lecoq.io/embed">📊 Metrics embed</a></th>
-    <th><a href="https://metrics.lecoq.io/insights">✨ Metrics insights</a></th>
+    <th><a href="https://metrics.lecoq.io/embed">📊 metrics embed</a></th>
+    <th><a href="https://metrics.lecoq.io/insights">✨ metrics insights</a></th>
   </tr>
   <tr>
     <td align="center">
@@ -113,13 +113,13 @@ Generate metrics that can be embedded everywhere, including your GitHub profile 
   </tr>
   <tr>
     <td align="center" colspan="2">
-      Test latest features and patches on <code><a href="https://beta-metrics.lecoq.io">🧪 Metrics beta</a></code>!
+      Test latest features and patches on <code><a href="https://beta-metrics.lecoq.io">🧪 metrics beta</a></code>!
     </td>
   </tr>
   <tr>
     <td align="center" colspan="2">
       <b>Power user?</b><br>
-      <a href="https://github.com/lowlighter/metrics/fork">Fork this repository</a> and edit HTML, CSS, JS and <a href="https://github.com/mde/ejs">EJS</a> for even more customization!
+      <a href="https://github.com/siosios/metrics/fork">Fork this repository</a> and edit HTML, CSS, JS and <a href="https://github.com/mde/ejs">EJS</a> for even more customization!
     </td>
   </tr>
 </table>

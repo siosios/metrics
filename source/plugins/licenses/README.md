@@ -27,8 +27,8 @@ This could result in compromised server!</p>
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Permissions, limitations and conditions</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.licenses.svg" alt=""></img></details>
-      <details open><summary>Licenses overview</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.licenses.ratio.svg" alt=""></img></details>
+      <details open><summary>Permissions, limitations and conditions</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.licenses.svg" alt=""></img></details>
+      <details open><summary>Licenses overview</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.licenses.ratio.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -124,7 +124,7 @@ The example command is intended for NodeJs projects that use <code>npm</code> to
 name: Licenses and permissions
 with:
   filename: metrics.plugin.licenses.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   template: repository
   repo: metrics
@@ -137,7 +137,7 @@ name: Licenses with open-source ratio graphs
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.licenses.ratio.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   template: repository
   repo: metrics

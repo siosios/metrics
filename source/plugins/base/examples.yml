@@ -2,5 +2,5 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.base.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: header, activity, community, repositories, metadata

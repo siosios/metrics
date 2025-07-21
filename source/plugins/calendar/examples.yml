@@ -2,7 +2,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.calendar.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_calendar: yes
 
@@ -10,7 +10,7 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.calendar.full.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_calendar: yes
     plugin_calendar_limit: 0

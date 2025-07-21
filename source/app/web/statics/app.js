@@ -87,11 +87,11 @@
     },
     //Methods
     methods: {
-      //Metrics insights
+      //metrics insights
       async insights() {
         window.location.href = `/insights?user=${this.user1}`
       },
-      //Metrics embed
+      //metrics embed
       async embed() {
         window.location.href = `/embed?user=${this.user2}`
       },

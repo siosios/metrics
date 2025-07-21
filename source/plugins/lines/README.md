@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Repositories and diff history</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.lines.history.svg" alt=""></img></details>
-      <details><summary>Compact display in base plugin</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.lines.svg" alt=""></img></details>
+      <details open><summary>Repositories and diff history</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.lines.history.svg" alt=""></img></details>
+      <details><summary>Compact display in base plugin</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.lines.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -127,7 +127,7 @@ name: Compact display in base plugin
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.lines.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: repositories
   plugin_lines: yes
   plugin_lines_delay: 30
@@ -138,7 +138,7 @@ name: Repositories and diff history
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.lines.history.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_lines: yes
   plugin_lines_delay: 30
@@ -148,7 +148,7 @@ with:
   repositories_skipped: |
     @use.patterns
     */*
-    +lowlighter/metrics
+    +siosios/metrics
 
 ```
 <!--/examples-->

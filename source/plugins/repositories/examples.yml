@@ -2,16 +2,16 @@
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.repositories.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_repositories: yes
-    plugin_repositories_featured: lowlighter/metrics
+    plugin_repositories_featured: siosios/metrics
 
 - name: Pinned repositories
   uses: mikey-/metrics@latest
   with:
     filename: metrics.plugin.repositories.pinned.svg
-    token: ${{ secrets.METRICS_TOKEN }}
+    token: ${{ secrets.metrics_TOKEN }}
     base: ""
     plugin_repositories: yes
     plugin_repositories_pinned: 2

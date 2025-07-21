@@ -3,7 +3,7 @@
   with:
     token: MOCKED_TOKEN
     plugin_repositories: 'yes'
-    plugin_repositories_featured: lowlighter/metrics
+    plugin_repositories_featured: siosios/metrics
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 📓 Featured repositories - Pinned repositories

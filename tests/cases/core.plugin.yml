@@ -29,7 +29,7 @@
     config_output: png
     use_mocked_data: 'yes'
     verify: 'yes'
-- name: 🧱 Core - Metrics insights
+- name: 🧱 Core - metrics insights
   if: ${{ success() || failure() }}
   uses: mikey-/metrics@latest
   with:
@@ -43,7 +43,7 @@
     token: MOCKED_TOKEN
     base: header, repositories
     config_presets: >-
-      https://raw.githubusercontent.com/lowlighter/metrics/presets/lunar-red/preset.yaml
+      https://raw.githubusercontent.com/siosios/metrics/presets/lunar-red/preset.yaml
     use_mocked_data: 'yes'
     verify: 'yes'
   modes:

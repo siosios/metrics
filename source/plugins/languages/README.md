@@ -19,10 +19,10 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Indepth analysis (clone and analyze repositories)</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.languages.indepth.svg" alt=""></img></details>
-      <details open><summary>Recently used (analyze recent activity events)</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.languages.recent.svg" alt=""></img></details>
-      <details><summary>Default algorithm</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.languages.svg" alt=""></img></details>
-      <details><summary>Default algorithm (with details)</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.languages.details.svg" alt=""></img></details>
+      <details open><summary>Indepth analysis (clone and analyze repositories)</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.languages.indepth.svg" alt=""></img></details>
+      <details open><summary>Recently used (analyze recent activity events)</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.languages.recent.svg" alt=""></img></details>
+      <details><summary>Default algorithm</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.languages.svg" alt=""></img></details>
+      <details><summary>Default algorithm (with details)</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.languages.details.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -173,9 +173,9 @@ It will be automatically hidden if empty.</p>
 <p>Specify a list of additional repositories to analyze.</p>
 <p>Below are the supported syntax formats:</p>
 <ul>
-<li><code>owner/repo</code> (e.g. <code>lowlighter/metrics</code>)</li>
-<li><code>owner/repo@branch</code> (e.g. <code>lowlighter/metrics@main</code>)</li>
-<li><code>owner/repo@branch:commits</code> (e.g. <code>lowlighter/metrics@main:v1.0..v1.1</code>)<ul>
+<li><code>owner/repo</code> (e.g. <code>siosios/metrics</code>)</li>
+<li><code>owner/repo@branch</code> (e.g. <code>siosios/metrics@main</code>)</li>
+<li><code>owner/repo@branch:commits</code> (e.g. <code>siosios/metrics@main:v1.0..v1.1</code>)<ul>
 <li>See <a href="https://git-scm.com/docs/git-rev-list#_description"><code>git rev-list</code></a> documentation for more information about <code>commits</code> syntax</li>
 </ul>
 </li>
@@ -365,13 +365,13 @@ It will fetch a specified amount of recent push events and perform linguistic an
 Several options lets you customize which languages should be displayed.
 It is possible to ignore completely languages or those lower than a given threshold, skip repositories, and filter by language categories.
 
-*Example: hide HTML and CSS languages, skip lowlighter/metrics repository*
+*Example: hide HTML and CSS languages, skip siosios/metrics repository*
 ```yml
 - uses: mikey-/metrics@latest
   with:
     plugin_languages: yes
     plugin_languages_ignored: html, css
-    plugin_languages_skipped: lowlighter/metrics
+    plugin_languages_skipped: siosios/metrics
 ```
 
 *Example: hide languages with less than 2% usage*
@@ -447,7 +447,7 @@ name: Most used
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.languages.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_languages: yes
   plugin_languages_ignored: >-
@@ -461,7 +461,7 @@ name: Most used (with details)
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.languages.details.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_languages: yes
   plugin_languages_ignored: >-
@@ -476,7 +476,7 @@ name: Recently used
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.languages.recent.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_languages: yes
   plugin_languages_ignored: >-
@@ -492,7 +492,7 @@ name: Indepth analysis
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.languages.indepth.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_languages: yes
   plugin_languages_ignored: >-

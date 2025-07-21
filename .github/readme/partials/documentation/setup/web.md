@@ -21,7 +21,7 @@ No additional scopes are required.
 
 Fetch a copy of [`settings.example.json`](/settings.example.json) and rename it `settings.json`
 ```shell
-wget https://raw.githubusercontent.com/lowlighter/metrics/master/settings.example.json
+wget https://raw.githubusercontent.com/siosios/metrics/master/settings.example.json
 mv settings.example.json settings.json
 ```
 
@@ -124,7 +124,7 @@ If a plugin is used without sufficient permissions, it will result in an error.
 
 ## 3️ Start docker container
 
-Docker images are published on [GitHub Container Registry](https://github.com/lowlighter/metrics/pkgs/container/metrics).
+Docker images are published on [GitHub Container Registry](https://github.com/siosios/metrics/pkgs/container/metrics).
 
 Configure the following variables (or hardcode them in the command in the next block):
 ```shell
@@ -140,7 +140,7 @@ PUBLISHED_PORT=80
 
 And start the container using the following command:
 ```shell
-docker run --rm --entrypoint="" -p=127.0.0.1:$PUBLISHED_PORT:$SERVICE_PORT --volume=$SETTINGS:/metrics/settings.json ghcr.io/lowlighter/metrics:$VERSION npm start
+docker run --rm --entrypoint="" -p=127.0.0.1:$PUBLISHED_PORT:$SERVICE_PORT --volume=$SETTINGS:/metrics/settings.json ghcr.io/siosios/metrics:$VERSION npm start
 ```
 
 ## 4️ Add images to your profile `README.md`
@@ -149,7 +149,7 @@ Update profile `README.md` to include rendered image.
 
 *Example: add rendered image with markdown*
 ```markdown
-![Metrics](https://my.server.com/username)
+![metrics](https://my.server.com/username)
 ```
 
 ### 4️.1️ URL parameters syntax
@@ -183,7 +183,7 @@ This is described below for Linux-like systems which support *systemd*.
 Create a new service file `/etc/systemd/system/github_metrics.service` and paste the following:
 ```ini
 [Unit]
-Description=Metrics
+Description=metrics
 After=network-online.target
 Wants=network-online.target
 

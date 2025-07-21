@@ -19,9 +19,9 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Classic charts</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.stargazers.svg" alt=""></img></details>
-      <details><summary>Graph charts</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.stargazers.graph.svg" alt=""></img></details>
-      <details open><summary>Worldmap</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.stargazers.worldmap.svg" alt=""></img></details>
+      <details open><summary>Classic charts</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.stargazers.svg" alt=""></img></details>
+      <details><summary>Graph charts</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.stargazers.graph.svg" alt=""></img></details>
+      <details open><summary>Worldmap</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.stargazers.worldmap.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -154,7 +154,7 @@ name: Using classic charts
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.stargazers.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_stargazers: yes
 
@@ -164,7 +164,7 @@ name: Using graph charts
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.stargazers.graph.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_stargazers: yes
   plugin_stargazers_charts_type: graph
@@ -175,7 +175,7 @@ name: With worldmap
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.stargazers.worldmap.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_stargazers: yes
   plugin_stargazers_charts: no

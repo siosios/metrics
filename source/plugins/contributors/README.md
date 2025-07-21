@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>By contribution types</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.contributors.categories.svg" alt=""></img></details>
-      <details><summary>By number of contributions</summary><img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.contributors.contributions.svg" alt=""></img></details>
+      <details open><summary>By contribution types</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.contributors.categories.svg" alt=""></img></details>
+      <details><summary>By number of contributions</summary><img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.contributors.contributions.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -159,7 +159,7 @@ name: Contributors with contributions count
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.contributors.contributions.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   template: repository
   repo: metrics
@@ -172,7 +172,7 @@ name: Contributors by categories
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.contributors.categories.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   template: repository
   repo: metrics

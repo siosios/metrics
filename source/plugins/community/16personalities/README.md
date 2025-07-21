@@ -7,7 +7,7 @@
   <tr><th>⚠️ Disclaimer</th><td><p>This plugin is not affiliated, associated, authorized, endorsed by, or in any way officially connected with <a href="https://www.16personalities.com">16personalities</a>.
 All product and company names are trademarks™ or registered® trademarks of their respective holders.</p>
 </td></tr>
-<tr><th>Authors</th><td><a href="https://github.com/lowlighter">@lowlighter</a></td></tr>
+<tr><th>Authors</th><td><a href="https://github.com/siosios">@siosios</a></td></tr>
   <tr>
     <th rowspan="3">Supported features<br><sub><a href="metadata.yml">→ Full specification</a></sub></th>
     <td><a href="/source/templates/classic/README.md"><code>📗 Classic template</code></a></td>
@@ -20,7 +20,7 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github.com/lowlighter/metrics/blob/examples/metrics.plugin.16personalities.svg" alt=""></img>
+      <img src="https://github.com/siosios/metrics/blob/examples/metrics.plugin.16personalities.svg" alt=""></img>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -98,7 +98,7 @@ name: MBTI Personality profile
 uses: mikey-/metrics@latest
 with:
   filename: metrics.plugin.16personalities.svg
-  token: ${{ secrets.METRICS_TOKEN }}
+  token: ${{ secrets.metrics_TOKEN }}
   base: ""
   plugin_16personalities: yes
   plugin_16personalities_url: ${{ secrets.SIXTEEN_PERSONALITIES_URL }}
