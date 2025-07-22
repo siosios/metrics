@@ -40,6 +40,7 @@ RUN chmod +x /metrics/source/app/action/index.mjs \
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome-stable"
 ENV PUPPETEER_BROWSER_PATH="google-chrome-stable"
+ENV PUPPETEER_DOWNLOAD_BASE_URL="https://storage.googleapis.com/chrome-for-testing-public"
 
 # Execute GitHub action
 ENTRYPOINT node /metrics/source/app/action/index.mjs
