@@ -29,18 +29,26 @@ RUN chmod +x /metrics/source/app/action/index.mjs \
   # Clean apt/lists
   && rm -rf /var/lib/apt/lists/* \
   # Install node modules and rebuild indexes
-  && npm cache clean --force \
-  && npm install puppeteer \
-  && npm install \
-  && npm audit fix --force \
-  && npm run build \
-  && npm prune --omit=dev
-
+CMD ["node", "node_modules/puppeteer/install.js"]
 # Environment variables
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome-stable"
 ENV PUPPETEER_BROWSER_PATH="google-chrome-stable"
 ENV PUPPETEER_DOWNLOAD_BASE_URL="https://storage.googleapis.com/chrome-for-testing-public"
+
+# Copy repository
+WORKDIR /metrics
+COPY . .
+
+# Install node modules and rebuild indexes
+RUN set -x \
+  && which "${PUPPETEER_EXECUTABLE_PATH}" \
+  && npm install \
+  && npm audit fix --force \
+  && npm run build \
+  && npm prune --omit=dev
+
+
 
 # Execute GitHub action
 ENTRYPOINT node /metrics/source/app/action/index.mjs
