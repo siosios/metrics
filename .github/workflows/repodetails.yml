@@ -25,6 +25,8 @@ jobs:
         run: |
           REPOS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/users/siosios/repos?per_page=100)
           echo "REPOS=$REPOS" >> $GITHUB_OUTPUT
+          # Regex to remove special chars and brackets [[]](https://stackoverflow.com/questions/63246546/remove-curly-brackets-at-the-end-of-values-in-column-of-dataframe)
+          REPOS = {k: re.sub(r'{^\w\s-}', '', str(v)) for k,v in $REPOS}
 
       - name: Generate JPG image with repo details
         env:
