@@ -3,7 +3,9 @@ name: Repository Workflow
 on:
   schedule:
     - cron: "0 0 * * *"
-
+  # (optional) Run workflow manually
+  workflow_dispatch:
+  
 jobs:
   repo_info:
     runs-on: ubuntu-latest
