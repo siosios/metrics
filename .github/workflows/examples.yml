@@ -1292,6 +1292,8 @@ jobs:
 # ======================================================================================
 
   repository:
+    permissions:
+      contents: write
     runs-on: self-hosted
     needs: [ examples ]
     if: "github.repository == 'siosios/metrics'"
