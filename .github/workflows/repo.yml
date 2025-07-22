@@ -75,7 +75,7 @@ jobs:
           EOF
 
       - name: Upload PNG artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: repository-info
           path: repo_info.png
