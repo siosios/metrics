@@ -6,7 +6,7 @@ updates:
       - 📦 dependencies
     directory: /
     schedule:
-      interval: weekly
+      interval: daily
     pull-request-branch-name:
       separator: "-"
     reviewers:
