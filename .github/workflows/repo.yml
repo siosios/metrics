@@ -1,0 +1,55 @@
+name: Repository Workflow
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  repo_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch repository information
+        id: repo_info
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          repos_json=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/users/siosios/repos?per_page=100&sort=updated")
+          echo "repos_json=$repos_json" >> $GITHUB_OUTPUT
+
+      - name: Generate PNG image
+        env:
+          REPOS_JSON: ${{ steps.repo_info.outputs.repos_json }}
+        run: |
+          pip install pillow
+          python - <<EOF
+          from PIL import Image, ImageDraw, ImageFont
+          import json
+
+          repos = json.loads('''$REPOS_JSON''')
+
+          # Create a new image with a white background
+          img = Image.new('RGB', (800, 600), color=(255, 255, 255))
+          d = ImageDraw.Draw(img)
+
+          # Set the font and font size
+          font = ImageFont.load_default()
+          font_size =
+
+          # Draw the repository information on the image
+          y = 10
+          for repo in repos:
+            text = f"Name: {repo['name']}, Description: {repo['description']}, Stars: {repo['stargazers_count']}"
+            d.text((10, y), text, font=font, fill=(0, 0, 0))
+            y += font_size +          # Save the image to a PNG file
+          img.save('repo_info.png')
+          EOF
+
+      - name: Upload PNG image as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo_info_image
+          path: repo_info.png
