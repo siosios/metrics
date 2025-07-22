@@ -1,6 +1,7 @@
 name: Continuous integration
 permissions: write-all
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
 
