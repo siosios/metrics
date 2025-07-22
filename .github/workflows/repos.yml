@@ -25,13 +25,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set +e
           REPOS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/users/siosios/repos?per_page=100)
           echo "REPOS=$REPOS" >> $GITHUB_OUTPUT
+          set -e
 
       - name: Generate JPG image with repo details
         env:
           REPOS: ${{ steps.fetch_repo_details.outputs.REPOS }}
         run: |
+          set +e
           pip install pillow
           python - <<EOF
           from PIL import Image, ImageDraw, ImageFont
@@ -57,6 +60,7 @@ jobs:
 
           img.save('repo_details.jpg')
           EOF
+          set -e
 
       - name: Upload JPG as artifact
         uses: actions/upload-artifact@v4
