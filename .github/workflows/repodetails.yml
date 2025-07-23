@@ -18,48 +18,56 @@ jobs:
         with:
           python-version: '3.11'
           
-      - name: Fetch repo details from GitHub API
-        id: fetch_repo_details
+      - name: Fetch repo count from GitHub API
+        id: fetch_repo_count
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          REPOS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/users/siosios/repos?per_page=100)
-          echo "REPOS=$REPOS" >> $GITHUB_OUTPUT
-          # Regex to remove special chars and brackets [[]](https://stackoverflow.com/questions/63246546/remove-curly-brackets-at-the-end-of-values-in-column-of-dataframe)
-          repos = {k: re.sub(r'{^\w\s-}', '', str(v)) for k,v in REPOS}
-
-      - name: Generate JPG image with repo details
+          REPO_COUNT=$(curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/users/siosios/repos?per_page=100 | jq length)
+          echo "REPO_COUNT=$REPO_COUNT" >> $GITHUB_OUTPUT
+          repos = {k: re.sub(r'{^\w\s-}', '', str(v)) for k,v in REPO_COUNT}
+      - name: Generate JPG image with repo count
         env:
-          REPOS: ${{ steps.fetch_repo_details.outputs.repos }}
+          REPO_COUNT: ${{ steps.fetch_repo_count.outputs.repose }}
         run: |
           pip install pillow
           python - <<EOF
           from PIL import Image, ImageDraw, ImageFont
-          import json
 
-          width, height = 800, 600
+          width, height = 400, 200
           img = Image.new('RGB', (width, height), color=(73, 109, 137))
           d = ImageDraw.Draw(img)
 
           # Try to load a truetype font, fallback if not available
           try:
-              font = ImageFont.truetype("Arial.ttf", 20)
+              font = ImageFont.truetype("Arial.ttf", 40)
           except:
               font = ImageFont.load_default()
 
-          repos = json.loads('''$REPOS''')
+          text = f"SIOSIOS has {REPO_COUNT} repos"
+          text_width, text_height = d.textsize(text, font=font)
 
-          y = 10
-          for repo in repos:
-              text = f"Name: {repo['name']}, Stars: {repo['stargazers_count']}, Forks: {repo['forks_count']}"
-              d.text((10, y), text, font=font, fill=(255, 255, 255))
-              y += 25
+          # Center the text
+          x = (width - text_width) / 2
+          y = (height - text_height) / 2
 
-          img.save('repo_details.jpg')
+          d.text((x, y), text, font=font, fill=(255, 255, 255))
+          img.save('repo_count.jpg')
           EOF
 
       - name: Upload JPG as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
-          name: repo-details-image
-          path: repo_details.jpg
+          name: repo-count-image
+          path: repo_count.jpg
+
+      # Optional: Commit the image back to the repo (requires write permission)
+      - name: Commit generated image
+        if: false # set to true if you want to push back
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add repo_count.jpg
+          git commit -m "Update repo count image"
+          git push origin ${{ github.ref }}
+
