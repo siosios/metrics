@@ -1,0 +1,14 @@
+api
+config
+github
+GRAPHQL
+http
+json
+oid
+perl
+rsync
+spellchecker
+timeframe
+uname
+url
+vnd

@@ -1,0 +1,5 @@
+cspell
+dicts
+github
+jsoref
+sudo
