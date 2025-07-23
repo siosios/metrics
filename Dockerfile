@@ -35,6 +35,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome-stable"
 ENV PUPPETEER_DOWNLOAD_BASE_URL="https://storage.googleapis.com/chrome-for-testing-public"
 
+RUN set -x \
 && npx puppeteer browsers install chrome@119.0.6045.105 \
 && npx puppeteer browsers install chrome-headless-shell@119.0.6045.105 \
 && export PUPPETEER_BROWSER_REVISION=119.0.6045.105
