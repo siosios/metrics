@@ -17,7 +17,7 @@ RUN chmod +x /metrics/source/app/action/index.mjs \
   && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
   && apt-get install -y -q \
   && apt-get update \
-  && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 libx11-xcb1 libxtst6 lsb-release --no-install-recommends \
+  && apt-get install -y google-chrome-stable --no-install-recommends chromium fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 libx11-xcb1 libxtst6 lsb-release \
   # Install deno for miscellaneous scripts
   && apt-get install -y curl unzip xz-utils \
   && curl -fsSL https://deno.land/x/install/install.sh | DENO_INSTALL=/usr/local sh \
@@ -34,6 +34,10 @@ CMD ["node", "node_modules/puppeteer/install.mjs"]
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome-stable"
 ENV PUPPETEER_DOWNLOAD_BASE_URL="https://storage.googleapis.com/chrome-for-testing-public"
+
+&& npx puppeteer browsers install chrome@119.0.6045.105 \
+&& npx puppeteer browsers install chrome-headless-shell@119.0.6045.105 \
+&& export PUPPETEER_BROWSER_REVISION=119.0.6045.105
 
 # Copy repository
 WORKDIR /metrics
