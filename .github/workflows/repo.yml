@@ -32,25 +32,12 @@ jobs:
           import re
           import io
 
-          # Initialize GitHub client
-          g = Github("$GITHUB_TOKEN")
-          repo = g.get_repo("$GITHUB_REPOSITORY")
-
-          # Fetch repository information
-          repo_data = {
-              "Name": repo.name,
-              "Description": repo.description,
-              "Stars": repo.stargazers_count,
-              "Forks": repo.forks_count,
-              "Watchers": repo.subscribers_count,
-              "Open Issues": repo.open_issues_count,
-              "Language": repo.language,
-              "Created": repo.created_at.strftime("%Y-%m-%d"),
-              "Updated": repo.pushed_at.strftime("%Y-%m-%d")
-          }
+          repos_json=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/users/siosios/repos?per_page=100&sort=updated")
+          echo "repos_json=$repos_json" >> $GITHUB_OUTPUT
 
           # Regex to remove special chars and brackets [[]](https://stackoverflow.com/questions/63246546/remove-curly-brackets-at-the-end-of-values-in-column-of-dataframe)
-          clean_data = {k: re.sub(r'{^\w\s-}', '', str(v)) for k,v in repo_data.items()}
+          clean_data = {k: re.sub(r'{^\w\s-}', '', str(v)) for k,v in repos_json.items()}
 
           # Convert to DataFrame
           df = pd.DataFrame(list(clean_data.items()), columns=['Metric', 'Value'])
