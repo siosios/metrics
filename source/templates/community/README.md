@@ -18,10 +18,10 @@ These templates will be downloaded through git and will be usable by prefixing t
 
 *Example: using `my-theme` template by downloading it from `user/repo`*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     template: "@my-theme"
-    setup_community_templates: "user/repo@main:my-theme"
+    setup_community_templates: "user/repo@master:my-theme"
 ```
 
 For security reasons, community templates will use the `classic` template `template.mjs` instead of their own.
@@ -29,10 +29,10 @@ If you trust a community template, append `+trust` to it.
 
 *Example: using and trusting `my-theme` template by downloading it from `user/repo`*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     template: "@my-theme"
-    setup_community_templates: "user/repo@main:my-theme+trust"
+    setup_community_templates: "user/repo@master:my-theme+trust"
 ```
 
 > ⚠️ Note that it basically allow remote code execution and the template may have access to **sensitive data** along with **tokens**! Use this feature only from a trusted source. Remember that its content may also change at any time...
@@ -41,7 +41,7 @@ Some templates may accept additional custom parameters that can be passed throug
 
 *Example: using and trusting `my-theme` template by downloading it from `user/repo`*
 ```yaml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     template: "@my-theme"
     query: |
@@ -55,7 +55,7 @@ Some templates may accept additional custom parameters that can be passed throug
 <!--examples-->
 ```yaml
 name: Using a community template
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   token: ${{ secrets.metrics_TOKEN }}
   template: "@classic"
@@ -64,7 +64,7 @@ with:
 ```
 ```yaml
 name: Using a trusted community template
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   token: ${{ secrets.metrics_TOKEN }}
   template: "@terminal"

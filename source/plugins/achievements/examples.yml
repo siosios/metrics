@@ -1,5 +1,5 @@
 - name: Detailed display
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.achievements.svg
     token: ${{ secrets.metrics_TOKEN }}
@@ -10,7 +10,7 @@
     timeout: 1800000
 
 - name: Compact display
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.achievements.compact.svg
     token: ${{ secrets.metrics_TOKEN }}

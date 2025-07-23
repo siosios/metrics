@@ -130,7 +130,7 @@ Use at your own risk, <em>metrics</em> and its authors cannot be held responsibl
 <!--examples-->
 ```yaml
 name: JavaScript or TypeScript snippet of the day
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.code.svg
   token: ${{ secrets.metrics_TOKEN }}

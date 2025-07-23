@@ -140,7 +140,7 @@ Each modified file by a contributor matching a file glob will add them in said c
 
 *Example: *
 ```yaml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     plugin_contributors: yes
     plugin_contributors_categories: |
@@ -156,7 +156,7 @@ Each modified file by a contributor matching a file glob will add them in said c
 <!--examples-->
 ```yaml
 name: Contributors with contributions count
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.contributors.contributions.svg
   token: ${{ secrets.metrics_TOKEN }}
@@ -169,7 +169,7 @@ with:
 ```
 ```yaml
 name: Contributors by categories
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.contributors.categories.svg
   token: ${{ secrets.metrics_TOKEN }}

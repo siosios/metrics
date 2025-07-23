@@ -66,7 +66,7 @@ Configuration file also contains settings about enabled templates, plugins and f
     "enabled": ["classic", "terminal"],
   },
   "community": {
-    "templates": ["user/repo@main:custom-theme"],
+    "templates": ["user/repo@master:custom-theme"],
   },
   "hosted": {
     "by": "me",

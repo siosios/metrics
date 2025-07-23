@@ -28,7 +28,7 @@
 <!--examples-->
 ```yaml
 name: Example
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   template: terminal
   filename: metrics.terminal.svg

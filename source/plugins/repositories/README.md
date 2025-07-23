@@ -148,7 +148,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Featured repositories
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.repositories.svg
   token: ${{ secrets.metrics_TOKEN }}
@@ -159,7 +159,7 @@ with:
 ```
 ```yaml
 name: Pinned repositories
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.repositories.pinned.svg
   token: ${{ secrets.metrics_TOKEN }}

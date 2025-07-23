@@ -154,7 +154,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Comment reactions
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.reactions.svg
   token: ${{ secrets.metrics_TOKEN }}

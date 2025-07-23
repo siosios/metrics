@@ -168,7 +168,7 @@ This will fetch additional data (10 times <a href="/source/plugins/people/README
 <!--examples-->
 ```yaml
 name: Followers
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.people.followers.svg
   token: ${{ secrets.metrics_TOKEN }}
@@ -179,7 +179,7 @@ with:
 ```
 ```yaml
 name: Contributors and sponsors
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.people.repository.svg
   token: ${{ secrets.metrics_TOKEN }}

@@ -29,7 +29,7 @@ To run *metrics* action on a self-hosted runner, uses `runs-on: self-hosted`.
 ```yaml
 runs-on: self-hosted
 steps:
-  - uses: mikey-/metrics@latest
+  - uses: siosios/metrics@latest
     with:
       token: ${{ secrets.metrics_TOKEN }}
 ```

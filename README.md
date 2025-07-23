@@ -446,7 +446,7 @@ Generate metrics that can be embedded everywhere, including your GitHub profile 
 # 📚 Documentation
 
 
-> <sup>*⚠️ This is the documentation of **v3.35-beta** (`@master`/`@main` branches) which includes [unreleased features](https://github.com/siosios/metrics/compare/latest...master) planned for next release. See documentation for current released version [**v3.34** (`@latest` branch) here](https://github.com/siosios/metrics/blob/latest/README.md).* </sup>
+> <sup>*⚠️ This is the documentation of **v3.35-beta** (`@master`/`@master` branches) which includes [unreleased features](https://github.com/siosios/metrics/compare/latest...master) planned for next release. See documentation for current released version [**v3.34** (`@latest` branch) here](https://github.com/siosios/metrics/blob/latest/README.md).* </sup>
 
 
 

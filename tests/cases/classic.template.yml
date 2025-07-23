@@ -1,5 +1,5 @@
 - name: 📗 Classic template - Example
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     token: MOCKED_TOKEN
     base: header, repositories

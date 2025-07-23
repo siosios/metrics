@@ -73,7 +73,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: mikey-/metrics@latest
+      - uses: siosios/metrics@latest
         with:
           token: ${{ secrets.metrics_TOKEN }}
 ```
@@ -85,13 +85,13 @@ Default output action is to commit rendered metrics to target repository on each
 
 Use [`output_action`](/source/plugins/core/README.md#-configuring-output-action) to change this behaviour to use either pull requests, gists or manually handle renders.
 
-### 3️.1️ Choosing between `@latest`, `@master`/`@main`, a fork or a pinned version
+### 3️.1️ Choosing between `@latest`, `@master`/`@master`, a fork or a pinned version
 
 There are several *metrics* versions that can be used in workflows:
 
 - `@latest`
   - ✔️ Stable version
-- `@master`/`@main`
+- `@master`/`@master`
   - ✔️ Enjoy new features and bug fixes as they're being released
   - ✔️ Helps discovering new issues
   - ➖ Jobs may fail occasionally (watch [issues](https://github.com/siosios/metrics/issues) and [discussions](https://github.com/siosios/metrics/discussions) for bug tracking)

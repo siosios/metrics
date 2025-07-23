@@ -15,7 +15,7 @@ Setup is mostly the same as for user accounts. A personal access token from an u
 
 *Example: render metrics for `github` organization*
 ```yaml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     token: ${{ secrets.metrics_TOKEN }}
     user: github

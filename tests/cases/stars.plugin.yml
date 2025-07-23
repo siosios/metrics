@@ -1,5 +1,5 @@
 - name: 🌟 Recently starred repositories - Recently starred
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     token: MOCKED_TOKEN
     plugin_stars: 'yes'

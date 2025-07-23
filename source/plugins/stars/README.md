@@ -64,7 +64,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Recently starred
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.stars.svg
   token: ${{ secrets.metrics_TOKEN }}

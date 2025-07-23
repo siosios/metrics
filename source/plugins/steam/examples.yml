@@ -1,5 +1,5 @@
 - name: Recently played games
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.steam.svg
     token: NOT_NEEDED
@@ -16,7 +16,7 @@
       use_mocked_data: yes
 
 - name: Profile and detailed game history
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.steam.full.svg
     token: NOT_NEEDED

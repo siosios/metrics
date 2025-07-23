@@ -1,5 +1,5 @@
 - name: Compact display in base plugin
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.lines.svg
     token: ${{ secrets.metrics_TOKEN }}
@@ -8,7 +8,7 @@
     plugin_lines_delay: 30
 
 - name: Repositories and diff history
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.lines.history.svg
     token: ${{ secrets.metrics_TOKEN }}

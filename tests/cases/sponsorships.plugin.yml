@@ -1,5 +1,5 @@
 - name: 💝 GitHub Sponsorships - 💝 GitHub Sponsorships
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     token: MOCKED_TOKEN
     plugin_sponsorships: 'yes'

@@ -164,7 +164,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Recent activity
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.activity.svg
   token: ${{ secrets.metrics_TOKEN }}

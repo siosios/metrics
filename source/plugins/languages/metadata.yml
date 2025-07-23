@@ -127,8 +127,8 @@ inputs:
 
       Below are the supported syntax formats:
       - `owner/repo` (e.g. `siosios/metrics`)
-      - `owner/repo@branch` (e.g. `siosios/metrics@main`)
-      - `owner/repo@branch:commits` (e.g. `siosios/metrics@main:v1.0..v1.1`)
+      - `owner/repo@branch` (e.g. `siosios/metrics@master`)
+      - `owner/repo@branch:commits` (e.g. `siosios/metrics@master:v1.0..v1.1`)
         - See [`git rev-list`](https://git-scm.com/docs/git-rev-list#_description) documentation for more information about `commits` syntax
 
       It is possible to specify repositories that are not hosted on [github.com](https://github.com) by passing a full url instead.
@@ -138,7 +138,7 @@ inputs:
     type: array
     format: comma-separated
     default: ""
-    example: siosios/metrics, siosios/metrics@main, siosios/metrics@latest:v1.0..v1.1
+    example: siosios/metrics, siosios/metrics@master, siosios/metrics@latest:v1.0..v1.1
 
   plugin_languages_analysis_timeout:
     description: |

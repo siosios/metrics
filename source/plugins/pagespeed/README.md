@@ -122,7 +122,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Succinct report
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.pagespeed.svg
   token: NOT_NEEDED
@@ -134,7 +134,7 @@ with:
 ```
 ```yaml
 name: Detailed report
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.pagespeed.detailed.svg
   token: NOT_NEEDED
@@ -147,7 +147,7 @@ with:
 ```
 ```yaml
 name: Screenshot
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.pagespeed.screenshot.svg
   token: NOT_NEEDED
@@ -160,7 +160,7 @@ with:
 ```
 ```yaml
 name: Succinct report with PWA
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.pagespeed.svg
   token: NOT_NEEDED

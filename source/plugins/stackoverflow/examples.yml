@@ -1,5 +1,5 @@
 - name: Top answers from stackoverflow
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.stackoverflow.svg
     token: NOT_NEEDED

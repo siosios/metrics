@@ -1,5 +1,5 @@
 - name: Using classic charts
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.stargazers.svg
     token: ${{ secrets.metrics_TOKEN }}
@@ -7,7 +7,7 @@
     plugin_stargazers: yes
 
 - name: Using graph charts
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.stargazers.graph.svg
     token: ${{ secrets.metrics_TOKEN }}
@@ -16,7 +16,7 @@
     plugin_stargazers_charts_type: graph
 
 - name: With worldmap
-  uses: mikey-/metrics@latest
+  uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.stargazers.worldmap.svg
     token: ${{ secrets.metrics_TOKEN }}

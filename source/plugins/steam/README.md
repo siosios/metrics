@@ -164,7 +164,7 @@ To retrieve your Steam ID, access your user account on [store.steampowered.com/a
 <!--examples-->
 ```yaml
 name: Recently played games
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.steam.svg
   token: NOT_NEEDED
@@ -178,7 +178,7 @@ with:
 ```
 ```yaml
 name: Profile and detailed game history
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.steam.full.svg
   token: NOT_NEEDED

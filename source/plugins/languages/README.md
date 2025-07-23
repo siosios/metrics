@@ -174,8 +174,8 @@ It will be automatically hidden if empty.</p>
 <p>Below are the supported syntax formats:</p>
 <ul>
 <li><code>owner/repo</code> (e.g. <code>siosios/metrics</code>)</li>
-<li><code>owner/repo@branch</code> (e.g. <code>siosios/metrics@main</code>)</li>
-<li><code>owner/repo@branch:commits</code> (e.g. <code>siosios/metrics@main:v1.0..v1.1</code>)<ul>
+<li><code>owner/repo@branch</code> (e.g. <code>siosios/metrics@master</code>)</li>
+<li><code>owner/repo@branch:commits</code> (e.g. <code>siosios/metrics@master:v1.0..v1.1</code>)<ul>
 <li>See <a href="https://git-scm.com/docs/git-rev-list#_description"><code>git rev-list</code></a> documentation for more information about <code>commits</code> syntax</li>
 </ul>
 </li>
@@ -284,7 +284,7 @@ Since git lets you use any email and username for commits, *metrics* may not be 
 
 *Example: configuring `indepth` mode*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     plugin_languages: yes
     plugin_languages_indepth: yes
@@ -350,7 +350,7 @@ It will fetch a specified amount of recent push events and perform linguistic an
 
 *Example: display recently used languages from 400 GitHub events from last 2 weeks*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     plugin_languages: yes
     plugin_languages_sections: recently-used
@@ -367,7 +367,7 @@ It is possible to ignore completely languages or those lower than a given thresh
 
 *Example: hide HTML and CSS languages, skip siosios/metrics repository*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     plugin_languages: yes
     plugin_languages_ignored: html, css
@@ -376,7 +376,7 @@ It is possible to ignore completely languages or those lower than a given thresh
 
 *Example: hide languages with less than 2% usage*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     plugin_languages: yes
     plugin_languages_threshold: 2%
@@ -389,7 +389,7 @@ Supported categories are `data`, `markup`, `programming` and `prose`.
 
 *Example: hide data and prose languages from stats*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     plugin_languages: yes
     plugin_languages_categories: data, prose
@@ -410,7 +410,7 @@ Both hexadecimal and [named color](https://developer.mozilla.org/en-US/docs/Web/
 
 *Example: using a predefined color set*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     plugin_languages: yes
     plugin_languages_colors: rainbow
@@ -419,7 +419,7 @@ Both hexadecimal and [named color](https://developer.mozilla.org/en-US/docs/Web/
 
 *Example: setting JavaScript to red, the first language to blue and the second one to `#ff00aa`*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     plugin_languages: yes
     plugin_languages_colors: javascript:red, 0:blue, 1:#ff00aa
@@ -433,7 +433,7 @@ To mitigate this, it is possible to use `plugin_languages_aliases` option and pr
 
 *Example: display JavaScript as JS and TypeScript as TS*
 ```yml
-- uses: mikey-/metrics@latest
+- uses: siosios/metrics@latest
   with:
     plugin_languages: yes
     plugin_languages_aliases: javascript:JS typescript:TS
@@ -444,7 +444,7 @@ To mitigate this, it is possible to use `plugin_languages_aliases` option and pr
 <!--examples-->
 ```yaml
 name: Most used
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.languages.svg
   token: ${{ secrets.metrics_TOKEN }}
@@ -458,7 +458,7 @@ with:
 ```
 ```yaml
 name: Most used (with details)
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.languages.details.svg
   token: ${{ secrets.metrics_TOKEN }}
@@ -473,7 +473,7 @@ with:
 ```
 ```yaml
 name: Recently used
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.languages.recent.svg
   token: ${{ secrets.metrics_TOKEN }}
@@ -489,7 +489,7 @@ with:
 ```
 ```yaml
 name: Indepth analysis
-uses: mikey-/metrics@latest
+uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.languages.indepth.svg
   token: ${{ secrets.metrics_TOKEN }}
