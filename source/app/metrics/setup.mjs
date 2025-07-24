@@ -208,7 +208,7 @@ export default async function({log = true, sandbox = false, community = {}, extr
   //Store authenticated user
   if (conf.settings.token) {
     try {
-      conf.authenticated = (await (new Octokit({auth: conf.settings.token})).users.getAuthenticated()).data.login
+      conf.authenticated = (await (new app({auth: conf.settings.token})).users.getAuthenticated()).data.login
       logger(`metrics/setup > setup > authenticated as ${conf.authenticated}`)
     }
     catch (error) {
