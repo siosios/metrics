@@ -1,8 +1,0 @@
-query Achievementsmetrics {
- 	repository(owner: "siosios", name: "metrics") {
-    viewerHasStarred
-  }
-  viewer {
-    login
-  }
-}
