@@ -1,21 +1,17 @@
 # 📒 Markdown template example
 
-See [rendering of this file here](https://github.com/lowlighter/metrics/blob/examples/metrics.markdown.full.md) and [original template source here](https://github.com/lowlighter/metrics/blob/master/source/templates/markdown/example.md).
+See [rendering of this file here](https://github.com/siosios/metrics/blob/examples/metrics.markdown.full.md) and [original template source here](https://github.com/siosios/metrics/blob/master/source/templates/markdown/example.md).
 
 ## 🧩 Plugins with markdown version
 
 **[📰 Recent activity](https://github.com/siosios)**
-* 🔃 Merged [#19 pr2](https://github.com/siosios/drftpd3/pull/19) in [siosios/drftpd3](https://github.com/siosios/drftpd3)
-  * 2 files changed `++4 --4`
-* 🔃 Opened [#19 pr2](https://github.com/siosios/drftpd3/pull/19) in [siosios/drftpd3](https://github.com/siosios/drftpd3)
-  * 2 files changed `++4 --4`
-* ⏺️ Created new branch latest in [siosios/metrics](https://github.com/siosios/metrics)
-* ⏺️ Created new branch presets in [siosios/metrics](https://github.com/siosios/metrics)
-* ⏺️ Created new branch examples in [siosios/metrics](https://github.com/siosios/metrics)
-* 🔃 Closed [#6 Newdesign](https://github.com/siosios/speedtest/pull/6) in [siosios/speedtest](https://github.com/siosios/speedtest)
-  * 27 files changed `++2246 --4`
-* 🔃 Merged [#8 Librespeed newdesign](https://github.com/siosios/speedtest/pull/8) in [siosios/speedtest](https://github.com/siosios/speedtest)
-  * 26 files changed `++2080 --3`
+* ⏺️ Created new repository  [siosios/banish](https://github.com/siosios/banish)
+* ⏺️ Created new branch main in [siosios/banish](https://github.com/siosios/banish)
+* ⏺️ Created new branch main in [siosios/auto-dnsbl](https://github.com/siosios/auto-dnsbl)
+* ⏺️ Created new repository  [siosios/auto-dnsbl](https://github.com/siosios/auto-dnsbl)
+* ⏺️ Created new branch presets in [siosios/Metrics](https://github.com/siosios/Metrics)
+* ⏺️ Created new branch examples in [siosios/Metrics](https://github.com/siosios/Metrics)
+* ⏺️ Created new branch master in [siosios/Metrics](https://github.com/siosios/Metrics)
 
 
 ___
@@ -26,14 +22,14 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [My Ultimate Self-Hosting Setup](https://codecaptured.com/blog/my-ultimate-self-hosting-setup/)
-  * *Published on 19 Jul 2025*
-* [How to write Rust in the Linux kernel: part 3](https://lwn.net/SubscriberLink/1026694/3413f4b43c862629/)
-  * *Published on 18 Jul 2025*
-* [Asynchrony is not concurrency](https://kristoff.it/blog/asynchrony-is-not-concurrency/)
-  * *Published on 18 Jul 2025*
-* [Valve confirms credit card companies pressured it to delist certain adult games](https://www.pcgamer.com/software/platforms/valve-confirms-credit-card-companies-pressured-it-to-delist-certain-adult-games-from-steam/)
-  * *Published on 18 Jul 2025*
+* [Vet is a safety net for the risky curl | bash pattern](https://github.com/vet-run/vet)
+  * *Published on 24 Jul 2025*
+* [Wix: Introduce the Open Source Maintenance Fee](https://github.com/wixtoolset/issues/issues/8974)
+  * *Published on 24 Jul 2025*
+* [Detekt – A static code analyzer for Kotlin](https://detekt.dev/)
+  * *Published on 24 Jul 2025*
+* [Web fingerprinting is worse than I thought (2023)](https://www.bitestring.com/posts/2023-03-19-web-fingerprinting-is-worse-than-I-thought.html)
+  * *Published on 24 Jul 2025*
 
 
 ___
