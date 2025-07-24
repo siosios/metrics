@@ -29,7 +29,7 @@ RUN chmod +x /metrics/source/app/action/index.mjs \
   # Clean apt/lists
   && rm -rf /var/lib/apt/lists/* \
   # Install node modules and rebuild indexes
-CMD ["node", "node_modules/puppeteer/install.mjs"]
+CMD ["node", "node_modules/puppeteer/install.js"]
 # Environment variables
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome-stable"
