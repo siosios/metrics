@@ -716,9 +716,9 @@ export const svg = {
         console.debug("metrics/svg/optimize/svg > this feature require experimental feature flag --optimize-svg")
         return rendered
       }
-      const {error, data: optimized} = await SVGO.optimize(rendered, {
+      const {error, data: optimized} = await optimize(rendered, {
         multipass: true,
-        plugins: SVGO.extendDefaultPlugins([
+        plugins: optimize.extendDefaultPlugins([
           //Additional cleanup
           {name: "cleanupListOfValues"},
           {name: "removeRasterImages"},
