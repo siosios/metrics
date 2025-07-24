@@ -1,5 +1,5 @@
 //Imports
-import { Octokit, App } from "octokit"
+import { App } from "octokit"
 import processes from "child_process"
 import fs from "fs"
 import yaml from "js-yaml"
