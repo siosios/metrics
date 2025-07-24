@@ -26,7 +26,7 @@ import readline from "readline"
 import htmlsanitize from "sanitize-html"
 import sharp from "sharp"
 import git from "simple-git"
-import { optimize } from "svgo"
+import SVGO from "svgo"
 import url from "url"
 import util from "util"
 import xmlformat from "xml-formatter"
@@ -716,9 +716,9 @@ export const svg = {
         console.debug("metrics/svg/optimize/svg > this feature require experimental feature flag --optimize-svg")
         return rendered
       }
-      const {error, data: optimized} = await optimize(rendered, {
+      const {error, data: optimized} = await SVGO.optimize(rendered, {
         multipass: true,
-        plugins: optimize.extendDefaultPlugins([
+        plugins: SVGO.extendDefaultPlugins([
           //Additional cleanup
           {name: "cleanupListOfValues"},
           {name: "removeRasterImages"},
