@@ -1,6 +1,5 @@
 name: Continuous integration
-permissions: 
-packages: write
+permissions: packages:write
 on:
   workflow_dispatch:
   push:
