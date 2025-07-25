@@ -1,5 +1,4 @@
 name: Continuous integration
-permissions: write
 on:
   workflow_dispatch:
   push:
