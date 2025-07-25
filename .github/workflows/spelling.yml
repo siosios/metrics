@@ -40,7 +40,7 @@ jobs:
       id: spelling
       uses: ./
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.METRICS_TOKEN }}
         experimental_apply_changes_via_bot: 1
         suppress_push_for_open_pull_request: 1
         check_file_names: 1

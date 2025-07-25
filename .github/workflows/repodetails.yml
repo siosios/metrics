@@ -21,7 +21,7 @@ jobs:
       - name: Fetch repo count from GitHub API
         id: fetch_repo_count
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
           REPO_COUNT=$(curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/users/siosios/repos?per_page=100 | jq length)
           echo "REPO_COUNT=$REPO_COUNT" >> $GITHUB_OUTPUT

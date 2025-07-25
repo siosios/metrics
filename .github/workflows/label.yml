@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/labeler@v5
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          repo-token: "${{ secrets.METRICS_TOKEN }}"
           configuration-path: .github/config/label.yml
           sync-labels: true

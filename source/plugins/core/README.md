@@ -496,7 +496,7 @@ When doing so, any settings which defaults on user fetched values will not be te
   <tr>
     <td nowrap="nowrap"><h4><code>committer_token</code></h4></td>
     <td rowspan="2"><p>GitHub Token used to commit metrics</p>
-<p>Leave this to <code>${{ github.token }}</code> or <code>${{ secrets.GITHUB_TOKEN }}</code>, which is a special auto-generated token restricted to current repository scope.</p>
+<p>Leave this to <code>${{ github.token }}</code> or <code>${{ secrets.METRICS_TOKEN }}</code>, which is a special auto-generated token restricted to current repository scope.</p>
 <blockquote>
 <p>💡 When using <a href="/source/plugins/core/README.md#output_action"><code>output_action: gist</code></a>, it will use <a href="/source/plugins/core/README.md#token"><code>token</code></a> instead, since gists are outside of scope</p>
 </blockquote>

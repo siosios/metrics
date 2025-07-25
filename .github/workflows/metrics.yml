@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: siosios/metrics@master
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }}
           output_action: commit
           committer_message: "chore: update metrics"
           retries: 3
