@@ -76,7 +76,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Login to GitHub registry
-        run: echo ${{ secrets.METRICS_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        run: echo ${{ METRICS_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Build docker image
         run: docker build -t ghcr.io/siosios/metrics:master .
       - name: Publish to GitHub registry
