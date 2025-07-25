@@ -1,5 +1,5 @@
 name: Continuous integration
-permissions: packages:write
+permissions: write
 on:
   workflow_dispatch:
   push:
@@ -72,6 +72,7 @@ jobs:
     name: Publish master to GitHub registry
     runs-on: self-hosted
     needs: [ update-indexes ]
+    permissions: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
