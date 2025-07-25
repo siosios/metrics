@@ -78,10 +78,8 @@ jobs:
       - name: Login to GitHub registry
         run: echo ${{ github.token }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Build docker image
-        permissions: write-all
         run: docker build -t ghcr.io/siosios/metrics:master .
       - name: Publish to GitHub registry
-        permissions: write-all
         run: docker push ghcr.io/siosios/metrics:master
       - name: Tag docker image (beta) and publish to GitHub registry
         run: |
