@@ -132,6 +132,7 @@ jobs:
           use_mocked_data: yes
           verify: yes
 
+
   # Publish examples
   publish-examples:
     name: Publish examples
