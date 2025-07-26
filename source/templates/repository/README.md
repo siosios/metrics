@@ -47,7 +47,7 @@ uses: siosios/metrics@latest
 with:
   template: repository
   filename: metrics.repository.svg
-  token: ${{ secrets.metrics_TOKEN_WITH_SCOPES }}
+  token: ${{ github.token_WITH_SCOPES }}
   user: siosios
   repo: metrics
   plugin_lines: yes

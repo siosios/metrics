@@ -262,7 +262,7 @@
             : [
               `          # Current configuration doesn't require a GitHub token`,
             ]),
-          `          token: ${this.scopes.size ? `${"$"}{{ secrets.metrics_TOKEN }}` : "NOT_NEEDED"}`,
+          `          token: ${this.scopes.size ? `${"$"}{{ github.token }}` : "NOT_NEEDED"}`,
           ``,
           `          # Options`,
           ...(this.user ? [`          user: ${this.user}`] : []),

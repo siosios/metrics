@@ -53,7 +53,7 @@
     plugin_isocalendar: yes
     config_twemoji: yes
     config_padding: 5%
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
   prod:
     with:
       output_action: commit

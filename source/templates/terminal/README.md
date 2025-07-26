@@ -32,7 +32,7 @@ uses: siosios/metrics@latest
 with:
   template: terminal
   filename: metrics.terminal.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: header, metadata
 
 ```
