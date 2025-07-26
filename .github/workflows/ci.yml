@@ -76,13 +76,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      # Log in to GitHub Container Registry to allow pushing Docker images
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
          registry: ghcr.io
-         username: ${{github.actor}}
-         password: ${{secrets.GITHUB_TOKEN}}
-  #    - name: Login to GitHub registry
+         username: ${{ github.actor }}
+  # - name: Login to GitHub registry
+  #   run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
    #     run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Build docker image
         run: docker build -t ghcr.io/siosios/metrics:master .
@@ -132,13 +133,14 @@ jobs:
           use_mocked_data: yes
           verify: yes
 
+
   # Publish examples
   publish-examples:
     name: Publish examples
     needs: [ action-master-test ]
     uses: siosios/metrics/.github/workflows/examples.yml@master
     secrets:
-      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+      METRICS_TOKEN: ${{ github.token }}
 
   # Publish examples (presets)
   publish-examples-presets:

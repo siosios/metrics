@@ -32,7 +32,7 @@ name: Example
 uses: siosios/metrics@latest
 with:
   filename: metrics.classic.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: header, repositories
   plugin_lines: yes
 

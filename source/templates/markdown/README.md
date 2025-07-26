@@ -144,7 +144,7 @@ with:
   markdown: >-
     https://raw.githubusercontent.com/siosios/metrics/examples/metrics.markdown.template.md
   config_output: markdown
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
 
 ```
 ```yaml
@@ -172,7 +172,7 @@ with:
   plugin_topics_limit: 24
   plugin_isocalendar: yes
   plugin_languages: yes
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
 
 ```
 ```yaml
@@ -190,7 +190,7 @@ with:
   plugin_isocalendar: yes
   config_twemoji: yes
   config_padding: 5%
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
 
 ```
 <!--/examples-->
