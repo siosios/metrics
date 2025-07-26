@@ -9,10 +9,7 @@ jobs:
   build-test-analyze:
     name: Build, test and analyze
     if: "!contains(github.event.head_commit.message, '[skip test]')"
-    runs-on: self-hosted
-    steps:
-      - name: Run build, test and analyze workflow
-        uses: siosios/metrics/.github/workflows/test.yml@master
+    uses: siosios/metrics/.github/workflows/test.yml@master
 
   # Format code
   format:
