@@ -5,13 +5,15 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 ## 🧩 Plugins with markdown version
 
 **[📰 Recent activity](https://github.com/siosios)**
+* 🔃 Merged [#1 pr2](https://github.com/siosios/cs2-modded-server/pull/1) in [siosios/cs2-modded-server](https://github.com/siosios/cs2-modded-server)
+  * 44 files changed `++1256 --27`
+* 🔃 Opened [#1 pr2](https://github.com/siosios/cs2-modded-server/pull/1) in [siosios/cs2-modded-server](https://github.com/siosios/cs2-modded-server)
+  * 44 files changed `++1256 --27`
 * ⏺️ Created new repository  [siosios/banish](https://github.com/siosios/banish)
 * ⏺️ Created new branch main in [siosios/banish](https://github.com/siosios/banish)
 * ⏺️ Created new branch main in [siosios/auto-dnsbl](https://github.com/siosios/auto-dnsbl)
 * ⏺️ Created new repository  [siosios/auto-dnsbl](https://github.com/siosios/auto-dnsbl)
 * ⏺️ Created new branch presets in [siosios/Metrics](https://github.com/siosios/Metrics)
-* ⏺️ Created new branch examples in [siosios/Metrics](https://github.com/siosios/Metrics)
-* ⏺️ Created new branch master in [siosios/Metrics](https://github.com/siosios/Metrics)
 
 
 ___
@@ -22,14 +24,14 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [Vet is a safety net for the risky curl | bash pattern](https://github.com/vet-run/vet)
+* [How We Rooted Copilot](https://research.eye.security/how-we-rooted-copilot/)
+  * *Published on 26 Jul 2025*
+* [Rust running on every GPU](https://rust-gpu.github.io/blog/2025/07/25/rust-on-every-gpu/)
+  * *Published on 26 Jul 2025*
+* [Purple Earth Hypothesis](https://en.wikipedia.org/wiki/Purple_Earth_hypothesis)
   * *Published on 24 Jul 2025*
-* [Wix: Introduce the Open Source Maintenance Fee](https://github.com/wixtoolset/issues/issues/8974)
-  * *Published on 24 Jul 2025*
-* [Detekt – A static code analyzer for Kotlin](https://detekt.dev/)
-  * *Published on 24 Jul 2025*
-* [Web fingerprinting is worse than I thought (2023)](https://www.bitestring.com/posts/2023-03-19-web-fingerprinting-is-worse-than-I-thought.html)
-  * *Published on 24 Jul 2025*
+* [Font-size-adjust Is Useful](https://matklad.github.io/2025/07/16/font-size-adjust.html)
+  * *Published on 23 Jul 2025*
 
 
 ___
