@@ -159,7 +159,7 @@ name: Featured repositories
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.repositories.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_repositories: yes
   plugin_repositories_featured: siosios/metrics
@@ -170,7 +170,7 @@ name: Pinned repositories
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.repositories.pinned.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_repositories: yes
   plugin_repositories_pinned: 2

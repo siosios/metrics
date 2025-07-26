@@ -465,7 +465,7 @@ name: Most used
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.languages.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_languages: yes
   plugin_languages_ignored: >-
@@ -479,7 +479,7 @@ name: Most used (with details)
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.languages.details.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_languages: yes
   plugin_languages_ignored: >-
@@ -494,7 +494,7 @@ name: Recently used
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.languages.recent.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_languages: yes
   plugin_languages_ignored: >-
@@ -510,7 +510,7 @@ name: Indepth analysis
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.languages.indepth.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_languages: yes
   plugin_languages_ignored: >-

@@ -2,9 +2,9 @@
   uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.traffic.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: repositories
     plugin_traffic: yes
   prod:
     with:
-      token: ${{ secrets.metrics_TOKEN_WITH_SCOPES }}
+      token: ${{ github.token_WITH_SCOPES }}

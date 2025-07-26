@@ -166,7 +166,7 @@ name: Contributors with contributions count
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.contributors.contributions.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   template: repository
   repo: metrics
@@ -179,7 +179,7 @@ name: Contributors by categories
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.contributors.categories.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   template: repository
   repo: metrics

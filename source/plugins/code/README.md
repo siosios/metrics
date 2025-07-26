@@ -140,7 +140,7 @@ name: JavaScript or TypeScript snippet of the day
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.code.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_code: yes
   plugin_code_languages: javascript, typescript

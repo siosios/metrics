@@ -161,7 +161,7 @@ name: Using classic charts
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.stargazers.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_stargazers: yes
 
@@ -171,7 +171,7 @@ name: Using graph charts
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.stargazers.graph.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_stargazers: yes
   plugin_stargazers_charts_type: graph
@@ -182,7 +182,7 @@ name: With worldmap
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.stargazers.worldmap.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_stargazers: yes
   plugin_stargazers_charts: no

@@ -68,7 +68,7 @@ name: Organization introduction
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.introduction.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   user: github
   base: header
   plugin_introduction: yes
@@ -79,7 +79,7 @@ name: Repository introduction
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.introduction.repository.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   template: repository
   repo: metrics
   base: header

@@ -166,7 +166,7 @@ name: Comment reactions
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.reactions.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_reactions: yes
   plugin_reactions_limit: 100

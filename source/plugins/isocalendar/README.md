@@ -72,7 +72,7 @@ name: Half-year calendar
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.isocalendar.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_isocalendar: yes
 
@@ -82,7 +82,7 @@ name: Full-year calendar
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.isocalendar.fullyear.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_isocalendar: yes
   plugin_isocalendar_duration: full-year

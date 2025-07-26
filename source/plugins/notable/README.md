@@ -163,7 +163,7 @@ name: Contributions
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.notable.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_notable: yes
 
@@ -173,7 +173,7 @@ name: Indepth analysis
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.notable.indepth.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_notable: yes
   plugin_notable_indepth: yes

@@ -2,19 +2,19 @@
   uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.introduction.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     user: github
     base: header
     plugin_introduction: yes
   prod:
     with:
-      token: ${{ secrets.metrics_TOKEN_WITH_SCOPES }}
+      token: ${{ github.token_WITH_SCOPES }}
 
 - name: Repository introduction
   uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.introduction.repository.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     template: repository
     repo: metrics
     base: header

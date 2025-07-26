@@ -201,7 +201,7 @@ name: Mildly interesting facts
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.habits.facts.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_habits: yes
   plugin_habits_facts: yes
@@ -214,7 +214,7 @@ name: Recent activity charts
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.habits.charts.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_habits: yes
   plugin_habits_facts: no

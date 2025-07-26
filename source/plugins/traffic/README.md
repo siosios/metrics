@@ -67,7 +67,7 @@ name: Repositories traffic
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.traffic.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: repositories
   plugin_traffic: yes
 

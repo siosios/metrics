@@ -79,7 +79,7 @@ name: GitHub Discussions
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.discussions.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_discussions: yes
   plugin_discussions_categories_limit: 8

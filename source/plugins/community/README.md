@@ -297,7 +297,7 @@ It uses the same syntax as GitHub action and looks like below:
   uses: siosios/metrics@latest
   with:
     filename: metrics.plugin.{name}.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_{name}: yes
   prod:

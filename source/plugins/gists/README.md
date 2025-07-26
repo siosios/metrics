@@ -55,7 +55,7 @@ name: Gists
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.gists.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_gists: yes
 

@@ -41,7 +41,7 @@ inputs:
     description: |
       GitHub Token used to commit metrics
 
-      Leave this to `${{ github.token }}` or `${{ secrets.METRICS_TOKEN }}`, which is a special auto-generated token restricted to current repository scope.
+      Leave this to `${{ github.token }}` or `${{ github.token }}`, which is a special auto-generated token restricted to current repository scope.
 
       > 💡 When using [`output_action: gist`](/source/plugins/core/README.md#output_action), it will use [`token`](/source/plugins/core/README.md#token) instead, since gists are outside of scope
     type: token

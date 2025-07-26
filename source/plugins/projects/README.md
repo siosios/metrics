@@ -131,7 +131,7 @@ name: Project from a repository
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.projects.svg
-  token: ${{ secrets.metrics_TOKEN_WITH_SCOPES }}
+  token: ${{ github.token_WITH_SCOPES }}
   base: ""
   plugin_projects: yes
   plugin_projects_repositories: siosios/metrics/projects/1

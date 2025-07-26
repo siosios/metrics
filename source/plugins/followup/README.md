@@ -108,7 +108,7 @@ name: Opened on user's repositories
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.followup.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_followup: yes
 
@@ -118,7 +118,7 @@ name: Opened by user
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.followup.user.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_followup: yes
   plugin_followup_sections: user
@@ -129,7 +129,7 @@ name: Indepth analysis
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.followup.indepth.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_followup: yes
   plugin_followup_indepth: yes
@@ -140,7 +140,7 @@ name: Exclude Archived
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.followup.archived.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_followup: yes
   plugin_followup_archived: no

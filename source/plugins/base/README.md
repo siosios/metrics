@@ -219,7 +219,7 @@ name: Default metrics
 uses: siosios/metrics@latest
 with:
   filename: metrics.base.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: header, activity, community, repositories, metadata
 
 ```

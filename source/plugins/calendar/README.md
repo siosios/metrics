@@ -77,7 +77,7 @@ name: Current year calendar
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.calendar.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_calendar: yes
 
@@ -87,7 +87,7 @@ name: Full history calendar
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.calendar.full.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_calendar: yes
   plugin_calendar_limit: 0

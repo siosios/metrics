@@ -69,7 +69,7 @@ name: Recently starred
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.stars.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_stars: yes
   plugin_stars_limit: 3

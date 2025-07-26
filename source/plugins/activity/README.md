@@ -176,7 +176,7 @@ name: Recent activity
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.activity.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_activity: yes
   plugin_activity_limit: 5

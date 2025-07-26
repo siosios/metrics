@@ -133,7 +133,7 @@ name: Compact display in base plugin
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.lines.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: repositories
   plugin_lines: yes
   plugin_lines_delay: 30
@@ -144,7 +144,7 @@ name: Repositories and diff history
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.lines.history.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_lines: yes
   plugin_lines_delay: 30

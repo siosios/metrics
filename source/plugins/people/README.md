@@ -180,7 +180,7 @@ name: Followers
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.people.followers.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_people: yes
   plugin_people_types: followers
@@ -191,7 +191,7 @@ name: Contributors and sponsors
 uses: siosios/metrics@latest
 with:
   filename: metrics.plugin.people.repository.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   template: repository
   repo: metrics
