@@ -47,4 +47,4 @@ jobs:
         run: ./delete_workflows.sh siosios/metrics
         working-directory: .github/actions/ghcr-clean
         env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
