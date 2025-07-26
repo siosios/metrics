@@ -9,7 +9,10 @@ jobs:
   build-test-analyze:
     name: Build, test and analyze
     if: "!contains(github.event.head_commit.message, '[skip test]')"
-    uses: siosios/metrics/.github/workflows/test.yml@master
+    runs-on: self-hosted
+    steps:
+      - name: Run build, test and analyze workflow
+        uses: siosios/metrics/.github/workflows/test.yml@master
 
   # Format code
   format:
@@ -76,13 +79,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      # Log in to GitHub Container Registry to allow pushing Docker images
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
          registry: ghcr.io
-         username: ${{github.actor}}
-         password: ${{secrets.GITHUB_TOKEN}}
-  #    - name: Login to GitHub registry
+         username: ${{ github.actor }}
+  # - name: Login to GitHub registry
+  #   run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
    #     run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Build docker image
         run: docker build -t ghcr.io/siosios/metrics:master .
