@@ -138,7 +138,7 @@ jobs:
     needs: [ action-master-test ]
     uses: siosios/metrics/.github/workflows/examples.yml@master
     secrets:
-      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+      METRICS_TOKEN: ${{ github.token }}
 
   # Publish examples (presets)
   publish-examples-presets:
