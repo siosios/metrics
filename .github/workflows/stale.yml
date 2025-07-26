@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: dessant/lock-threads@v4
         with:
-          github-token: ${{ secrets.METRICS_TOKEN }}
+          github-token: ${{ github.token }}
           issue-inactive-days: 180
           issue-lock-reason: ""
           add-issue-labels: ☑️ archived
