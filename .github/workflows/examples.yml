@@ -41,7 +41,7 @@ jobs:
         with:
           filename: metrics.organization.svg
           user: github
-          token: ${{ github.token_WITH_SCOPES }}
+          token: ${{ github.token }}
           base: header, repositories
           output_action: none
           delay: 120
@@ -635,7 +635,7 @@ jobs:
         uses: siosios/metrics@master
         with:
           filename: metrics.plugin.projects.svg
-          token: ${{ github.token_WITH_SCOPES }}
+          token: ${{ github.token }}
           base: ""
           plugin_projects: yes
           plugin_projects_repositories: siosios/metrics/projects/1
@@ -649,7 +649,7 @@ jobs:
         uses: siosios/metrics@master
         with:
           filename: metrics.plugin.introduction.svg
-          token: ${{ github.token_WITH_SCOPES }}
+          token: ${{ github.token }}
           user: github
           base: header
           plugin_introduction: yes
@@ -826,7 +826,7 @@ jobs:
         with:
           template: repository
           filename: metrics.repository.svg
-          token: ${{ github.token_WITH_SCOPES }}
+          token: ${{ github.token }}
           user: siosios
           repo: metrics
           plugin_lines: yes
@@ -996,7 +996,7 @@ jobs:
         uses: siosios/metrics@master
         with:
           filename: metrics.sponsors.svg
-          token: ${{ github.token_PERSONAL }}
+          token: ${{ github.token }}
           base: ""
           user: siosios
           plugin_sponsors: yes
