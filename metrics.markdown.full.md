@@ -24,14 +24,14 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
+* [Resizable Structs in Zig](https://tristanpemble.com/resizable-structs-in-zig/)
+  * *Published on 26 Jul 2025*
+* [Show HN: QuickTunes: Apple Music player for Mac with iPod vibes](https://furnacecreek.org/quicktunes/)
+  * *Published on 26 Jul 2025*
 * [How We Rooted Copilot](https://research.eye.security/how-we-rooted-copilot/)
   * *Published on 26 Jul 2025*
-* [Rust running on every GPU](https://rust-gpu.github.io/blog/2025/07/25/rust-on-every-gpu/)
-  * *Published on 26 Jul 2025*
-* [Purple Earth Hypothesis](https://en.wikipedia.org/wiki/Purple_Earth_hypothesis)
+* [Purple Earth hypothesis](https://en.wikipedia.org/wiki/Purple_Earth_hypothesis)
   * *Published on 24 Jul 2025*
-* [Font-size-adjust Is Useful](https://matklad.github.io/2025/07/16/font-size-adjust.html)
-  * *Published on 23 Jul 2025*
 
 
 ___
