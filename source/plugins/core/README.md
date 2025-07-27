@@ -32,7 +32,7 @@ Configure `config_timezone` (see [supported timezone](https://en.wikipedia.org/w
 
 *Example: configuring timezone*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_timezone: Europe/Paris
 ```
@@ -43,7 +43,7 @@ Content can be manually ordered using `config_order` option.
 
 *Example: display base.header, isocalendar, languages and stars in this specific order*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     base: header
     plugin_isocalendar: yes
@@ -123,7 +123,7 @@ Options resolution is done in the following order:
 
 *Example: using a configuration preset from an url*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_presets: https://raw.githubusercontent.com/siosios/metrics/presets/lunar-red/preset.yaml
 ```
@@ -132,7 +132,7 @@ Some presets are hosted on this repository on the [`@presets`](https://github.co
 
 *Example: using a pre-defined configuration preset*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_presets: "@lunar-red"
 ```
@@ -147,7 +147,7 @@ Additional CSS can be injected using `extras_css` option.
 
 *Example: changing the color of `h2`*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     base: header
     extras_css: |
@@ -168,7 +168,7 @@ Additional JavaScript can be injected using `extras_js` option.
 
 *Example: removing all `h2`*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     base: header
     extras_js: |
@@ -205,21 +205,21 @@ Each value need to respect the following format:
 
 *Example: add 10px padding for both width and height*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_padding: 10
 ```
 
 *Example: add 10px padding to height and increase it by 8%*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_padding: 0, 10 + 8%
 ```
 
 *Example: remove 10% from height*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_padding: 0, -10%
 ```
@@ -234,7 +234,7 @@ The `columns` display will render a full-width image with automatic resizing: tw
 
 *Example: output a PNG image*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_display: large
 ```
@@ -245,7 +245,7 @@ Use `config_output` to change output format.
 
 *Example: output a PNG image*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_output: png
 ```
@@ -254,7 +254,7 @@ A JSON output can be used to retrieved collected data and use it elsewhere.
 
 *Example: output a JSON data dump*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_output: json
 ```
@@ -263,7 +263,7 @@ When using a PDF output, it is advised to set `config_base64: yes` to encode emb
 
 *Example: output a self-contained PDF document*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     markdown: TEMPLATE.md
     config_output: markdown-pdf
@@ -278,7 +278,7 @@ It is possible to generate a self-contained HTML file containing `✨ metrics in
 
 *Example: output `✨ metrics insights` report*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_output: insights
 ```
@@ -306,7 +306,7 @@ metrics:
   permissions:
     contents: write
   steps:
-    - uses: siosios/metrics@latest
+    - uses: siosios/metrics@master
       with:
         output_action: commit
         committer_branch: metrics-renders
@@ -328,12 +328,12 @@ metrics:
     contents: write
     pull-requests: write
   steps:
-    - uses: siosios/metrics@latest
+    - uses: siosios/metrics@master
       with:
         filename: my-metrics-0.svg
         output_action: pull-request
 
-    - uses: siosios/metrics@latest
+    - uses: siosios/metrics@master
       with:
         filename: my-metrics-1.svg
         output_action: pull-request-merge
@@ -350,7 +350,7 @@ It is required to provide a gist id to `committer_gist` option to make it work.
 ```yaml
 metrics:
   steps:
-    - uses: siosios/metrics@latest
+    - uses: siosios/metrics@master
       with:
         output_action: gist
         committer_gist: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -372,11 +372,11 @@ metrics:
         with:
           fetch-depth: 0
 
-    - uses: siosios/metrics@latest
+    - uses: siosios/metrics@master
       with:
         output_action: none
 
-    - uses: siosios/metrics@latest
+    - uses: siosios/metrics@master
       run: |
         set +e
         git checkout metrics-renders
@@ -395,7 +395,7 @@ Use `retries` and `retries_delay` options to automatically retry rendering.
 
 *Example: retry render up to 3 times (wait 5 minutes between each fail)*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     retries: 3
     retries_delay: 300
@@ -408,7 +408,7 @@ Use `retries_output_action` and `retries_delay_output_action` options to automat
 
 *Example: retry output action up to 5 times (wait 2 minutes between each fail)*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     retries_output_action: 5
     retries_delay_output_action: 120
@@ -422,14 +422,14 @@ To reduce filesize and decrease loading time, *metrics* offers several optimizat
 
 *Example: optimize CSS and XML*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     optimize: css, xml
 ```
 
 *Example: optimize SVG (experimental)*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     optimize: svg
     experimental_features: --optimize-svg
@@ -445,7 +445,7 @@ On forks, this feature is disable to take into account any changes you made on i
 
 *Example: using prebuilt docker image*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     use_prebuilt_image: yes
 ```

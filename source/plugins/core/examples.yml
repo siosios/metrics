@@ -1,5 +1,5 @@
 - name: Organization
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.organization.svg
     user: github
@@ -7,7 +7,7 @@
     base: header, repositories
 
 - name: Large display
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.large.svg
     token: ${{ github.token }}
@@ -15,7 +15,7 @@
 
 - name: JSON metrics
   if: ${{ success() || failure() }}
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.example.json
     token: ${{ github.token }}
@@ -23,7 +23,7 @@
 
 - name: PNG metrics
   if: ${{ success() || failure() }}
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.example.png
     token: ${{ github.token }}
@@ -31,14 +31,14 @@
 
 - name: metrics insights
   if: ${{ success() || failure() }}
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.insights.html
     token: ${{ github.token }}
     config_output: insights
 
 - name: Presets
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.presets.svg
     token: ${{ github.token }}
@@ -51,7 +51,7 @@
       - web
 
 - name: Plugin error example
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.error.svg
     token: ${{ github.token }}

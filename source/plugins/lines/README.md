@@ -130,7 +130,7 @@ after returning correct results upon performing another query.</p>
 <!--examples-->
 ```yaml
 name: Compact display in base plugin
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.lines.svg
   token: ${{ github.token }}
@@ -141,7 +141,7 @@ with:
 ```
 ```yaml
 name: Repositories and diff history
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.lines.history.svg
   token: ${{ github.token }}

@@ -168,7 +168,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Featured star list
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.starlists.svg
   token: NOT_NEEDED
@@ -180,7 +180,7 @@ with:
 ```
 ```yaml
 name: Featured star list languages
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.starlists.languages.svg
   token: NOT_NEEDED

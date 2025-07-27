@@ -158,7 +158,7 @@ Helps to avoid consuming too much Google Geocoding API requests while still bein
 <!--examples-->
 ```yaml
 name: Using classic charts
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.stargazers.svg
   token: ${{ github.token }}
@@ -168,7 +168,7 @@ with:
 ```
 ```yaml
 name: Using graph charts
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.stargazers.graph.svg
   token: ${{ github.token }}
@@ -179,7 +179,7 @@ with:
 ```
 ```yaml
 name: With worldmap
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.stargazers.worldmap.svg
   token: ${{ github.token }}

@@ -1,5 +1,5 @@
 - name: Mildly interesting facts
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.habits.facts.svg
     token: ${{ github.token }}
@@ -10,7 +10,7 @@
     config_timezone: Europe/Paris
 
 - name: Recent activity charts
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.habits.charts.svg
     token: ${{ github.token }}

@@ -1,5 +1,5 @@
 - name: Opened on user's repositories
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.followup.svg
     token: ${{ github.token }}
@@ -7,7 +7,7 @@
     plugin_followup: yes
 
 - name: Opened by user
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.followup.user.svg
     token: ${{ github.token }}
@@ -16,7 +16,7 @@
     plugin_followup_sections: user
 
 - name: Indepth analysis
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.followup.indepth.svg
     token: ${{ github.token }}
@@ -25,7 +25,7 @@
     plugin_followup_indepth: yes
 
 - name: Exclude Archived
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.followup.archived.svg
     token: ${{ github.token }}

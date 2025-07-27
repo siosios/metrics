@@ -74,7 +74,7 @@
 <!--examples-->
 ```yaml
 name: News from hackernews
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.rss.svg
   token: NOT_NEEDED

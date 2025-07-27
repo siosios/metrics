@@ -1,5 +1,5 @@
 - name: Recently starred
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.stars.svg
     token: ${{ github.token }}

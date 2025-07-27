@@ -138,7 +138,7 @@ inputs:
     type: array
     format: comma-separated
     default: ""
-    example: siosios/metrics, siosios/metrics@master, siosios/metrics@latest:v1.0..v1.1
+    example: siosios/metrics, siosios/metrics@master, siosios/metrics@master:v1.0..v1.1
 
   plugin_languages_analysis_timeout:
     description: |

@@ -216,7 +216,7 @@ Broad affiliations will result in less representative metrics.</p>
 <!--examples-->
 ```yaml
 name: Default metrics
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.base.svg
   token: ${{ github.token }}

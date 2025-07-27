@@ -137,7 +137,7 @@ Use at your own risk, <em>metrics</em> and its authors cannot be held responsibl
 <!--examples-->
 ```yaml
 name: JavaScript or TypeScript snippet of the day
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.code.svg
   token: ${{ github.token }}

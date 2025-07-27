@@ -302,7 +302,7 @@ Since git lets you use any email and username for commits, *metrics* may not be 
 
 *Example: configuring `indepth` mode*
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     plugin_languages: yes
     plugin_languages_indepth: yes
@@ -368,7 +368,7 @@ It will fetch a specified amount of recent push events and perform linguistic an
 
 *Example: display recently used languages from 400 GitHub events from last 2 weeks*
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     plugin_languages: yes
     plugin_languages_sections: recently-used
@@ -385,7 +385,7 @@ It is possible to ignore completely languages or those lower than a given thresh
 
 *Example: hide HTML and CSS languages, skip siosios/metrics repository*
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     plugin_languages: yes
     plugin_languages_ignored: html, css
@@ -394,7 +394,7 @@ It is possible to ignore completely languages or those lower than a given thresh
 
 *Example: hide languages with less than 2% usage*
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     plugin_languages: yes
     plugin_languages_threshold: 2%
@@ -407,7 +407,7 @@ Supported categories are `data`, `markup`, `programming` and `prose`.
 
 *Example: hide data and prose languages from stats*
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     plugin_languages: yes
     plugin_languages_categories: data, prose
@@ -428,7 +428,7 @@ Both hexadecimal and [named color](https://developer.mozilla.org/en-US/docs/Web/
 
 *Example: using a predefined color set*
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     plugin_languages: yes
     plugin_languages_colors: rainbow
@@ -437,7 +437,7 @@ Both hexadecimal and [named color](https://developer.mozilla.org/en-US/docs/Web/
 
 *Example: setting JavaScript to red, the first language to blue and the second one to `#ff00aa`*
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     plugin_languages: yes
     plugin_languages_colors: javascript:red, 0:blue, 1:#ff00aa
@@ -451,7 +451,7 @@ To mitigate this, it is possible to use `plugin_languages_aliases` option and pr
 
 *Example: display JavaScript as JS and TypeScript as TS*
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     plugin_languages: yes
     plugin_languages_aliases: javascript:JS typescript:TS
@@ -462,7 +462,7 @@ To mitigate this, it is possible to use `plugin_languages_aliases` option and pr
 <!--examples-->
 ```yaml
 name: Most used
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.languages.svg
   token: ${{ github.token }}
@@ -476,7 +476,7 @@ with:
 ```
 ```yaml
 name: Most used (with details)
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.languages.details.svg
   token: ${{ github.token }}
@@ -491,7 +491,7 @@ with:
 ```
 ```yaml
 name: Recently used
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.languages.recent.svg
   token: ${{ github.token }}
@@ -507,7 +507,7 @@ with:
 ```
 ```yaml
 name: Indepth analysis
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.languages.indepth.svg
   token: ${{ github.token }}

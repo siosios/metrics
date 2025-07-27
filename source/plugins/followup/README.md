@@ -105,7 +105,7 @@ It helps knowing whether repositories are also maintained by other users and giv
 <!--examples-->
 ```yaml
 name: Opened on user's repositories
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.followup.svg
   token: ${{ github.token }}
@@ -115,7 +115,7 @@ with:
 ```
 ```yaml
 name: Opened by user
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.followup.user.svg
   token: ${{ github.token }}
@@ -126,7 +126,7 @@ with:
 ```
 ```yaml
 name: Indepth analysis
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.followup.indepth.svg
   token: ${{ github.token }}
@@ -137,7 +137,7 @@ with:
 ```
 ```yaml
 name: Exclude Archived
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.followup.archived.svg
   token: ${{ github.token }}
