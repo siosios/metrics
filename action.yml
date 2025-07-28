@@ -220,7 +220,7 @@ inputs:
   use_prebuilt_image:
     description: >-
       Use pre-built docker image from [GitHub container
-      registry](https://github.com/siosios/metrics/pkgs/container/metrics)
+      registry](https://github.com/lowlighter/metrics/pkgs/container/metrics)
     default: yes
 
   plugins_errors_fatal:
@@ -430,6 +430,25 @@ inputs:
     default: <default-value>
 
   # ====================================================================================
+  # 📜 Repository licenses
+
+  plugin_licenses:
+    description: Enable licenses plugin
+    default: <default-value>
+
+  plugin_licenses_setup:
+    description: Setup command
+    default: <default-value>
+
+  plugin_licenses_ratio:
+    description: Used licenses ratio
+    default: <default-value>
+
+  plugin_licenses_legal:
+    description: Permissions, limitations and conditions about used licenses
+    default: <default-value>
+
+  # ====================================================================================
   # 💡 Coding habits and activity
 
   plugin_habits:
@@ -601,6 +620,44 @@ inputs:
     default: <default-value>
 
   # ====================================================================================
+  # 💝 GitHub Sponsorships
+
+  plugin_sponsorships:
+    description: Enable sponsorships plugin
+    default: <default-value>
+
+  plugin_sponsorships_sections:
+    description: Displayed sections
+    default: <default-value>
+
+  plugin_sponsorships_size:
+    description: Profile picture display size
+    default: <default-value>
+
+  # ====================================================================================
+  # 💕 GitHub Sponsors
+
+  plugin_sponsors:
+    description: Enable sponsors plugin
+    default: <default-value>
+
+  plugin_sponsors_sections:
+    description: Displayed sections
+    default: <default-value>
+
+  plugin_sponsors_past:
+    description: Past sponsorships
+    default: <default-value>
+
+  plugin_sponsors_size:
+    description: Profile picture display size
+    default: <default-value>
+
+  plugin_sponsors_title:
+    description: Title caption
+    default: <default-value>
+
+  # ====================================================================================
   # 📓 Featured repositories
 
   plugin_repositories:
@@ -702,6 +759,37 @@ inputs:
 
   plugin_calendar_limit:
     description: Years to display
+    default: <default-value>
+
+  # ====================================================================================
+  # 🏆 Achievements
+
+  plugin_achievements:
+    description: Enable achievements plugin
+    default: <default-value>
+
+  plugin_achievements_threshold:
+    description: Rank threshold filter
+    default: <default-value>
+
+  plugin_achievements_secrets:
+    description: Secrets achievements
+    default: <default-value>
+
+  plugin_achievements_display:
+    description: Display style
+    default: <default-value>
+
+  plugin_achievements_limit:
+    description: Display limit
+    default: <default-value>
+
+  plugin_achievements_ignored:
+    description: Ignored achievements
+    default: <default-value>
+
+  plugin_achievements_only:
+    description: Showcased achievements
     default: <default-value>
 
   # ====================================================================================
@@ -858,10 +946,87 @@ inputs:
     default: <default-value>
 
   # ====================================================================================
+  # 🌇 GitHub Skyline
+
+  plugin_skyline:
+    description: Enable skyline plugin
+    default: <default-value>
+
+  plugin_skyline_year:
+    description: Displayed year
+    default: <default-value>
+
+  plugin_skyline_frames:
+    description: Frames count
+    default: <default-value>
+
+  plugin_skyline_quality:
+    description: Image quality
+    default: <default-value>
+
+  plugin_skyline_compatibility:
+    description: Compatibility mode
+    default: <default-value>
+
+  plugin_skyline_settings:
+    description: Advanced settings
+    default: <default-value>
+
+  # ====================================================================================
   # 💭 GitHub Community Support
 
   plugin_support:
     description: Enable support plugin
+    default: <default-value>
+
+  # ====================================================================================
+  # ⏱️ Google PageSpeed
+
+  plugin_pagespeed:
+    description: Enable pagespeed plugin
+    default: <default-value>
+
+  plugin_pagespeed_token:
+    description: PageSpeed token
+    default: <default-value>
+
+  plugin_pagespeed_url:
+    description: Audited website
+    default: <default-value>
+
+  plugin_pagespeed_detailed:
+    description: Detailed results
+    default: <default-value>
+
+  plugin_pagespeed_screenshot:
+    description: Website screenshot
+    default: <default-value>
+
+  plugin_pagespeed_pwa:
+    description: PWA Status
+    default: <default-value>
+
+  # ====================================================================================
+  # 🐤 Latest tweets
+
+  plugin_tweets:
+    description: Enable tweets plugin
+    default: <default-value>
+
+  plugin_tweets_token:
+    description: Twitter API token
+    default: <default-value>
+
+  plugin_tweets_user:
+    description: Twitter username
+    default: <default-value>
+
+  plugin_tweets_attachments:
+    description: Tweets attachments
+    default: <default-value>
+
+  plugin_tweets_limit:
+    description: Display limit
     default: <default-value>
 
   # ====================================================================================
@@ -923,6 +1088,49 @@ inputs:
     default: <default-value>
 
   # ====================================================================================
+  # 🎼 Music activity and suggestions
+
+  plugin_music:
+    description: Enable music plugin
+    default: <default-value>
+
+  plugin_music_provider:
+    description: Music provider
+    default: <default-value>
+
+  plugin_music_token:
+    description: Music provider token
+    default: <default-value>
+
+  plugin_music_user:
+    description: Music provider username
+    default: <default-value>
+
+  plugin_music_mode:
+    description: Display mode
+    default: <default-value>
+
+  plugin_music_playlist:
+    description: Playlist URL
+    default: <default-value>
+
+  plugin_music_limit:
+    description: Display limit
+    default: <default-value>
+
+  plugin_music_played_at:
+    description: Recently played - Last played timestamp
+    default: <default-value>
+
+  plugin_music_time_range:
+    description: Top tracks - Time range
+    default: <default-value>
+
+  plugin_music_top_type:
+    description: Top tracks - Display type
+    default: <default-value>
+
+  # ====================================================================================
   # ✒️ Recent posts
 
   plugin_posts:
@@ -965,6 +1173,76 @@ inputs:
     default: <default-value>
 
   # ====================================================================================
+  # ⏰ WakaTime
+
+  plugin_wakatime:
+    description: Enable wakatime plugin
+    default: <default-value>
+
+  plugin_wakatime_token:
+    description: WakaTime API token
+    default: <default-value>
+
+  plugin_wakatime_url:
+    description: WakaTime URL
+    default: <default-value>
+
+  plugin_wakatime_user:
+    description: WakaTime username
+    default: <default-value>
+
+  plugin_wakatime_sections:
+    description: Displayed sections
+    default: <default-value>
+
+  plugin_wakatime_days:
+    description: Time range
+    default: <default-value>
+
+  plugin_wakatime_limit:
+    description: Display limit (entries per graph)
+    default: <default-value>
+
+  plugin_wakatime_languages_other:
+    description: Other languages
+    default: <default-value>
+
+  plugin_wakatime_languages_ignored:
+    description: Ignored languages
+    default: <default-value>
+
+  plugin_wakatime_repositories_visibility:
+    description: Repositories visibility
+    default: <default-value>
+
+  # ====================================================================================
+  # 🗳️ Leetcode
+
+  plugin_leetcode:
+    description: Enable leetcode plugin
+    default: <default-value>
+
+  plugin_leetcode_user:
+    description: LeetCode login
+    default: <default-value>
+
+  plugin_leetcode_sections:
+    description: Displayed sections
+    default: <default-value>
+
+  plugin_leetcode_limit_skills:
+    description: Display limit (skills)
+    default: <default-value>
+
+  plugin_leetcode_ignored_skills:
+    description: Ignored skills
+    default: <default-value>
+
+  plugin_leetcode_limit_recent:
+    description: Display limit (recent)
+    default: <default-value>
+
+  # ====================================================================================
   # 🕹️ Steam
 
   plugin_steam:
@@ -1002,10 +1280,221 @@ inputs:
     description: Display threshold (Game playtime in hours)
     default: <default-value>
 
+  # ====================================================================================
+  # 🧠 16personalities
+
+  plugin_16personalities:
+    description: Enable 16personalities plugin
+    default: <default-value>
+
+  plugin_16personalities_url:
+    description: Profile URL
+    default: <default-value>
+
+  plugin_16personalities_sections:
+    description: Displayed sections
+    default: <default-value>
+
+  plugin_16personalities_scores:
+    description: Display traits scores
+    default: <default-value>
+
+  # ====================================================================================
+  # ♟️ Chess
+
+  plugin_chess:
+    description: Enable chess plugin
+    default: <default-value>
+
+  plugin_chess_token:
+    description: Chess platform token
+    default: <default-value>
+
+  plugin_chess_user:
+    description: Chess platform login
+    default: <default-value>
+
+  plugin_chess_platform:
+    description: Chess platform
+    default: <default-value>
+
+  plugin_chess_animation:
+    description: Animation settings
+    default: <default-value>
+
+  # ====================================================================================
+  # 🪙 Crypto
+
+  plugin_crypto:
+    description: Enable crypto plugin
+    default: <default-value>
+
+  plugin_crypto_id:
+    description: Crypto id
+    default: <default-value>
+
+  plugin_crypto_vs_currency:
+    description: The target currency of market data (usd, eur, jpy, etc.)
+    default: <default-value>
+
+  plugin_crypto_days:
+    description: Data up to number of days ago (eg. 1,14,30,max)
+    default: <default-value>
+
+  plugin_crypto_precision:
+    description: The number of decimal places to use
+    default: <default-value>
+
+  # ====================================================================================
+  # 🥠 Fortune
+
+  plugin_fortune:
+    description: Enable fortune plugin
+    default: <default-value>
+
+  # ====================================================================================
+  # 💉 Nightscout
+
+  plugin_nightscout:
+    description: Enable nightscout plugin
+    default: <default-value>
+
+  plugin_nightscout_url:
+    description: Nightscout URL
+    default: <default-value>
+
+  plugin_nightscout_datapoints:
+    description: Number of datapoints shown the graph
+    default: <default-value>
+
+  plugin_nightscout_lowalert:
+    description: Threshold for low blood sugar
+    default: <default-value>
+
+  plugin_nightscout_highalert:
+    description: Threshold for high blood sugar
+    default: <default-value>
+
+  plugin_nightscout_urgentlowalert:
+    description: Threshold for urgently low blood sugar
+    default: <default-value>
+
+  plugin_nightscout_urgenthighalert:
+    description: Threshold for urgently high blood sugar
+    default: <default-value>
+
+  # ====================================================================================
+  # 💩 PoopMap plugin
+
+  plugin_poopmap:
+    description: Enable poopmap plugin
+    default: <default-value>
+
+  plugin_poopmap_token:
+    description: PoopMap API token
+    default: <default-value>
+
+  plugin_poopmap_days:
+    description: Time range
+    default: <default-value>
+
+  # ====================================================================================
+  # 📸 Website screenshot
+
+  plugin_screenshot:
+    description: Enable screenshot plugin
+    default: <default-value>
+
+  plugin_screenshot_title:
+    description: Title caption
+    default: <default-value>
+
+  plugin_screenshot_url:
+    description: Website URL
+    default: <default-value>
+
+  plugin_screenshot_selector:
+    description: CSS Selector
+    default: <default-value>
+
+  plugin_screenshot_mode:
+    description: Output mode
+    default: <default-value>
+
+  plugin_screenshot_viewport:
+    description: Viewport options
+    default: <default-value>
+
+  plugin_screenshot_wait:
+    description: Wait time before taking screenshot (ms)
+    default: <default-value>
+
+  plugin_screenshot_background:
+    description: Background
+    default: <default-value>
+
+  # ====================================================================================
+  # 🦑 Splatoon
+
+  plugin_splatoon:
+    description: Enable splatoon plugin
+    default: <default-value>
+
+  plugin_splatoon_token:
+    description: Splatnet token
+    default: <default-value>
+
+  plugin_splatoon_sections:
+    description: Displayed sections
+    default: <default-value>
+
+  plugin_splatoon_versus_limit:
+    description: Display limit (Versus)
+    default: <default-value>
+
+  plugin_splatoon_salmon_limit:
+    description: Display limit (Salmon run)
+    default: <default-value>
+
+  plugin_splatoon_statink:
+    description: stat.ink integration
+    default: <default-value>
+
+  plugin_splatoon_statink_token:
+    description: stat.ink token
+    default: <default-value>
+
+  plugin_splatoon_source:
+    description: Source
+    default: <default-value>
+
+  # ====================================================================================
+  # 💹 Stock prices
+
+  plugin_stock:
+    description: Enable stock plugin
+    default: <default-value>
+
+  plugin_stock_token:
+    description: Yahoo Finance token
+    default: <default-value>
+
+  plugin_stock_symbol:
+    description: Company stock symbol
+    default: <default-value>
+
+  plugin_stock_duration:
+    description: Time range
+    default: <default-value>
+
+  plugin_stock_interval:
+    description: Time interval between points
+    default: <default-value>
+
 
 # ====================================================================================
 # Action metadata
-name: metrics embed
+name: Metrics embed
 author: siosios
 description: An infographics generator with 40+ plugins and 300+ options to display stats about your GitHub account!
 branding:
@@ -1020,9 +1509,9 @@ runs:
   steps:
     - run: |
         # Check runner compatibility
-        echo "::group::metrics docker image setup"
-        echo "GitHub action: $metrics_ACTION ($metrics_ACTION_PATH)"
-        cd $metrics_ACTION_PATH
+        echo "::group::Metrics docker image setup"
+        echo "GitHub action: $METRICS_ACTION ($METRICS_ACTION_PATH)"
+        cd $METRICS_ACTION_PATH
         for DEPENDENCY in docker jq; do
           if ! which $DEPENDENCY > /dev/null 2>&1; then
             echo "::error::\"$DEPENDENCY\" is not installed on current runner but is needed to run metrics"
@@ -1045,74 +1534,74 @@ runs:
         echo "Environment variables: loaded"
 
         # Renders output folder
-        metrics_RENDERS="/metrics_renders"
-        sudo mkdir -p $metrics_RENDERS
-        echo "Renders output folder: $metrics_RENDERS"
+        METRICS_RENDERS="/metrics_renders"
+        sudo mkdir -p $METRICS_RENDERS
+        echo "Renders output folder: $METRICS_RENDERS"
 
         # Source repository (picked from action name)
-        metrics_SOURCE=$(echo $metrics_ACTION | sed -E 's/metrics.*?$//g' | sed -E 's/_//g')
-        echo "Source: $metrics_SOURCE"
+        METRICS_SOURCE=$(echo $METRICS_ACTION | sed -E 's/metrics.*?$//g' | sed -E 's/_//g')
+        echo "Source: $METRICS_SOURCE"
 
         # Version (picked from package.json)
-        metrics_VERSION=$(grep -Po '(?<="version": ").*(?=")' package.json)
-        echo "Version: $metrics_VERSION"
+        METRICS_VERSION=$(grep -Po '(?<="version": ").*(?=")' package.json)
+        echo "Version: $METRICS_VERSION"
 
         # Image tag (extracted from version or from env)
-        metrics_TAG=v$(echo $metrics_VERSION | sed -r 's/^([0-9]+[.][0-9]+).*/\1/')
-        echo "Image tag: $metrics_TAG"
+        METRICS_TAG=v$(echo $METRICS_VERSION | sed -r 's/^([0-9]+[.][0-9]+).*/\1/')
+        echo "Image tag: $METRICS_TAG"
 
         # Image name
         # Official action
-        if [[ $metrics_SOURCE == "siosios" ]]; then
+        if [[ $METRICS_SOURCE == "lowlighter" ]]; then
           # Use registry with pre-built images
-          if [[ ! $metrics_USE_PREBUILT_IMAGE =~ ^([Ff]alse|[Oo]ff|[Nn]o|0)$ ]]; then
+          if [[ ! $METRICS_USE_PREBUILT_IMAGE =~ ^([Ff]alse|[Oo]ff|[Nn]o|0)$ ]]; then
             # Is released version
             set +e
-            metrics_IS_RELEASED=$(expr $(expr match $metrics_VERSION .*-beta) == 0)
+            METRICS_IS_RELEASED=$(expr $(expr match $METRICS_VERSION .*-beta) == 0)
             set -e
-            echo "Is released version: $metrics_IS_RELEASED"
-            if [[ "$metrics_IS_RELEASED" -eq "0" ]]; then
-              metrics_TAG="$metrics_TAG-beta"
-              echo "Image tag (updated): $metrics_TAG"
+            echo "Is released version: $METRICS_IS_RELEASED"
+            if [[ "$METRICS_IS_RELEASED" -eq "0" ]]; then
+              METRICS_TAG="$METRICS_TAG-beta"
+              echo "Image tag (updated): $METRICS_TAG"
             fi
-            metrics_IMAGE=ghcr.io/siosios/metrics:$metrics_TAG
-            echo "Using pre-built version $metrics_TAG, will pull docker image from GitHub registry"
-            if ! docker image pull $metrics_IMAGE; then
+            METRICS_IMAGE=ghcr.io/siosios/metrics:$METRICS_TAG
+            echo "Using pre-built version $METRICS_TAG, will pull docker image from GitHub registry"
+            if ! docker image pull $METRICS_IMAGE; then
               echo "Failed to fetch docker image from GitHub registry, will rebuild it locally"
-              metrics_IMAGE=metrics:$metrics_VERSION
+              METRICS_IMAGE=metrics:$METRICS_VERSION
             fi
           # Rebuild image
           else
-            echo "Using an unreleased version ($metrics_VERSION)"
-            metrics_IMAGE=metrics:$metrics_VERSION
+            echo "Using an unreleased version ($METRICS_VERSION)"
+            METRICS_IMAGE=metrics:$METRICS_VERSION
           fi
         # Forked action
         else
           echo "Using a forked version"
-          metrics_IMAGE=metrics:forked-$metrics_VERSION
+          METRICS_IMAGE=metrics:forked-$METRICS_VERSION
         fi
-        echo "Image name: $metrics_IMAGE"
+        echo "Image name: $METRICS_IMAGE"
 
         # Build image if necessary
         set +e
-        docker image inspect $metrics_IMAGE
-        metrics_IMAGE_NEEDS_BUILD="$?"
+        docker image inspect $METRICS_IMAGE
+        METRICS_IMAGE_NEEDS_BUILD="$?"
         set -e
-        if [[ "$metrics_IMAGE_NEEDS_BUILD" -gt "0" ]]; then
-          echo "Image $metrics_IMAGE is not present locally, rebuilding it from Dockerfile"
-          docker build -t $metrics_IMAGE .
+        if [[ "$METRICS_IMAGE_NEEDS_BUILD" -gt "0" ]]; then
+          echo "Image $METRICS_IMAGE is not present locally, rebuilding it from Dockerfile"
+          docker build -t $METRICS_IMAGE .
         else
-          echo "Image $metrics_IMAGE is present locally"
+          echo "Image $METRICS_IMAGE is present locally"
         fi
         echo "::endgroup::"
 
         # Run docker image with current environment
-        docker run --init --rm --volume $GITHUB_EVENT_PATH:$GITHUB_EVENT_PATH --volume $metrics_RENDERS:/renders --env-file .env $metrics_IMAGE
+        docker run --init --rm --volume $GITHUB_EVENT_PATH:$GITHUB_EVENT_PATH --volume $METRICS_RENDERS:/renders --env-file .env $METRICS_IMAGE
         rm .env
       shell: bash
       env:
-        metrics_ACTION: ${{ github.action }}
-        metrics_ACTION_PATH: ${{ github.action_path }}
-        metrics_USE_PREBUILT_IMAGE: ${{ inputs.use_prebuilt_image }}
+        METRICS_ACTION: ${{ github.action }}
+        METRICS_ACTION_PATH: ${{ github.action_path }}
+        METRICS_USE_PREBUILT_IMAGE: ${{ inputs.use_prebuilt_image }}
         INPUTS: ${{ toJson(inputs) }}
         TZ: ${{ inputs.config_timezone }}
