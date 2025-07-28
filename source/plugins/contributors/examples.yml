@@ -2,7 +2,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.contributors.contributions.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     template: repository
     repo: metrics
@@ -13,7 +13,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.contributors.categories.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     template: repository
     repo: metrics

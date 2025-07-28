@@ -2,7 +2,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.calendar.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_calendar: yes
 
@@ -10,7 +10,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.calendar.full.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_calendar: yes
     plugin_calendar_limit: 0

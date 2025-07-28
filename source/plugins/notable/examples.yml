@@ -2,7 +2,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.notable.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_notable: yes
 
@@ -10,7 +10,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.notable.indepth.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_notable: yes
     plugin_notable_indepth: yes

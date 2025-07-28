@@ -3,14 +3,14 @@
   with:
     filename: metrics.organization.svg
     user: github
-    token: ${{ secrets.metrics_TOKEN_WITH_SCOPES }}
+    token: ${{ github.token_WITH_SCOPES }}
     base: header, repositories
 
 - name: Large display
   uses: siosios/metrics@master
   with:
     filename: metrics.large.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     config_display: large
 
 - name: JSON metrics
@@ -18,7 +18,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.example.json
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     config_output: json
 
 - name: PNG metrics
@@ -26,7 +26,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.example.png
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     config_output: png
 
 - name: metrics insights
@@ -34,14 +34,14 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.insights.html
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     config_output: insights
 
 - name: Presets
   uses: siosios/metrics@master
   with:
     filename: metrics.presets.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: header, repositories
     config_presets: https://raw.githubusercontent.com/siosios/metrics/presets/lunar-red/preset.yaml
   prod:
@@ -54,7 +54,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.error.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_projects: yes
   prod:

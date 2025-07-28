@@ -57,7 +57,7 @@ Some templates may accept additional custom parameters that can be passed throug
 name: Using a community template
 uses: siosios/metrics@master
 with:
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   template: "@classic"
   setup_community_templates: siosios/metrics@master:classic
 
@@ -66,7 +66,7 @@ with:
 name: Using a trusted community template
 uses: siosios/metrics@master
 with:
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   template: "@terminal"
   setup_community_templates: siosios/metrics@master:terminal+trust
 

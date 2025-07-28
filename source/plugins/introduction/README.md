@@ -41,7 +41,8 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
+<b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -51,7 +52,8 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
+<b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> yes<br></td>
   </tr>
@@ -66,7 +68,7 @@ name: Organization introduction
 uses: siosios/metrics@master
 with:
   filename: metrics.plugin.introduction.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   user: github
   base: header
   plugin_introduction: yes
@@ -77,7 +79,7 @@ name: Repository introduction
 uses: siosios/metrics@master
 with:
   filename: metrics.plugin.introduction.repository.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   template: repository
   repo: metrics
   base: header

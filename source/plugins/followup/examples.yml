@@ -2,7 +2,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.followup.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_followup: yes
 
@@ -10,7 +10,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.followup.user.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_followup: yes
     plugin_followup_sections: user
@@ -19,7 +19,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.followup.indepth.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_followup: yes
     plugin_followup_indepth: yes
@@ -28,7 +28,7 @@
   uses: siosios/metrics@master
   with:
     filename: metrics.plugin.followup.archived.svg
-    token: ${{ secrets.metrics_TOKEN }}
+    token: ${{ github.token }}
     base: ""
     plugin_followup: yes
     plugin_followup_archived: no

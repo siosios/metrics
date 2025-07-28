@@ -40,7 +40,8 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
+<b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -54,7 +55,8 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap"><b>type:</b> <code>string</code>
+    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
+<b>type:</b> <code>string</code>
 <br>
 <b>default:</b> half-year<br>
 <b>allowed values:</b><ul><li>half-year</li><li>full-year</li></ul></td>
@@ -70,7 +72,7 @@ name: Half-year calendar
 uses: siosios/metrics@master
 with:
   filename: metrics.plugin.isocalendar.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_isocalendar: yes
 
@@ -80,7 +82,7 @@ name: Full-year calendar
 uses: siosios/metrics@master
 with:
   filename: metrics.plugin.isocalendar.fullyear.svg
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
   base: ""
   plugin_isocalendar: yes
   plugin_isocalendar_duration: full-year

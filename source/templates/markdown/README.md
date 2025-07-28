@@ -6,7 +6,7 @@
 </td></tr>
   <tr>
     <th rowspan="3">Supported features<br><sub><a href="metadata.yml">→ Full specification</a></sub></th>
-    <td><a href="/source/plugins/activity/README.md" title="📰 Recent activity">📰</a> <a href="/source/plugins/posts/README.md" title="✒️ Recent posts">✒️</a> <a href="/source/plugins/rss/README.md" title="🗼 Rss feed">🗼</a> <a href="/source/plugins/topics/README.md" title="📌 Starred topics">📌</a> <a href="/source/plugins/tweets/README.md" title="🐤 Latest tweets">🐤</a> <code>✓ embed()</code></td>
+    <td><a href="/source/plugins/activity/README.md" title="📰 Recent activity">📰</a> <a href="/source/plugins/posts/README.md" title="✒️ Recent posts">✒️</a> <a href="/source/plugins/rss/README.md" title="🗼 Rss feed">🗼</a> <a href="/source/plugins/topics/README.md" title="📌 Starred topics">📌</a> <code>✓ embed()</code></td>
   </tr>
   <tr>
     <td><code>👤 Users</code> <code>👥 Organizations</code> <code>📓 Repositories</code></td>
@@ -144,7 +144,7 @@ with:
   markdown: >-
     https://raw.githubusercontent.com/siosios/metrics/examples/metrics.markdown.template.md
   config_output: markdown
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
 
 ```
 ```yaml
@@ -172,7 +172,7 @@ with:
   plugin_topics_limit: 24
   plugin_isocalendar: yes
   plugin_languages: yes
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
 
 ```
 ```yaml
@@ -190,7 +190,7 @@ with:
   plugin_isocalendar: yes
   config_twemoji: yes
   config_padding: 5%
-  token: ${{ secrets.metrics_TOKEN }}
+  token: ${{ github.token }}
 
 ```
 <!--/examples-->
