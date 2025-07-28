@@ -152,6 +152,7 @@ jobs:
       STOCK_TOKEN: ${{ secrets.STOCK_TOKEN }}
       TWITTER_TOKEN: ${{ secrets.TWITTER_TOKEN }}
       WAKATIME_TOKEN: ${{ secrets.WAKATIME_TOKEN }}
+      
   # Publish examples (presets)
   publish-examples-presets:
     name: Publish examples (presets)
