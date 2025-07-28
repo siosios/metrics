@@ -14,8 +14,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Chmod script
+        run: chmod +x .github/actions/ghcr-clean/delete_ghcr_dangling_images.sh
       - name: Run script
         run: ./delete_ghcr_dangling_images.sh siosios metrics
         working-directory: .github/actions/ghcr-clean
         env:
-          GITHUB_TOKEN: ${{ secrets.GHCR_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}

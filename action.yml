@@ -220,7 +220,7 @@ inputs:
   use_prebuilt_image:
     description: >-
       Use pre-built docker image from [GitHub container
-      registry](https://github.com/siosios/metrics/pkgs/container/metrics)
+      registry](https://github.com/lowlighter/metrics/pkgs/container/metrics)
     default: yes
 
   plugins_errors_fatal:
@@ -1494,7 +1494,7 @@ inputs:
 
 # ====================================================================================
 # Action metadata
-name: metrics embed
+name: Metrics embed
 author: siosios
 description: An infographics generator with 40+ plugins and 300+ options to display stats about your GitHub account!
 branding:
@@ -1509,9 +1509,9 @@ runs:
   steps:
     - run: |
         # Check runner compatibility
-        echo "::group::metrics docker image setup"
-        echo "GitHub action: $metrics_ACTION ($metrics_ACTION_PATH)"
-        cd $metrics_ACTION_PATH
+        echo "::group::Metrics docker image setup"
+        echo "GitHub action: $METRICS_ACTION ($METRICS_ACTION_PATH)"
+        cd $METRICS_ACTION_PATH
         for DEPENDENCY in docker jq; do
           if ! which $DEPENDENCY > /dev/null 2>&1; then
             echo "::error::\"$DEPENDENCY\" is not installed on current runner but is needed to run metrics"
@@ -1534,74 +1534,74 @@ runs:
         echo "Environment variables: loaded"
 
         # Renders output folder
-        metrics_RENDERS="/metrics_renders"
-        sudo mkdir -p $metrics_RENDERS
-        echo "Renders output folder: $metrics_RENDERS"
+        METRICS_RENDERS="/metrics_renders"
+        sudo mkdir -p $METRICS_RENDERS
+        echo "Renders output folder: $METRICS_RENDERS"
 
         # Source repository (picked from action name)
-        metrics_SOURCE=$(echo $metrics_ACTION | sed -E 's/metrics.*?$//g' | sed -E 's/_//g')
-        echo "Source: $metrics_SOURCE"
+        METRICS_SOURCE=$(echo $METRICS_ACTION | sed -E 's/metrics.*?$//g' | sed -E 's/_//g')
+        echo "Source: $METRICS_SOURCE"
 
         # Version (picked from package.json)
-        metrics_VERSION=$(grep -Po '(?<="version": ").*(?=")' package.json)
-        echo "Version: $metrics_VERSION"
+        METRICS_VERSION=$(grep -Po '(?<="version": ").*(?=")' package.json)
+        echo "Version: $METRICS_VERSION"
 
         # Image tag (extracted from version or from env)
-        metrics_TAG=v$(echo $metrics_VERSION | sed -r 's/^([0-9]+[.][0-9]+).*/\1/')
-        echo "Image tag: $metrics_TAG"
+        METRICS_TAG=v$(echo $METRICS_VERSION | sed -r 's/^([0-9]+[.][0-9]+).*/\1/')
+        echo "Image tag: $METRICS_TAG"
 
         # Image name
         # Official action
-        if [[ $metrics_SOURCE == "siosios" ]]; then
+        if [[ $METRICS_SOURCE == "lowlighter" ]]; then
           # Use registry with pre-built images
-          if [[ ! $metrics_USE_PREBUILT_IMAGE =~ ^([Ff]alse|[Oo]ff|[Nn]o|0)$ ]]; then
+          if [[ ! $METRICS_USE_PREBUILT_IMAGE =~ ^([Ff]alse|[Oo]ff|[Nn]o|0)$ ]]; then
             # Is released version
             set +e
-            metrics_IS_RELEASED=$(expr $(expr match $metrics_VERSION .*-beta) == 0)
+            METRICS_IS_RELEASED=$(expr $(expr match $METRICS_VERSION .*-beta) == 0)
             set -e
-            echo "Is released version: $metrics_IS_RELEASED"
-            if [[ "$metrics_IS_RELEASED" -eq "0" ]]; then
-              metrics_TAG="$metrics_TAG-beta"
-              echo "Image tag (updated): $metrics_TAG"
+            echo "Is released version: $METRICS_IS_RELEASED"
+            if [[ "$METRICS_IS_RELEASED" -eq "0" ]]; then
+              METRICS_TAG="$METRICS_TAG-beta"
+              echo "Image tag (updated): $METRICS_TAG"
             fi
-            metrics_IMAGE=ghcr.io/siosios/metrics:$metrics_TAG
-            echo "Using pre-built version $metrics_TAG, will pull docker image from GitHub registry"
-            if ! docker image pull $metrics_IMAGE; then
+            METRICS_IMAGE=ghcr.io/siosios/metrics:$METRICS_TAG
+            echo "Using pre-built version $METRICS_TAG, will pull docker image from GitHub registry"
+            if ! docker image pull $METRICS_IMAGE; then
               echo "Failed to fetch docker image from GitHub registry, will rebuild it locally"
-              metrics_IMAGE=metrics:$metrics_VERSION
+              METRICS_IMAGE=metrics:$METRICS_VERSION
             fi
           # Rebuild image
           else
-            echo "Using an unreleased version ($metrics_VERSION)"
-            metrics_IMAGE=metrics:$metrics_VERSION
+            echo "Using an unreleased version ($METRICS_VERSION)"
+            METRICS_IMAGE=metrics:$METRICS_VERSION
           fi
         # Forked action
         else
           echo "Using a forked version"
-          metrics_IMAGE=metrics:forked-$metrics_VERSION
+          METRICS_IMAGE=metrics:forked-$METRICS_VERSION
         fi
-        echo "Image name: $metrics_IMAGE"
+        echo "Image name: $METRICS_IMAGE"
 
         # Build image if necessary
         set +e
-        docker image inspect $metrics_IMAGE
-        metrics_IMAGE_NEEDS_BUILD="$?"
+        docker image inspect $METRICS_IMAGE
+        METRICS_IMAGE_NEEDS_BUILD="$?"
         set -e
-        if [[ "$metrics_IMAGE_NEEDS_BUILD" -gt "0" ]]; then
-          echo "Image $metrics_IMAGE is not present locally, rebuilding it from Dockerfile"
-          docker build -t $metrics_IMAGE .
+        if [[ "$METRICS_IMAGE_NEEDS_BUILD" -gt "0" ]]; then
+          echo "Image $METRICS_IMAGE is not present locally, rebuilding it from Dockerfile"
+          docker build -t $METRICS_IMAGE .
         else
-          echo "Image $metrics_IMAGE is present locally"
+          echo "Image $METRICS_IMAGE is present locally"
         fi
         echo "::endgroup::"
 
         # Run docker image with current environment
-        docker run --init --rm --volume $GITHUB_EVENT_PATH:$GITHUB_EVENT_PATH --volume $metrics_RENDERS:/renders --env-file .env $metrics_IMAGE
+        docker run --init --rm --volume $GITHUB_EVENT_PATH:$GITHUB_EVENT_PATH --volume $METRICS_RENDERS:/renders --env-file .env $METRICS_IMAGE
         rm .env
       shell: bash
       env:
-        metrics_ACTION: ${{ github.action }}
-        metrics_ACTION_PATH: ${{ github.action_path }}
-        metrics_USE_PREBUILT_IMAGE: ${{ inputs.use_prebuilt_image }}
+        METRICS_ACTION: ${{ github.action }}
+        METRICS_ACTION_PATH: ${{ github.action_path }}
+        METRICS_USE_PREBUILT_IMAGE: ${{ inputs.use_prebuilt_image }}
         INPUTS: ${{ toJson(inputs) }}
         TZ: ${{ inputs.config_timezone }}

@@ -83,9 +83,6 @@
     "stars":{
       "enabled": false,                 "//": "Enable stars plugin"
     },
-    "licenses":{
-      "enabled": false,                 "//": "Enable licenses plugin"
-    },
     "habits":{
       "enabled": false,                 "//": "Enable habits plugin"
     },
@@ -101,12 +98,6 @@
     "people":{
       "enabled": false,                 "//": "Enable people plugin"
     },
-    "sponsorships":{
-      "enabled": false,                 "//": "Enable sponsorships plugin"
-    },
-    "sponsors":{
-      "enabled": false,                 "//": "Enable sponsors plugin"
-    },
     "repositories":{
       "enabled": false,                 "//": "Enable repositories plugin"
     },
@@ -118,9 +109,6 @@
     },
     "calendar":{
       "enabled": false,                 "//": "Enable calendar plugin"
-    },
-    "achievements":{
-      "enabled": false,                 "//": "Enable achievements plugin"
     },
     "notable":{
       "enabled": false,                 "//": "Enable notable plugin"
@@ -143,19 +131,8 @@
     "introduction":{
       "enabled": false,                 "//": "Enable introduction plugin"
     },
-    "skyline":{
-      "enabled": false,                 "//": "Enable skyline plugin"
-    },
     "support":{
       "enabled": false,                 "//": "Enable support plugin"
-    },
-    "pagespeed":{
-      "token": "PageSpeed token",
-      "enabled": false,                 "//": "Enable pagespeed plugin"
-    },
-    "tweets":{
-      "token": "Twitter API token",
-      "enabled": false,                 "//": "Enable tweets plugin"
     },
     "stackoverflow":{
       "enabled": false,                 "//": "Enable stackoverflow plugin"
@@ -163,58 +140,15 @@
     "anilist":{
       "enabled": false,                 "//": "Enable aniList plugin"
     },
-    "music":{
-      "token": "Music provider token",
-      "enabled": false,                 "//": "Enable music plugin"
-    },
     "posts":{
       "enabled": false,                 "//": "Enable posts plugin"
     },
     "rss":{
       "enabled": false,                 "//": "Enable rss plugin"
     },
-    "wakatime":{
-      "token": "WakaTime API token",
-      "enabled": false,                 "//": "Enable wakatime plugin"
-    },
-    "leetcode":{
-      "enabled": false,                 "//": "Enable leetcode plugin"
-    },
     "steam":{
       "token": "Steam token",
       "enabled": false,                 "//": "Enable steam plugin"
-    },
-    "16personalities":{
-      "enabled": false,                 "//": "Enable 16personalities plugin"
-    },
-    "chess":{
-      "token": "Chess platform token",
-      "enabled": false,                 "//": "Enable chess plugin"
-    },
-    "crypto":{
-      "enabled": false,                 "//": "Enable crypto plugin"
-    },
-    "fortune":{
-      "enabled": false,                 "//": "Enable fortune plugin"
-    },
-    "nightscout":{
-      "enabled": false,                 "//": "Enable nightscout plugin"
-    },
-    "poopmap":{
-      "token": "PoopMap API token",
-      "enabled": false,                 "//": "Enable poopmap plugin"
-    },
-    "screenshot":{
-      "enabled": false,                 "//": "Enable screenshot plugin"
-    },
-    "splatoon":{
-      "token": "Splatnet token",
-      "statink.token": null,            "//": "stat.ink token",
-      "enabled": false,                 "//": "Enable splatoon plugin"
-    },
-    "stock":{
-      "token": "Yahoo Finance token",
-      "enabled": false,                 "//": "Enable stock plugin"
     },
     "//": ""
   }

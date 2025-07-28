@@ -76,6 +76,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      # Log in to GitHub Container Registry to allow pushing Docker images
+      #- name: Login to GitHub Container Registry
+      #  uses: docker/login-action@v3
+      #  with:
+       #  registry: ghcr.io
+      #   username: ${{ github.actor }}
       - name: Login to GitHub registry
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Build docker image
@@ -126,24 +132,14 @@ jobs:
           use_mocked_data: yes
           verify: yes
 
+
   # Publish examples
   publish-examples:
     name: Publish examples
     needs: [ action-master-test ]
     uses: siosios/metrics/.github/workflows/examples.yml@master
     secrets:
-      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
-      METRICS_TOKEN_WITH_SCOPES: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
-      METRICS_TOKEN_PERSONAL: ${{ secrets.METRICS_TOKEN_PERSONAL }}
-      CHESS_TOKEN: ${{ secrets.CHESS_TOKEN }}
-      PAGESPEED_TOKEN: ${{ secrets.PAGESPEED_TOKEN }}
-      GOOGLE_MAP_TOKEN: ${{ secrets.GOOGLE_MAP_TOKEN }}
-      SPLATOON_TOKEN: ${{ secrets.SPLATOON_TOKEN }}
-      SPLATOON_STATINK_TOKEN: ${{ secrets.SPLATOON_STATINK_TOKEN }}
-      SPOTIFY_TOKENS: ${{ secrets.SPOTIFY_TOKENS }}
-      STOCK_TOKEN: ${{ secrets.STOCK_TOKEN }}
-      TWITTER_TOKEN: ${{ secrets.TWITTER_TOKEN }}
-      WAKATIME_TOKEN: ${{ secrets.WAKATIME_TOKEN }}
+      METRICS_TOKEN: ${{ github.token }}
 
   # Publish examples (presets)
   publish-examples-presets:
