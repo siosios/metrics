@@ -24,14 +24,14 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [Resizable Structs in Zig](https://tristanpemble.com/resizable-structs-in-zig/)
-  * *Published on 26 Jul 2025*
-* [Show HN: QuickTunes: Apple Music player for Mac with iPod vibes](https://furnacecreek.org/quicktunes/)
-  * *Published on 26 Jul 2025*
-* [How We Rooted Copilot](https://research.eye.security/how-we-rooted-copilot/)
-  * *Published on 26 Jul 2025*
-* [Purple Earth hypothesis](https://en.wikipedia.org/wiki/Purple_Earth_hypothesis)
-  * *Published on 24 Jul 2025*
+* [Tao on &#34;blue team&#34; vs. &#34;red team&#34; LLMs](https://mathstodon.xyz/@tao/114915604830689046)
+  * *Published on 28 Jul 2025*
+* [Copyparty, turn almost any device into a file server](https://github.com/9001/copyparty)
+  * *Published on 28 Jul 2025*
+* [GLM-4.5: Reasoning, Coding, and Agentic Abililties](https://z.ai/blog/glm-4.5)
+  * *Published on 28 Jul 2025*
+* [The Geological Sublime](https://harpers.org/archive/2025/07/the-geological-sublime-lewis-hyde-deep-time/)
+  * *Published on 28 Jul 2025*
 
 
 ___
