@@ -1,5 +1,5 @@
 - name: 🙋 Introduction - Organization introduction
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     user: github
@@ -8,7 +8,7 @@
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 🙋 Introduction - Repository introduction
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     template: repository

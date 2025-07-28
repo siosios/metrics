@@ -1,5 +1,5 @@
 - name: 🗨️ Stack Overflow - Top answers from stackoverflow
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: NOT_NEEDED
     plugin_stackoverflow: 'yes'

@@ -1,5 +1,5 @@
 - name: 👨‍💻 Lines of code changed - Compact display in base plugin
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     base: repositories
@@ -8,7 +8,7 @@
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 👨‍💻 Lines of code changed - Repositories and diff history
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_lines: 'yes'

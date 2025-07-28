@@ -1,5 +1,5 @@
 - name: Gists
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.gists.svg
     token: ${{ secrets.metrics_TOKEN }}

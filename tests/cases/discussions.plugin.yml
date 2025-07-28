@@ -1,5 +1,5 @@
 - name: 💬 Discussions - GitHub Discussions
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_discussions: 'yes'

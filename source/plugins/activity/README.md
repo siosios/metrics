@@ -131,7 +131,7 @@ All product and company names are trademarks™ or registered® trademarks of th
   <tr>
     <td nowrap="nowrap"><h4><code>plugin_activity_filter</code></h4></td>
     <td rowspan="2"><p>Events types</p>
-<p>These are fetched from <a href="https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/github-event-types">GitHub events API</a> and the following types are currently supported:</p>
+<p>These are fetched from <a href="https://docs.github.com/en/free-pro-team@master/developers/webhooks-and-events/github-event-types">GitHub events API</a> and the following types are currently supported:</p>
 <ul>
 <li><code>push</code>: Push of commits</li>
 <li><code>issue</code>: Opening/Reopening/Closing of issues</li>
@@ -164,7 +164,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Recent activity
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.activity.svg
   token: ${{ secrets.metrics_TOKEN }}

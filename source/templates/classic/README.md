@@ -29,7 +29,7 @@ This is also the default template.</p>
 <!--examples-->
 ```yaml
 name: Example
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.classic.svg
   token: ${{ secrets.metrics_TOKEN }}

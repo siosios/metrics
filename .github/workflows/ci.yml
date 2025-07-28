@@ -202,14 +202,14 @@ jobs:
       - name: Push latest
         run: git push origin latest
 
-  # Test siosios/metrics@latest
+  # Test siosios/metrics@master
   action-latest-test:
-    name: Test siosios/metrics@latest
+    name: Test siosios/metrics@master
     runs-on: self-hosted
     needs: [ update-latest ]
     steps:
       - name: Run tests
-        uses: siosios/metrics@latest
+        uses: siosios/metrics@master
         with:
           token: MOCKED_TOKEN
           plugins_errors_fatal: yes
@@ -219,7 +219,7 @@ jobs:
 
   # Deploy to metrics.lecoq.io
  # deploy-latest:
-  #  name: Deploy siosios/metrics@latest
+  #  name: Deploy siosios/metrics@master
   #  runs-on: ubuntu-latest
  #   needs: [ docker-release, deploy-master ]
  #   steps:

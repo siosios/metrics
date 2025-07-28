@@ -1,5 +1,5 @@
 - name: Comment reactions
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.reactions.svg
     token: ${{ secrets.metrics_TOKEN }}

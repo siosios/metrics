@@ -1,5 +1,5 @@
 - name: Using a community template
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: ${{ secrets.metrics_TOKEN }}
     template: "@classic"
@@ -9,7 +9,7 @@
       - action
 
 - name: Using a trusted community template
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: ${{ secrets.metrics_TOKEN }}
     template: "@terminal"

@@ -1,5 +1,5 @@
 - name: 🧮 Repositories traffic - Repositories traffic
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     base: repositories

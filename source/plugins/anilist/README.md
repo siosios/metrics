@@ -135,7 +135,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Favorites anime and currently watching
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.anilist.svg
   token: NOT_NEEDED
@@ -148,7 +148,7 @@ with:
 ```
 ```yaml
 name: Favorites manga and currently reading
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.anilist.manga.svg
   token: NOT_NEEDED
@@ -161,7 +161,7 @@ with:
 ```
 ```yaml
 name: Favorites characters
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.anilist.characters.svg
   token: NOT_NEEDED

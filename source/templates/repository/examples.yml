@@ -1,5 +1,5 @@
 - name: Example
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     template: repository
     filename: metrics.repository.svg

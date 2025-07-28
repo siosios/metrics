@@ -1,5 +1,5 @@
 - name: Recent activity
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.activity.svg
     token: ${{ secrets.metrics_TOKEN }}

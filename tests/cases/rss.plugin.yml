@@ -1,5 +1,5 @@
 - name: 🗼 Rss feed - News from hackernews
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: NOT_NEEDED
     plugin_rss: 'yes'

@@ -1,5 +1,5 @@
 - name: 📙 Terminal template - Example
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     template: terminal
     token: MOCKED_TOKEN

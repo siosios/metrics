@@ -178,7 +178,7 @@ Configure `config_timezone` (see [supported timezone](https://en.wikipedia.org/w
 
 *Example: configuring timezone*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     config_timezone: Europe/Paris
 ```
@@ -188,7 +188,7 @@ Configure `config_timezone` (see [supported timezone](https://en.wikipedia.org/w
 <!--examples-->
 ```yaml
 name: Mildly interesting facts
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.habits.facts.svg
   token: ${{ secrets.metrics_TOKEN }}
@@ -201,7 +201,7 @@ with:
 ```
 ```yaml
 name: Recent activity charts
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.habits.charts.svg
   token: ${{ secrets.metrics_TOKEN }}

@@ -1,12 +1,12 @@
 - name: ✨ Stargazers - Using classic charts
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_stargazers: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: ✨ Stargazers - Using graph charts
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_stargazers: 'yes'
@@ -14,7 +14,7 @@
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: ✨ Stargazers - With worldmap
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_stargazers: 'yes'

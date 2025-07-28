@@ -1,5 +1,5 @@
 - name: Project from a repository
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.projects.svg
     token: ${{ secrets.metrics_TOKEN_WITH_SCOPES }}

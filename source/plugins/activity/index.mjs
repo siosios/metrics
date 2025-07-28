@@ -44,7 +44,7 @@ export default async function({login, data, rest, q, account, imports}, {enabled
         .filter(({created_at}) => Number.isFinite(days) ? new Date(created_at) > new Date(Date.now() - days * 24 * 60 * 60 * 1000) : true)
         .filter(event => visibility === "public" ? event.public : true)
         .map(async ({type, payload, actor: {login: actor}, repo: {name: repo}, created_at}) => {
-          //See https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/github-event-types
+          //See https://docs.github.com/en/free-pro-team@master/developers/webhooks-and-events/github-event-types
           const timestamp = new Date(created_at)
           if (!imports.filters.repo(repo, skipped))
             return null

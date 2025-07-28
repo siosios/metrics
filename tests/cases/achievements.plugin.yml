@@ -1,5 +1,5 @@
 - name: 🏆 Achievements - Detailed display
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_achievements: 'yes'
@@ -8,7 +8,7 @@
     verify: 'yes'
   timeout: 1800000
 - name: 🏆 Achievements - Compact display
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_achievements: 'yes'

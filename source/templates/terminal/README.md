@@ -28,7 +28,7 @@
 <!--examples-->
 ```yaml
 name: Example
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   template: terminal
   filename: metrics.terminal.svg

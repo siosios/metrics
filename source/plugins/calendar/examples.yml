@@ -1,5 +1,5 @@
 - name: Current year calendar
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.calendar.svg
     token: ${{ secrets.metrics_TOKEN }}
@@ -7,7 +7,7 @@
     plugin_calendar: yes
 
 - name: Full history calendar
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.calendar.full.svg
     token: ${{ secrets.metrics_TOKEN }}

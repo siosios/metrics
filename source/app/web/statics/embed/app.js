@@ -246,7 +246,7 @@
           `    permissions:`,
           `      contents: write`,
           `    steps:`,
-          `      - uses: siosios/metrics@latest`,
+          `      - uses: siosios/metrics@master`,
           `        with:`,
           ...(this.scopes.size
             ? [

@@ -7,7 +7,7 @@ If you are interested in contributing, the following resources may interest you:
 * [📜 License](/LICENSE)
 * **:octocat: GitHub resources**
   * [📖 GitHub GraphQL API](https://docs.github.com/en/graphql)
-  * [📖 GitHub GraphQL Explorer](https://docs.github.com/en/free-pro-team@latest/graphql/overview/explorer)
+  * [📖 GitHub GraphQL Explorer](https://docs.github.com/en/free-pro-team@master/graphql/overview/explorer)
   * [📖 GitHub Rest API](https://docs.github.com/en/rest)
   * [📖 GitHub Octicons](https://github.com/primer/octicons)
 

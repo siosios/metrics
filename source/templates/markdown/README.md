@@ -55,7 +55,7 @@ It also means that to access plugins data they must be enabled and configured be
 
 *Example: enabling `plugin_activity` exposes `plugins.activity` data*
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     template: markdown
     plugin_activity: yes
@@ -110,7 +110,7 @@ An additional feature which makes the markdown template more powerful than its c
 These renders will automatically be pushed to `markdown_cache` folder and included in the markdown render.
 
 ```yml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     template: markdown
     markdown_cache: .cache
@@ -137,7 +137,7 @@ The `embed()` function takes two arguments:
 <!--examples-->
 ```yaml
 name: Example
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   template: markdown
   filename: metrics.markdown.md
@@ -149,7 +149,7 @@ with:
 ```
 ```yaml
 name: Example with plugins configuration for embed use
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   template: markdown
   filename: metrics.markdown.full.md
@@ -177,7 +177,7 @@ with:
 ```
 ```yaml
 name: Example (pdf output)
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   template: markdown
   filename: metrics.markdown.pdf

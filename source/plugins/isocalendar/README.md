@@ -67,7 +67,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Half-year calendar
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.isocalendar.svg
   token: ${{ secrets.metrics_TOKEN }}
@@ -77,7 +77,7 @@ with:
 ```
 ```yaml
 name: Full-year calendar
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.isocalendar.fullyear.svg
   token: ${{ secrets.metrics_TOKEN }}

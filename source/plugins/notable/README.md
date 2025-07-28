@@ -152,7 +152,7 @@ For each of the above, a badge is awarded. Its color and progress depends of the
 <!--examples-->
 ```yaml
 name: Contributions
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.notable.svg
   token: ${{ secrets.metrics_TOKEN }}
@@ -162,7 +162,7 @@ with:
 ```
 ```yaml
 name: Indepth analysis
-uses: siosios/metrics@latest
+uses: siosios/metrics@master
 with:
   filename: metrics.plugin.notable.indepth.svg
   token: ${{ secrets.metrics_TOKEN }}

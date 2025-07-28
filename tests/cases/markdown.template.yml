@@ -1,5 +1,5 @@
 - name: 📒 Markdown template - Example
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     template: markdown
     markdown: >-
@@ -9,7 +9,7 @@
     use_mocked_data: yes
     verify: yes
 - name: 📒 Markdown template - Example with plugins configuration for embed use
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     template: markdown
     markdown: >-
@@ -35,7 +35,7 @@
     use_mocked_data: yes
     verify: yes
 - name: 📒 Markdown template - Example (pdf output)
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     template: markdown
     markdown: >-

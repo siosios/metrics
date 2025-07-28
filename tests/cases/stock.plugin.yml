@@ -1,5 +1,5 @@
 - name: 💹 Stock prices - Stock prices from Tesla
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: NOT_NEEDED
     plugin_stock: 'yes'

@@ -1,5 +1,5 @@
 - name: Most used
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.languages.svg
     token: ${{ secrets.metrics_TOKEN }}
@@ -9,7 +9,7 @@
     plugin_languages_limit: 4
 
 - name: Most used (with details)
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.languages.details.svg
     token: ${{ secrets.metrics_TOKEN }}
@@ -20,7 +20,7 @@
     plugin_languages_limit: 4
 
 - name: Recently used
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.languages.recent.svg
     token: ${{ secrets.metrics_TOKEN }}
@@ -32,7 +32,7 @@
     plugin_languages_limit: 4
 
 - name: Indepth analysis
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.languages.indepth.svg
     token: ${{ secrets.metrics_TOKEN }}

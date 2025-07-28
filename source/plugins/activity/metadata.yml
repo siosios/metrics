@@ -87,7 +87,7 @@ inputs:
     description: |
       Events types
 
-      These are fetched from [GitHub events API](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/github-event-types) and the following types are currently supported:
+      These are fetched from [GitHub events API](https://docs.github.com/en/free-pro-team@master/developers/webhooks-and-events/github-event-types) and the following types are currently supported:
       - `push`: Push of commits
       - `issue`: Opening/Reopening/Closing of issues
       - `pr`: Opening/Closing of pull requests

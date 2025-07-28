@@ -15,13 +15,13 @@ Setup is mostly the same as for user accounts. A personal access token from an u
 
 *Example: render metrics for `github` organization*
 ```yaml
-- uses: siosios/metrics@latest
+- uses: siosios/metrics@master
   with:
     token: ${{ secrets.metrics_TOKEN }}
     user: github
 ```
 
-> 💡 If your organization using single sign-on, you may need to [authorize your personal token access](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)
+> 💡 If your organization using single sign-on, you may need to [authorize your personal token access](https://docs.github.com/en/free-pro-team@master/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)
 
 > 💡 Plugins supporting organizations account are labeled with `👥 Organizations`. Note that rendering consume way more API requests and huge organization may not actually be able to use a given plugin.
 

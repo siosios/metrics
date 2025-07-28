@@ -1,5 +1,5 @@
 - name: 📘 Repository template - Example
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     template: repository
     token: MOCKED_TOKEN

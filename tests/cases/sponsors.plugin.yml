@@ -1,5 +1,5 @@
 - name: 💕 GitHub Sponsors - Sponsors goal
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_sponsors: 'yes'
@@ -8,7 +8,7 @@
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 💕 GitHub Sponsors - Sponsors introduction
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_sponsors: 'yes'

@@ -1,5 +1,5 @@
 - name: Organization introduction
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.introduction.svg
     token: ${{ secrets.metrics_TOKEN }}
@@ -11,7 +11,7 @@
       token: ${{ secrets.metrics_TOKEN_WITH_SCOPES }}
 
 - name: Repository introduction
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     filename: metrics.plugin.introduction.repository.svg
     token: ${{ secrets.metrics_TOKEN }}

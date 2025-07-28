@@ -1,5 +1,5 @@
 - name: ♐ Random code snippet - JavaScript or TypeScript snippet of the day
-  uses: siosios/metrics@latest
+  uses: siosios/metrics@master
   with:
     token: MOCKED_TOKEN
     plugin_code: 'yes'
