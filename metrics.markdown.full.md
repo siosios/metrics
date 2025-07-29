@@ -24,13 +24,13 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [Tao on &#34;blue team&#34; vs. &#34;red team&#34; LLMs](https://mathstodon.xyz/@tao/114915604830689046)
+* [Fintech dystopia](https://fintechdystopia.com/)
+  * *Published on 29 Jul 2025*
+* [An engineer&#39;s perspective: Why everything feels broken and what can we do](https://tushardadlani.com/the-leverage-arbitrage-why-everything-feels-broken)
+  * *Published on 29 Jul 2025*
+* [I designed my own fast game streaming video codec – PyroWave](https://themaister.net/blog/2025/06/16/i-designed-my-own-ridiculously-fast-game-streaming-video-codec-pyrowave/)
   * *Published on 28 Jul 2025*
-* [Copyparty, turn almost any device into a file server](https://github.com/9001/copyparty)
-  * *Published on 28 Jul 2025*
-* [GLM-4.5: Reasoning, Coding, and Agentic Abililties](https://z.ai/blog/glm-4.5)
-  * *Published on 28 Jul 2025*
-* [The Geological Sublime](https://harpers.org/archive/2025/07/the-geological-sublime-lewis-hyde-deep-time/)
+* [Copyparty – Turn almost any device into a file server](https://github.com/9001/copyparty)
   * *Published on 28 Jul 2025*
 
 
