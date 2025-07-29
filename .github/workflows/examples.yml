@@ -80,17 +80,6 @@ jobs:
           delay: 120
           user: siosios
           plugins_errors_fatal: yes
-      - name: 🧱 Core - metrics insights
-        if: ${{ success() || failure() }}
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.insights.html
-          token: ${{ github.token }}
-          config_output: insights
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
       - name: 🧱 Core - Plugin error example
         uses: siosios/metrics@master
         with:
@@ -110,19 +99,6 @@ jobs:
           token: ${{ github.token }}
           base: ""
           plugin_isocalendar: yes
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
-      - name: 📅 Isometric commit calendar - Full-year calendar
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.isocalendar.fullyear.svg
-          token: ${{ github.token }}
-          base: ""
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
           output_action: none
           delay: 120
           user: siosios
@@ -588,18 +564,6 @@ jobs:
           plugin_activity_limit: 5
           plugin_activity_days: 0
           plugin_activity_filter: issue, pr, release, fork, review, ref/create
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
-      - name: 🧮 Repositories traffic - Repositories traffic
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.traffic.svg
-          token: ${{ github.token_WITH_SCOPES }}
-          base: repositories
-          plugin_traffic: yes
           output_action: none
           delay: 120
           user: siosios
