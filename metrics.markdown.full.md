@@ -24,14 +24,14 @@ ___
 ___
 
 **[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [Fintech dystopia](https://fintechdystopia.com/)
+* [My 2.5 year old laptop can write Space Invaders in JavaScript now (GLM-4.5 Air)](https://simonwillison.net/2025/Jul/29/space-invaders/)
   * *Published on 29 Jul 2025*
-* [An engineer&#39;s perspective: Why everything feels broken and what can we do](https://tushardadlani.com/the-leverage-arbitrage-why-everything-feels-broken)
+* [Learning Is Slower Than You Think](https://nisheethvishnoi.substack.com/p/learning-is-slower-than-you-think)
   * *Published on 29 Jul 2025*
-* [I designed my own fast game streaming video codec – PyroWave](https://themaister.net/blog/2025/06/16/i-designed-my-own-ridiculously-fast-game-streaming-video-codec-pyrowave/)
-  * *Published on 28 Jul 2025*
-* [Copyparty – Turn almost any device into a file server](https://github.com/9001/copyparty)
-  * *Published on 28 Jul 2025*
+* [Observable Notebooks 2.0 Technology Preview](https://observablehq.com/notebook-kit/)
+  * *Published on 29 Jul 2025*
+* [Linux Performance Analysis in 60 seconds (2015)](https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55)
+  * *Published on 29 Jul 2025*
 
 
 ___
