@@ -583,44 +583,6 @@ jobs:
           user: siosios
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
-      - name: 🎫 Gists - Gists
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.gists.svg
-          token: ${{ github.token }}
-          base: ""
-          plugin_gists: yes
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
-      - name: 🗂️ GitHub projects - Project from a repository
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.projects.svg
-          token: ${{ github.token }}
-          base: ""
-          plugin_projects: yes
-          plugin_projects_repositories: siosios/metrics/projects/1
-          plugin_projects_descriptions: yes
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
-      - name: 🙋 Introduction - Organization introduction
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.introduction.svg
-          token: ${{ github.token }}
-          user: github
-          base: header
-          plugin_introduction: yes
-          output_action: none
-          delay: 120
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
       - name: 🙋 Introduction - Repository introduction
         uses: siosios/metrics@master
         with:
@@ -630,69 +592,6 @@ jobs:
           repo: metrics
           base: header
           plugin_introduction: yes
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
-      - name: 🗨️ Stack Overflow - Top answers from stackoverflow
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.stackoverflow.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_stackoverflow: yes
-          plugin_stackoverflow_user: 1
-          plugin_stackoverflow_sections: answers-top
-          plugin_stackoverflow_limit: 2
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
-      - name: >-
-          🌸 Anilist watch list and reading list - Favorites anime and currently
-          watching
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.anilist.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_anilist: yes
-          plugin_anilist_medias: anime
-          plugin_anilist_sections: favorites, watching
-          plugin_anilist_limit: 1
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
-      - name: >-
-          🌸 Anilist watch list and reading list - Favorites manga and currently
-          reading
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.anilist.manga.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_anilist: yes
-          plugin_anilist_medias: manga
-          plugin_anilist_sections: favorites, reading
-          plugin_anilist_limit: 1
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
-      - name: 🌸 Anilist watch list and reading list - Favorites characters
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.anilist.characters.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_anilist: yes
-          plugin_anilist_sections: characters
-          plugin_anilist_limit_characters: 22
           output_action: none
           delay: 120
           user: siosios
@@ -722,20 +621,6 @@ jobs:
           plugin_posts_limit: 2
           plugin_posts_descriptions: yes
           plugin_posts_covers: yes
-          output_action: none
-          delay: 120
-          user: siosios
-          plugins_errors_fatal: yes
-        if: ${{ success() || failure() }}
-      - name: 🗼 Rss feed - News from hackernews
-        uses: siosios/metrics@master
-        with:
-          filename: metrics.plugin.rss.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_rss: yes
-          plugin_rss_source: https://news.ycombinator.com/rss
-          plugin_rss_limit: 4
           output_action: none
           delay: 120
           user: siosios
@@ -845,8 +730,6 @@ jobs:
           plugin_posts_descriptions: yes
           plugin_posts_covers: yes
           plugin_posts_limit: 2
-          plugin_rss: yes
-          plugin_rss_source: https://news.ycombinator.com/rss
           plugin_rss_limit: 4
           plugin_topics: yes
           plugin_topics_limit: 24
@@ -867,9 +750,6 @@ jobs:
           markdown: >-
             https://raw.githubusercontent.com/siosios/metrics/master/source/templates/markdown/example.pdf.md
           config_output: markdown-pdf
-          plugin_rss: yes
-          plugin_rss_source: https://news.ycombinator.com/rss
-          plugin_rss_limit: 4
           plugin_isocalendar: yes
           config_twemoji: yes
           config_padding: 5%
