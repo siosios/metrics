@@ -76,12 +76,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      # Log in to GitHub Container Registry to allow pushing Docker images
-      #- name: Login to GitHub Container Registry
-      #  uses: docker/login-action@v3
-      #  with:
-       #  registry: ghcr.io
-      #   username: ${{ github.actor }}
       - name: Login to GitHub registry
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Build docker image
