@@ -23,15 +23,6 @@ ___
 
 ___
 
-**[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [My 2.5 year old laptop can write Space Invaders in JavaScript now (GLM-4.5 Air)](https://simonwillison.net/2025/Jul/29/space-invaders/)
-  * *Published on 29 Jul 2025*
-* [Learning Is Slower Than You Think](https://nisheethvishnoi.substack.com/p/learning-is-slower-than-you-think)
-  * *Published on 29 Jul 2025*
-* [Observable Notebooks 2.0 Technology Preview](https://observablehq.com/notebook-kit/)
-  * *Published on 29 Jul 2025*
-* [Linux Performance Analysis in 60 seconds (2015)](https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55)
-  * *Published on 29 Jul 2025*
 
 
 ___
