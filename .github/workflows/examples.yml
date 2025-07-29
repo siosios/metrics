@@ -680,8 +680,6 @@ jobs:
           repo: metrics
           plugin_lines: yes
           plugin_followup: yes
-          plugin_projects: yes
-          plugin_projects_repositories: siosios/metrics/projects/1
           output_action: none
           delay: 120
           plugins_errors_fatal: yes
