@@ -158,7 +158,7 @@ jobs:
       - name: Tag docker image (release)
         env:
           GITHUB_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
-        run: docker tag ghcr.io/siosios/metrics:master ghcr.io/siosios/metrics:$(echo $GITHUB_COMMIT_MESSAGE | grep -Po 'v\d+[.]\d+')
+        run: docker tag ghcr.io/siosios/metrics:master $(echo $GITHUB_COMMIT_MESSAGE | grep -Po 'v\d+[.]\d+')
       - name: Publish release to GitHub registry
         env:
           GITHUB_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
