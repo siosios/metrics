@@ -103,7 +103,7 @@ jobs:
   #  name: Deploy siosios/metrics@master
   #  runs-on: ubuntu-latest
   #  needs: [ docker-master ]
-  #  steps:
+  #  steps: 
   #    - name: Deploy web instance
   #      run: "curl -X POST -H 'Authorization: ${{ secrets.WEB_DEPLOY_BETA_TOKEN }}' https://beta-metrics.lecoq.io/.control/stop"
    #   - name: Wait for redeploy
