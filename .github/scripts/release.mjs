@@ -26,17 +26,17 @@ if (!version)
 console.log(`Version: ${version}`)
 
 //Load related pr
-const {data: {items: prs}} = await rest.search.issuesAndPullRequests({
-  q: `repo:${repository.owner}/${repository.name} is:pr is:merged author:${maintainer} assignee:${maintainer} Release ${version} in:title`,
-})
+//const {data: {items: prs}} = await rest.search.issuesAndPullRequests({
+//  q: `repo:${repository.owner}/${repository.name} is:pr is:merged author:${maintainer} assignee:${maintainer} Release ${version} in:title`,
+//})
 
 //Ensure that there is exactly one pr matching
-if (prs.length < 1)
-  throw new Error(`No matching prs found`)
-if (prs.length > 1)
-  throw new Error(`Multiple prs found (${prs.length} matching)`)
-const [patchnote] = prs
-console.log(`Using pr#${patchnote.number}: ${patchnote.title}`)
+//if (prs.length < 1)
+//  throw new Error(`No matching prs found`)
+//if (prs.length > 1)
+//  throw new Error(`Multiple prs found (${prs.length} matching)`)
+//const [patchnote] = prs
+//console.log(`Using pr#${patchnote.number}: ${patchnote.title}`)
 
 //Check whether release already exists
 try {
