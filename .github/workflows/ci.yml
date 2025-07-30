@@ -238,6 +238,6 @@ jobs:
       - name: Publish release
         run: node .github/scripts/release.mjs
         env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
