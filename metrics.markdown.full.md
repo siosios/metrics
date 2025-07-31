@@ -23,15 +23,6 @@ ___
 
 ___
 
-**[🗼 Rss feed from Hacker News](https://news.ycombinator.com/)**
-* [Fast](https://www.catherinejue.com/fast)
-  * *Published on 30 Jul 2025*
-* [Classic Common Desktop Environment coming to OpenBSD](https://undeadly.org/cgi?action=article;sid=20250730080301)
-  * *Published on 31 Jul 2025*
-* [Ollama&#39;s new app](https://ollama.com/blog/new-app)
-  * *Published on 30 Jul 2025*
-* [Figma will IPO on July 31](https://www.figma.com/blog/ipo-pricing/)
-  * *Published on 30 Jul 2025*
 
 
 ___
