@@ -47,6 +47,8 @@ COPY . .
 # Install node modules and rebuild indexes
 RUN set -x \
   && which "${PUPPETEER_EXECUTABLE_PATH}" \
+  && npm install -g vue@2.7.16 \
+  && npm install -g @vue/cli \
   && npm install \
   && npm audit fix --force \
   && npm run build \
