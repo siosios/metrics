@@ -5,6 +5,8 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 ## 🧩 Plugins with markdown version
 
 **[📰 Recent activity](https://github.com/siosios)**
+* 🍽️ Forked [matomo-org/matomo](https://github.com/matomo-org/matomo) to [siosios/matomo](https://github.com/siosios/matomo)
+* 🍽️ Forked [boxlabss/AI-for-Eggdrop](https://github.com/boxlabss/AI-for-Eggdrop) to [siosios/AI-for-Eggdrop](https://github.com/siosios/AI-for-Eggdrop)
 * 🔃 Opened [#1 Potential fix for code scanning alert no. 642: Unused variable, import, function or class](https://github.com/siosios/metrics/pull/1) in [siosios/metrics](https://github.com/siosios/metrics)
   * 1 file changed `++0 --1`
 * ⏺️ Created new branch alert-autofix-642 in [siosios/metrics](https://github.com/siosios/metrics)
@@ -13,8 +15,6 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 * 🔃 Opened [#1 pr2](https://github.com/siosios/cs2-modded-server/pull/1) in [siosios/cs2-modded-server](https://github.com/siosios/cs2-modded-server)
   * 44 files changed `++1256 --27`
 * ⏺️ Created new repository  [siosios/banish](https://github.com/siosios/banish)
-* ⏺️ Created new branch main in [siosios/banish](https://github.com/siosios/banish)
-* ⏺️ Created new branch main in [siosios/auto-dnsbl](https://github.com/siosios/auto-dnsbl)
 
 
 ___
