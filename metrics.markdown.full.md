@@ -14,7 +14,6 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
   * 44 files changed `++1256 --27`
 * 🔃 Opened [#1 pr2](https://github.com/siosios/cs2-modded-server/pull/1) in [siosios/cs2-modded-server](https://github.com/siosios/cs2-modded-server)
   * 44 files changed `++1256 --27`
-* ⏺️ Created new repository  [siosios/banish](https://github.com/siosios/banish)
 
 
 ___
