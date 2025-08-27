@@ -10,10 +10,6 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 * 🔃 Opened [#1 Potential fix for code scanning alert no. 642: Unused variable, import, function or class](https://github.com/siosios/metrics/pull/1) in [siosios/metrics](https://github.com/siosios/metrics)
   * 1 file changed `++0 --1`
 * ⏺️ Created new branch alert-autofix-642 in [siosios/metrics](https://github.com/siosios/metrics)
-* 🔃 Merged [#1 pr2](https://github.com/siosios/cs2-modded-server/pull/1) in [siosios/cs2-modded-server](https://github.com/siosios/cs2-modded-server)
-  * 44 files changed `++1256 --27`
-* 🔃 Opened [#1 pr2](https://github.com/siosios/cs2-modded-server/pull/1) in [siosios/cs2-modded-server](https://github.com/siosios/cs2-modded-server)
-  * 44 files changed `++1256 --27`
 
 
 ___
