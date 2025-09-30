@@ -23,7 +23,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
-          REPO_COUNT=$(curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/users/siosios/repos?per_page=100 | jq length)
+          REPO_COUNT=$(curl -s -H "Authorization: token ${{ secrets.METRICS_TOKEN }}" https://api.github.com/users/siosios/repos?per_page=100 | jq length)
           echo "REPO_COUNT=$REPO_COUNT" >> $GITHUB_OUTPUT
           repos = {k: re.sub(r'{^\w\s-}', '', str(v)) for k,v in REPO_COUNT}
       - name: Generate JPG image with repo count
