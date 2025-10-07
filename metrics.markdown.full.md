@@ -5,11 +5,13 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 ## 🧩 Plugins with markdown version
 
 **[📰 Recent activity](https://github.com/siosios)**
-* 🍽️ Forked [matomo-org/matomo](https://github.com/matomo-org/matomo) to [siosios/matomo](https://github.com/siosios/matomo)
-* 🍽️ Forked [boxlabss/AI-for-Eggdrop](https://github.com/boxlabss/AI-for-Eggdrop) to [siosios/AI-for-Eggdrop](https://github.com/siosios/AI-for-Eggdrop)
-* 🔃 Opened [#1 Potential fix for code scanning alert no. 642: Unused variable, import, function or class](https://github.com/siosios/metrics/pull/1) in [siosios/metrics](https://github.com/siosios/metrics)
-  * 1 file changed `++0 --1`
-* ⏺️ Created new branch alert-autofix-642 in [siosios/metrics](https://github.com/siosios/metrics)
+* 🍽️ Forked [server-status-project/server-status](https://github.com/server-status-project/server-status) to [siosios/server-status](https://github.com/siosios/server-status)
+* 🍽️ Forked [BassT23/Proxmox](https://github.com/BassT23/Proxmox) to [siosios/Proxmox-Updater](https://github.com/siosios/Proxmox-Updater)
+* 🍽️ Forked [community-scripts/ProxmoxVE](https://github.com/community-scripts/ProxmoxVE) to [siosios/ProxmoxVE](https://github.com/siosios/ProxmoxVE)
+* 🍽️ Forked [DoctorFTB/firezone-1.x-self-hosted](https://github.com/DoctorFTB/firezone-1.x-self-hosted) to [siosios/firezone-1.x-self-hosted](https://github.com/siosios/firezone-1.x-self-hosted)
+* 🍽️ Forked [firezone/firezone](https://github.com/firezone/firezone) to [siosios/firezone](https://github.com/siosios/firezone)
+* #️⃣ Closed [#5 Outdated Sources Detected](https://github.com/siosios/RPZ-Blocklists/issues/5) in [siosios/RPZ-Blocklists](https://github.com/siosios/RPZ-Blocklists)
+* #️⃣ Opened [#5 Outdated Sources Detected](https://github.com/siosios/RPZ-Blocklists/issues/5) in [siosios/RPZ-Blocklists](https://github.com/siosios/RPZ-Blocklists)
 
 
 ___
