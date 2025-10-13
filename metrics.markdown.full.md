@@ -5,13 +5,15 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 ## 🧩 Plugins with markdown version
 
 **[📰 Recent activity](https://github.com/siosios)**
+* 🔃 Merged [#2 Testing dev](https://github.com/siosios/autoinstall_cloudstack/pull/2) in [siosios/autoinstall_cloudstack](https://github.com/siosios/autoinstall_cloudstack)
+  * 1 file changed `++1595 --396`
+* 🔃 Opened [#2 Testing dev](https://github.com/siosios/autoinstall_cloudstack/pull/2) in [siosios/autoinstall_cloudstack](https://github.com/siosios/autoinstall_cloudstack)
+  * 1 file changed `++1595 --396`
+* ⏺️ Created new branch Testing-Dev in [siosios/autoinstall_cloudstack](https://github.com/siosios/autoinstall_cloudstack)
 * 🍽️ Forked [server-status-project/server-status](https://github.com/server-status-project/server-status) to [siosios/server-status](https://github.com/siosios/server-status)
 * 🍽️ Forked [BassT23/Proxmox](https://github.com/BassT23/Proxmox) to [siosios/Proxmox-Updater](https://github.com/siosios/Proxmox-Updater)
 * 🍽️ Forked [community-scripts/ProxmoxVE](https://github.com/community-scripts/ProxmoxVE) to [siosios/ProxmoxVE](https://github.com/siosios/ProxmoxVE)
 * 🍽️ Forked [DoctorFTB/firezone-1.x-self-hosted](https://github.com/DoctorFTB/firezone-1.x-self-hosted) to [siosios/firezone-1.x-self-hosted](https://github.com/siosios/firezone-1.x-self-hosted)
-* 🍽️ Forked [firezone/firezone](https://github.com/firezone/firezone) to [siosios/firezone](https://github.com/siosios/firezone)
-* #️⃣ Closed [#5 Outdated Sources Detected](https://github.com/siosios/RPZ-Blocklists/issues/5) in [siosios/RPZ-Blocklists](https://github.com/siosios/RPZ-Blocklists)
-* #️⃣ Opened [#5 Outdated Sources Detected](https://github.com/siosios/RPZ-Blocklists/issues/5) in [siosios/RPZ-Blocklists](https://github.com/siosios/RPZ-Blocklists)
 
 
 ___
