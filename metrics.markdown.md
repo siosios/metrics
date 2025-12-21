@@ -1,7 +1,7 @@
 ### 👋 Hello, I'm siosios
 
 I joined GitHub on `05/10/2009`.
-I contributed to `45` repositories and made `508` commits.
+I contributed to `43` repositories and made `508` commits.
 
 > Elements in `inline code-blocks` were auto-magically templated by **metrics markdown template**.
 > Although this is rendered as a PNG image in this example, it'll actually push markdown 😎
