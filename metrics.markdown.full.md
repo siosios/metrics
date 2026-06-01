@@ -9,7 +9,6 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 * 🍽️ Forked [techjarves/OpenClaude-Portable](https://github.com/techjarves/OpenClaude-Portable) to [siosios/OpenClaude-Portable](https://github.com/siosios/OpenClaude-Portable)
 * 🍽️ Forked [Gitlawb/openclaude](https://github.com/Gitlawb/openclaude) to [siosios/openclaude](https://github.com/siosios/openclaude)
 * 🍽️ Forked [JonMurphy/RPZ_add-on](https://github.com/JonMurphy/RPZ_add-on) to [siosios/RPZ_add-on](https://github.com/siosios/RPZ_add-on)
-* 🍽️ Forked [Z4nzu/hackingtool](https://github.com/Z4nzu/hackingtool) to [siosios/hackingtool](https://github.com/siosios/hackingtool)
 
 
 ___
