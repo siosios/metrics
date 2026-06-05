@@ -5,10 +5,7 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 ## 🧩 Plugins with markdown version
 
 **[📰 Recent activity](https://github.com/siosios)**
-* 🍽️ Forked [manierkendall-svg/OpenClaude-Multi-Platform](https://github.com/manierkendall-svg/OpenClaude-Multi-Platform) to [siosios/OpenClaude-Multi-Platform](https://github.com/siosios/OpenClaude-Multi-Platform)
-* 🍽️ Forked [techjarves/OpenClaude-Portable](https://github.com/techjarves/OpenClaude-Portable) to [siosios/OpenClaude-Portable](https://github.com/siosios/OpenClaude-Portable)
-* 🍽️ Forked [Gitlawb/openclaude](https://github.com/Gitlawb/openclaude) to [siosios/openclaude](https://github.com/siosios/openclaude)
-* 🍽️ Forked [JonMurphy/RPZ_add-on](https://github.com/JonMurphy/RPZ_add-on) to [siosios/RPZ_add-on](https://github.com/siosios/RPZ_add-on)
+No recent activity
 
 
 ___
