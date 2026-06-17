@@ -5,7 +5,7 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 ## 🧩 Plugins with markdown version
 
 **[📰 Recent activity](https://github.com/siosios)**
-No recent activity
+* 🍽️ Forked [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat) to [siosios/win11debloat](https://github.com/siosios/win11debloat)
 
 
 ___
