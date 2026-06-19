@@ -5,6 +5,8 @@ See [rendering of this file here](https://github.com/siosios/metrics/blob/exampl
 ## 🧩 Plugins with markdown version
 
 **[📰 Recent activity](https://github.com/siosios)**
+* 🍽️ Forked [Opnwall/Syncthing-for-IPFire](https://github.com/Opnwall/Syncthing-for-IPFire) to [siosios/Syncthing-for-IPFire](https://github.com/siosios/Syncthing-for-IPFire)
+* 🍽️ Forked [Opnwall/AdGuard-Home-for-IPFire](https://github.com/Opnwall/AdGuard-Home-for-IPFire) to [siosios/AdGuard-Home-for-IPFire](https://github.com/siosios/AdGuard-Home-for-IPFire)
 * 🍽️ Forked [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat) to [siosios/win11debloat](https://github.com/siosios/win11debloat)
 
 
